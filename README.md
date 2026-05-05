@@ -10,11 +10,10 @@
 
 （若使用自定义域名，以仓库 Settings → Pages 显示为准。）
 
-## 首次启用 GitHub Pages
+## GitHub Pages 说明
 
-1. 打开本仓库 **Settings → Pages**。
-2. **Build and deployment** → Source 选择 **GitHub Actions**。
-3. 推送任意更新到 `main`，等待 **Actions** 里工作流变绿后刷新 Pages 地址。
+当前使用 **Deploy from a branch**：分支 **`main`**、目录 **`/`（根目录）**，由 GitHub 直接发布静态文件（无需 Actions）。  
+若你在 Settings 里改过，请保持为 **Branch: `main` / folder: `/ (root)`**。
 
 ## 本地预览
 
