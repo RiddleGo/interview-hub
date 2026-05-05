@@ -123,8 +123,8 @@
     </header>
     <div class="grid" id="cards"></div>
     <p class="note">
-      「单页学习」走各仓库的 <strong>GitHub Pages</strong>（<code>…github.io/仓库名/study.html</code>），由 GitHub 按 <code>text/html</code> 提供页面；不要用 jsDelivr/raw 直链，否则常被标成 <code>text/plain</code> 只会显示源码。
-      若刚改过题库，Pages 重建可能需要一两分钟。
+      「单页学习」先进入本站的 <code>open.html</code>：用 <code>fetch</code> 拉取各库的 Pages 版 <code>study.html</code>，再以 <code>Blob(text/html)</code> 放进全屏 <code>iframe</code>，避免部分环境把页面当纯文本只显示源码。
+      顶栏有 <strong>直接打开 Pages</strong> 备用链接。不要用 jsDelivr/raw 直链，常见为 <code>text/plain</code>。
     </p>
     <footer>
       <a href="https://github.com/RiddleGo" target="_blank" rel="noopener">@RiddleGo</a>
@@ -161,7 +161,9 @@
     ];
     const gh = (s) => "https://github.com/" + OWNER + "/" + s;
     const pagesHost = "https://" + OWNER.toLowerCase() + ".github.io";
-    const study = (s) => pagesHost + "/" + s + "/study.html";
+    const hubBase = pagesHost + "/interview-hub";
+    /** 经 open.html 用 Blob+iframe 打开，避免部分浏览器/内嵌 WebView 把直链当纯文本显示源码 */
+    const study = (s) => hubBase + "/open.html?repo=" + encodeURIComponent(s);
     const root = document.getElementById("cards");
     items.forEach((it) => {
       const el = document.createElement("article");
