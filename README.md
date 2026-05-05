@@ -1,6 +1,8 @@
 # interview-hub
 
-面经合集 **导航站**：用浏览器访问下方 Pages 地址，可一键进入四个题库仓库与各自的单页 `study.html`（在线预览）。
+面经合集 **导航站**：用浏览器访问下方 Pages 地址，可一键进入四个题库仓库与各自的单页 `study.html`。
+
+各题库单页走 **GitHub Pages**（例如 `https://riddlego.github.io/agent-interview-300/study.html`），避免 CDN/raw 将 HTML 标成 `text/plain` 导致只显示源码。
 
 ## 在线访问
 

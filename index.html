@@ -123,8 +123,8 @@
     </header>
     <div class="grid" id="cards"></div>
     <p class="note">
-      「单页学习」通过 jsDelivr 拉取各仓库 <code>main</code> 分支上的 <code>study.html</code>，首次访问或刚推送更新后可能有短缓存延迟。
-      若单页打不开，可先点「GitHub 仓库」在浏览器中打开对应文件。
+      「单页学习」走各仓库的 <strong>GitHub Pages</strong>（<code>…github.io/仓库名/study.html</code>），由 GitHub 按 <code>text/html</code> 提供页面；不要用 jsDelivr/raw 直链，否则常被标成 <code>text/plain</code> 只会显示源码。
+      若刚改过题库，Pages 重建可能需要一两分钟。
     </p>
     <footer>
       <a href="https://github.com/RiddleGo" target="_blank" rel="noopener">@RiddleGo</a>
@@ -160,7 +160,8 @@
       }
     ];
     const gh = (s) => "https://github.com/" + OWNER + "/" + s;
-    const study = (s) => "https://cdn.jsdelivr.net/gh/" + OWNER + "/" + s + "@main/study.html";
+    const pagesHost = "https://" + OWNER.toLowerCase() + ".github.io";
+    const study = (s) => pagesHost + "/" + s + "/study.html";
     const root = document.getElementById("cards");
     items.forEach((it) => {
       const el = document.createElement("article");
