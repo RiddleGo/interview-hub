@@ -1,6 +1,6 @@
 # interview-hub
 
-面经合集 **导航站**：用浏览器访问下方 Pages 地址，可一键进入四个题库仓库与各自的单页 `study.html`。
+面经合集 **导航站**：用浏览器访问下方 Pages 地址，可一键进入四个题库仓库与各自的单页 `study.html`。页面底部含 **微信公众号** 配图（`images/gongzhonghao.png`）。
 
 各题库「单页学习」直达 **`https://riddlego.github.io/<仓库名>/study.html`**（GitHub Pages），不再经过中转页。
 
