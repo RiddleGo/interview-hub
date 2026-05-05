@@ -8,7 +8,9 @@
 
 启用 GitHub Pages（见下）后，站点一般为：
 
-**https://riddlego.github.io/interview-hub/**
+**https://riddlego.github.io/interview-hub/index.html**（推荐；根路径 `/interview-hub/` 偶发 CDN 旧缓存）
+
+备用：`https://riddlego.github.io/interview-hub/?v=1`
 
 （若使用自定义域名，以仓库 Settings → Pages 显示为准。）
 
