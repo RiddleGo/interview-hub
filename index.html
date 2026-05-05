@@ -163,7 +163,16 @@
     <section class="qr-area" aria-labelledby="qr-heading">
       <h3 id="qr-heading">微信公众号</h3>
       <p class="qr-cap">欢迎关注 · 获取更多更新与说明</p>
-      <img src="images/gongzhonghao.png" width="1954" height="624" alt="微信公众号二维码" loading="lazy" decoding="async">
+      <img id="qr-wechat" width="1954" height="624" alt="微信公众号二维码" loading="eager" decoding="async" fetchpriority="low">
+      <script>
+        (function () {
+          var el = document.getElementById("qr-wechat");
+          if (!el) return;
+          el.src = location.hostname.endsWith("github.io")
+            ? "/interview-hub/images/gongzhonghao.png"
+            : "images/gongzhonghao.png";
+        })();
+      </script>
     </section>
     <footer>
       <a href="https://github.com/RiddleGo" target="_blank" rel="noopener">@RiddleGo</a>
