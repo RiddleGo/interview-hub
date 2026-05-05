@@ -114,6 +114,37 @@
       font-size: .82rem;
       color: var(--muted);
     }
+    .qr-area {
+      margin-top: 2rem;
+      text-align: center;
+      padding: 1.35rem 1rem 1.5rem;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background: var(--card);
+      box-shadow: var(--shadow);
+    }
+    .qr-area h3 {
+      margin: 0 0 0.35rem;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.02em;
+    }
+    .qr-area .qr-cap {
+      margin: 0 0 0.75rem;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+    .qr-area img {
+      max-width: min(320px, 92vw);
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1954 / 624;
+      border-radius: 12px;
+      display: block;
+      margin: 0 auto;
+      border: 1px solid var(--border);
+    }
   </style>
 </head>
 <body>
@@ -129,6 +160,11 @@
     <p class="note">
       「单页学习」直达各仓库的 **GitHub Pages**（<code>…github.io/仓库名/study.html</code>），由 GitHub 按网页返回。请勿使用 <code>raw.githubusercontent.com</code> 或 GitHub 上的 **Raw**，否则多为 <code>text/plain</code> 只会显示源码。
     </p>
+    <section class="qr-area" aria-labelledby="qr-heading">
+      <h3 id="qr-heading">微信公众号</h3>
+      <p class="qr-cap">欢迎关注 · 获取更多更新与说明</p>
+      <img src="images/gongzhonghao.png" width="1954" height="624" alt="微信公众号二维码" loading="lazy" decoding="async">
+    </section>
     <footer>
       <a href="https://github.com/RiddleGo" target="_blank" rel="noopener">@RiddleGo</a>
       · 源文件在仓库 <a href="https://github.com/RiddleGo/interview-hub" target="_blank" rel="noopener">interview-hub</a>
