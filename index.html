@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>面经导航 · RiddleGo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0c0e14;
+      --card: #151922;
+      --border: rgba(255,255,255,.08);
+      --text: #eef2f8;
+      --muted: #8b95a8;
+      --a: #3ee0c9;
+      --b: #a78bfa;
+      --radius: 16px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "DM Sans", "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      background-image:
+        radial-gradient(ellipse 100% 80% at 100% 0%, rgba(62,224,201,.12), transparent 50%),
+        radial-gradient(ellipse 70% 50% at 0% 100%, rgba(167,139,250,.1), transparent 45%);
+    }
+    .wrap { max-width: 960px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
+    header { text-align: center; margin-bottom: 2.75rem; }
+    header h1 {
+      font-size: clamp(1.6rem, 4vw, 2.1rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      margin: 0 0 .5rem;
+      background: linear-gradient(120deg, var(--text), var(--a));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    header p { color: var(--muted); margin: 0; font-size: .95rem; }
+    .grid {
+      display: grid;
+      gap: 1.1rem;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    }
+    article {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.35rem 1.25rem 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: .75rem;
+      transition: border-color .2s, box-shadow .2s;
+    }
+    article:hover {
+      border-color: rgba(62,224,201,.25);
+      box-shadow: 0 12px 40px rgba(0,0,0,.35);
+    }
+    article h2 {
+      margin: 0;
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    article .meta { font-size: .78rem; color: var(--muted); }
+    article p.desc {
+      margin: 0;
+      flex: 1;
+      font-size: .875rem;
+      color: #b8c0d0;
+    }
+    .actions { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .25rem; }
+    a.btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: .45rem .85rem;
+      border-radius: 10px;
+      font-size: .8rem;
+      font-weight: 600;
+      text-decoration: none;
+      border: 1px solid var(--border);
+      color: var(--text);
+      background: rgba(255,255,255,.04);
+      transition: border-color .15s, color .15s, background .15s;
+    }
+    a.btn:hover { border-color: var(--a); color: var(--a); background: rgba(62,224,201,.08); }
+    a.btn.primary {
+      border-color: rgba(62,224,201,.35);
+      color: var(--a);
+      background: rgba(62,224,201,.1);
+    }
+    a.btn.primary:hover { background: rgba(62,224,201,.18); }
+    footer {
+      margin-top: 3rem;
+      text-align: center;
+      font-size: .8rem;
+      color: var(--muted);
+    }
+    footer a { color: var(--a); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+    .note {
+      margin-top: 2rem;
+      padding: 1rem 1.1rem;
+      border-radius: var(--radius);
+      border: 1px dashed var(--border);
+      font-size: .82rem;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>面经题库导航</h1>
+      <p>Agent · AI Infra · 自动驾驶 · 搜广推 — 仓库与单页学习入口</p>
+    </header>
+    <div class="grid" id="cards"></div>
+    <p class="note">
+      「单页学习」通过 jsDelivr 拉取各仓库 <code>main</code> 分支上的 <code>study.html</code>，首次访问或刚推送更新后可能有短缓存延迟。
+      若单页打不开，可先点「GitHub 仓库」在浏览器中打开对应文件。
+    </p>
+    <footer>
+      <a href="https://github.com/RiddleGo" target="_blank" rel="noopener">@RiddleGo</a>
+      · 源文件在仓库 <a href="https://github.com/RiddleGo/interview-hub" target="_blank" rel="noopener">interview-hub</a>
+    </footer>
+  </div>
+  <script>
+    const OWNER = "RiddleGo";
+    const items = [
+      {
+        slug: "agent-interview-300",
+        title: "Agent 算法工程师面经",
+        meta: "300 题",
+        desc: "LLM、Agent、提示工程、RAG、多 Agent、框架、性能、安全与行业应用等知识体系与面试要点。"
+      },
+      {
+        slug: "ai-infra-interview-305",
+        title: "AI Infra 面经",
+        meta: "305 题",
+        desc: "PyTorch 底层、分布式训练、推理引擎、量化、调度与平台、C++/CUDA、网络与存储等。"
+      },
+      {
+        slug: "autodrive-interview-300",
+        title: "自动驾驶算法面经",
+        meta: "300 题",
+        desc: "感知、规划控制、预测、定位地图、C++、系统工程、仿真、数据闭环与安全法规。"
+      },
+      {
+        slug: "sgr-interview-300",
+        title: "搜广推算法面经",
+        meta: "300 题",
+        desc: "排序、召回、多任务、向量检索、Serving、大模型与推荐、系统设计与编程题。"
+      }
+    ];
+    const gh = (s) => "https://github.com/" + OWNER + "/" + s;
+    const study = (s) => "https://cdn.jsdelivr.net/gh/" + OWNER + "/" + s + "@main/study.html";
+    const root = document.getElementById("cards");
+    items.forEach((it) => {
+      const el = document.createElement("article");
+      el.innerHTML =
+        "<h2>" + it.title + "</h2>" +
+        "<div class=\"meta\">" + it.meta + "</div>" +
+        "<p class=\"desc\">" + it.desc + "</p>" +
+        "<div class=\"actions\">" +
+        "<a class=\"btn primary\" href=\"" + study(it.slug) + "\" target=\"_blank\" rel=\"noopener\">单页学习</a>" +
+        "<a class=\"btn\" href=\"" + gh(it.slug) + "\" target=\"_blank\" rel=\"noopener\">GitHub 仓库</a>" +
+        "<a class=\"btn\" href=\"" + gh(it.slug) + "/blob/main/README.md\" target=\"_blank\" rel=\"noopener\">README</a>" +
+        "</div>";
+      root.appendChild(el);
+    });
+  </script>
+</body>
+</html>
