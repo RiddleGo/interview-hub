@@ -2,7 +2,7 @@
 
 面经合集 **导航站**：用浏览器访问下方 Pages 地址，可一键进入四个题库仓库与各自的单页 `study.html`。
 
-各题库单页经 **`open.html?repo=…`** 用 Blob+iframe 打开（避免部分浏览器/WebView 仍按纯文本展示）；备用直链见 `open.html` 顶栏。
+各题库「单页学习」直达 **`https://riddlego.github.io/<仓库名>/study.html`**（GitHub Pages），不再经过中转页。
 
 ## 在线访问
 
