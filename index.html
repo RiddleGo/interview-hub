@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Cache-Control" content="no-cache">
-  <title>面经导航 · RiddleGo</title>
+  <title>学习总入口 · 面经与教材</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&display=swap" rel="stylesheet">
@@ -151,13 +151,25 @@
       display: block;
       object-fit: contain;
     }
+    article.featured {
+      grid-column: 1 / -1;
+      border-color: rgba(167, 139, 250, 0.35);
+    }
+    .section-label {
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin: 0.5rem 0 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+    }
   </style>
 </head>
 <body>
   <div class="wrap">
     <header>
-      <h1>面经题库导航</h1>
-      <p>Agent · AI Infra · 自动驾驶 · 搜广推 — 仓库与单页学习入口</p>
+      <h1>学习总入口</h1>
+      <p>面经题库（Agent / AI Infra / 自动驾驶 / 搜广推）与《人工智能系统》教材同站聚合</p>
       <p class="motto">你最终会成为你自己</p>
     </header>
     <div class="grid" id="cards"></div>
@@ -167,7 +179,7 @@
       <div id="qr-mount"></div>
       <script>
         (function () {
-          var base = location.hostname.endsWith("github.io") ? "/interview-hub/images/" : "images/";
+          var base = new URL("images/", location.href).href;
           var wrap = document.getElementById("qr-mount");
           if (!wrap) return;
           var pic = document.createElement("picture");
@@ -226,6 +238,22 @@
     const pagesHost = "https://" + OWNER.toLowerCase() + ".github.io";
     const study = (s) => pagesHost + "/" + s + "/study.html";
     const root = document.getElementById("cards");
+    var feat = document.createElement("article");
+    feat.className = "featured";
+    feat.innerHTML =
+      "<h2>《人工智能系统》教材</h2>" +
+      "<div class=\"meta\">微软 AI-System · 13 章 · 含 GitHub 原文链</div>" +
+      "<p class=\"desc\">框架与编译、分布式训练、集群调度、推理系统、模型压缩与安全等；正文从 GitHub raw 拉取，与本仓库一同部署在 <code>ai-system-textbook/</code>。</p>" +
+      "<div class=\"actions\">" +
+      "<a class=\"btn primary\" href=\"ai-system-textbook/index.html\">打开教材</a>" +
+      "<a class=\"btn\" href=\"https://github.com/microsoft/AI-System/tree/main/Textbook\" target=\"_blank\" rel=\"noopener\">上游 Textbook</a>" +
+      "</div>";
+    root.appendChild(feat);
+    var lbl = document.createElement("p");
+    lbl.className = "section-label";
+    lbl.style.gridColumn = "1 / -1";
+    lbl.textContent = "面经题库";
+    root.appendChild(lbl);
     items.forEach((it) => {
       const el = document.createElement("article");
       el.innerHTML =
