@@ -169,7 +169,7 @@
   <div class="wrap">
     <header>
       <h1>学习总入口</h1>
-      <p>面经题库（Agent / AI Infra / 自动驾驶 / 搜广推）与《人工智能系统》教材同站聚合</p>
+      <p>面经题库（Agent / AI Infra / 自动驾驶 / 搜广推）、教材与算法小抄同站聚合</p>
       <p class="motto">你最终会成为你自己</p>
     </header>
     <div class="grid" id="cards"></div>
@@ -249,6 +249,17 @@
       "<a class=\"btn\" href=\"https://github.com/microsoft/AI-System/tree/main/Textbook\" target=\"_blank\" rel=\"noopener\">上游 Textbook</a>" +
       "</div>";
     root.appendChild(feat);
+    var algo = document.createElement("article");
+    algo.className = "featured";
+    algo.innerHTML =
+      "<h2>labuladong 算法小抄（Python 版）</h2>" +
+      "<div class=\"meta\">57 篇 · 5 章 · LeetCode 框架</div>" +
+      "<p class=\"desc\">动态规划、回溯、BFS、双指针、二分、滑动窗口等核心套路，以及数据结构、高频面试题；示例代码已全部转为 Python。</p>" +
+      "<div class=\"actions\">" +
+      "<a class=\"btn primary\" href=\"leetcode/index.html\">打开算法小抄</a>" +
+      "<a class=\"btn\" href=\"https://github.com/RiddleGo/interview-hub/tree/main/leetcode\" target=\"_blank\" rel=\"noopener\">GitHub 源码</a>" +
+      "</div>";
+    root.appendChild(algo);
     var lbl = document.createElement("p");
     lbl.className = "section-label";
     lbl.style.gridColumn = "1 / -1";

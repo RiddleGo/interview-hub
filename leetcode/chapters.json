@@ -1,0 +1,374 @@
+[
+  {
+    "id": "第1章-核心套路篇",
+    "label": "第1章 核心套路篇",
+    "articles": [
+      {
+        "title": "学习算法和刷题的思路指南",
+        "path": "第1章-核心套路篇/1.1-学习算法和刷题的框架思维.md",
+        "html": "reader.html?path=第1章-核心套路篇/1.1-学习算法和刷题的框架思维.md",
+        "url": "https://riddlego.github.io/interview-hub/leetcode/reader.html?path=第1章-核心套路篇/1.1-学习算法和刷题的框架思维.md"
+      },
+      {
+        "title": "动态规划详解",
+        "path": "第1章-核心套路篇/1.2-动态规划解题套路框架.md",
+        "html": "reader.html?path=第1章-核心套路篇/1.2-动态规划解题套路框架.md",
+        "url": "https://riddlego.github.io/interview-hub/leetcode/reader.html?path=第1章-核心套路篇/1.2-动态规划解题套路框架.md"
+      },
+      {
+        "title": "回溯算法详解",
+        "path": "第1章-核心套路篇/1.3-回溯算法解题套路框架.md",
+        "html": "reader.html?path=第1章-核心套路篇/1.3-回溯算法解题套路框架.md",
+        "url": "https://riddlego.github.io/interview-hub/leetcode/reader.html?path=第1章-核心套路篇/1.3-回溯算法解题套路框架.md"
+      },
+      {
+        "title": "BFS 算法解题套路框架",
+        "path": "第1章-核心套路篇/1.4-BFS 算法套路框架.md",
+        "html": "reader.html?path=第1章-核心套路篇/1.4-BFS 算法套路框架.md",
+        "url": "https://riddlego.github.io/interview-hub/leetcode/reader.html?path=第1章-核心套路篇/1.4-BFS 算法套路框架.md"
+      },
+      {
+        "title": "双指针技巧总结",
+        "path": "第1章-核心套路篇/1.5-双指针技巧套路框架.md",
+        "html": "reader.html?path=第1章-核心套路篇/1.5-双指针技巧套路框架.md",
+        "url": "https://riddlego.github.io/interview-hub/leetcode/reader.html?path=第1章-核心套路篇/1.5-双指针技巧套路框架.md"
+      },
+      {
+        "title": "二分查找详解",
+        "path": "第1章-核心套路篇/1.6-我写了首诗，保你闭着眼睛都能写出二分搜索算法.md",
+        "html": "reader.html?path=第1章-核心套路篇/1.6-我写了首诗，保你闭着眼睛都能写出二分搜索算法.md",
+        "url": "https://riddlego.github.io/interview-hub/leetcode/reader.html?path=第1章-核心套路篇/1.6-我写了首诗，保你闭着眼睛都能写出二分搜索算法.md"
+      },
+      {
+        "title": "滑动窗口算法框架",
+        "path": "第1章-核心套路篇/1.7-我写了一个模板，把滑动窗口算法变成了默写题.md",
+        "html": "reader.html?path=第1章-核心套路篇/1.7-我写了一个模板，把滑动窗口算法变成了默写题.md",
+        "url": "https://riddlego.github.io/interview-hub/leetcode/reader.html?path=第1章-核心套路篇/1.7-我写了一个模板，把滑动窗口算法变成了默写题.md"
+      }
+    ]
+  },
+  {
+    "id": "第2章-动态规划系列",
+    "label": "第2章 动态规划系列",
+    "articles": [
+      {
+        "title": "动态规划设计：最长递增子序列",
+        "path": "第2章-动态规划系列/2.1-动态规划设计：最长递增子序列.md",
+        "html": "reader.html?path=第2章-动态规划系列/2.1-动态规划设计：最长递增子序列.md",
+        "url": "https://riddlego.github.io/interview-hub/leetcode/reader.html?path=第2章-动态规划系列/2.1-动态规划设计：最长递增子序列.md"
+      },
+      {
+        "title": "动态规划之正则表达",
+        "path": "第2章-动态规划系列/2.10-动态规划之正则表达式.md",
+        "html": "reader.html?path=第2章-动态规划系列/2.10-动态规划之正则表达式.md",
+        "url": "https://riddlego.github.io/interview-hub/leetcode/reader.html?path=第2章-动态规划系列/2.10-动态规划之正则表达式.md"
+      },
+      {
+        "title": "动态规划：不同的定义产生不同的解法",
+        "path": "第2章-动态规划系列/2.11-不同的定义产生不同的解法.md",
+        "html": "reader.html?path=第2章-动态规划系列/2.11-不同的定义产生不同的解法.md",
+        "url": "https://riddlego.github.io/interview-hub/leetcode/reader.html?path=第2章-动态规划系列/2.11-不同的定义产生不同的解法.md"
+      },
+      {
+        "title": "经典动态规划问题：高楼扔鸡蛋",
+        "path": "第2章-动态规划系列/2.12-经典动态规划：高楼扔鸡蛋 .md",
+        "html": "reader.html?path=第2章-动态规划系列/2.12-经典动态规划：高楼扔鸡蛋 .md",
+        "url": "https://riddlego.github.io/interview-hub/leetcode/reader.html?path=第2章-动态规划系列/2.12-经典动态规划：高楼扔鸡蛋 .md"
+      },
+      {
+        "title": "经典动态规划问题：高楼扔鸡蛋（进阶）",
+        "path": "第2章-动态规划系列/2.13-经典动态规划：高楼扔鸡蛋（进阶）.md",
+        "html": "reader.html?path=第2章-动态规划系列/2.13-经典动态规划：高楼扔鸡蛋（进阶）.md",
+        "url": "https://riddlego.github.io/interview-hub/leetcode/reader.html?path=第2章-动态规划系列/2.13-经典动态规划：高楼扔鸡蛋（进阶）.md"
+      },
+      {
+        "title": "经典动态规划：戳气球",
+        "path": "第2章-动态规划系列/2.14-经典动态规划：戳气球问题.md",
+        "html": "reader.html?path=第2章-动态规划系列/2.14-经典动态规划：戳气球问题.md",
+        "url": "https://riddlego.github.io/interview-hub/leetcode/reader.html?path=第2章-动态规划系列/2.14-经典动态规划：戳气球问题.md"
+      },
+      {
+        "title": "经典动态规划：0-1 背包问题",
+        "path": "第2章-动态规划系列/2.15-经典动态规划：0-1背包问题.md",
+        "html": "reader.html?path=第2章-动态规划系列/2.15-经典动态规划：0-1背包问题.md",
+        "url": "https://riddlego.github.io/interview-hub/leetcode/reader.html?path=第2章-动态规划系列/2.15-经典动态规划：0-1背包问题.md"
+      },
+      {
+        "title": "经典动态规划：子集背包问题",
+        "path": "第2章-动态规划系列/2.16-经典动态规划：子集背包问题.md",
+        "html": "reader.html?path=第2章-动态规划系列/2.16-经典动态规划：子集背包问题.md",
+        "url": "https://riddlego.github.io/interview-hub/leetcode/reader.html?path=第2章-动态规划系列/2.16-经典动态规划：子集背包问题.md"
+      },
+      {
+        "title": "经典动态规划：完全背包问题",
+        "path": "第2章-动态规划系列/2.17-经典动态规划：完全背包问题.md",
+        "html": "reader.html?path=第2章-动态规划系列/2.17-经典动态规划：完全背包问题.md",
+        "url": "https://riddlego.github.io/interview-hub/leetcode/reader.html?path=第2章-动态规划系列/2.17-经典动态规划：完全背包问题.md"
+      },
+      {
+        "title": "动态规划和回溯算法到底谁是谁爹？",
+        "path": "第2章-动态规划系列/2.19-动态规划和回溯算法，到底是什么关系.md",
+        "html": "reader.html?path=第2章-动态规划系列/2.19-动态规划和回溯算法，到底是什么关系.md",
+        "url": "https://riddlego.github.io/interview-hub/leetcode/reader.html?path=第2章-动态规划系列/2.19-动态规划和回溯算法，到底是什么关系.md"
+      },
+      {
+        "title": "信封嵌套问题",
+        "path": "第2章-动态规划系列/2.2-二维递增子序列：信封嵌套问题.md",
+        "html": "reader.html?path=第2章-动态规划系列/2.2-二维递增子序列：信封嵌套问题.md",
+        "url": "https://riddlego.github.io/interview-hub/leetcode/reader.html?path=第2章-动态规划系列/2.2-二维递增子序列：信封嵌套问题.md"
+      },
+      {
+        "title": "动态规划设计：最大子数组",
+        "path": "第2章-动态规划系列/2.3-最大子数组问题.md",
+        "html": "reader.html?path=第2章-动态规划系列/2.3-最大子数组问题.md",
+        "url": "https://riddlego.github.io/interview-hub/leetcode/reader.html?path=第2章-动态规划系列/2.3-最大子数组问题.md"
+      },
+      {
+        "title": "动态规划答疑篇",
+        "path": "第2章-动态规划系列/2.4-动态规划答疑：最优子结构及dp 遍历方向.md",
+        "html": "reader.html?path=第2章-动态规划系列/2.4-动态规划答疑：最优子结构及dp 遍历方向.md",
+        "url": "https://riddlego.github.io/interview-hub/leetcode/reader.html?path=第2章-动态规划系列/2.4-动态规划答疑：最优子结构及dp 遍历方向.md"
+      },
+      {
+        "title": "最长公共子序列",
+        "path": "第2章-动态规划系列/2.5-经典动态规划：最长公共子序列.md",
+        "html": "reader.html?path=第2章-动态规划系列/2.5-经典动态规划：最长公共子序列.md",
+        "url": "https://riddlego.github.io/interview-hub/leetcode/reader.html?path=第2章-动态规划系列/2.5-经典动态规划：最长公共子序列.md"
+      },
+      {
+        "title": "编辑距离",
+        "path": "第2章-动态规划系列/2.6-经典动态规划：编辑距离.md",
+        "html": "reader.html?path=第2章-动态规划系列/2.6-经典动态规划：编辑距离.md",
+        "url": "https://riddlego.github.io/interview-hub/leetcode/reader.html?path=第2章-动态规划系列/2.6-经典动态规划：编辑距离.md"
+      },
+      {
+        "title": "动态规划之子序列问题解题模板",
+        "path": "第2章-动态规划系列/2.7-子序列问题解题模板：最长回文子序列.md",
+        "html": "reader.html?path=第2章-动态规划系列/2.7-子序列问题解题模板：最长回文子序列.md",
+        "url": "https://riddlego.github.io/interview-hub/leetcode/reader.html?path=第2章-动态规划系列/2.7-子序列问题解题模板：最长回文子序列.md"
+      },
+      {
+        "title": "状态压缩：对动态规划进行降维打击",
+        "path": "第2章-动态规划系列/2.8-状态压缩：对动态规划进行降维打击.md",
+        "html": "reader.html?path=第2章-动态规划系列/2.8-状态压缩：对动态规划进行降维打击.md",
+        "url": "https://riddlego.github.io/interview-hub/leetcode/reader.html?path=第2章-动态规划系列/2.8-状态压缩：对动态规划进行降维打击.md"
+      },
+      {
+        "title": "构造回文的最小插入次数",
+        "path": "第2章-动态规划系列/2.9-以最小插入次数构造回文串.md",
+        "html": "reader.html?path=第2章-动态规划系列/2.9-以最小插入次数构造回文串.md",
+        "url": "https://riddlego.github.io/interview-hub/leetcode/reader.html?path=第2章-动态规划系列/2.9-以最小插入次数构造回文串.md"
+      }
+    ]
+  },
+  {
+    "id": "第3章-数据结构系列",
+    "label": "第3章 数据结构系列",
+    "articles": [
+      {
+        "title": "层层拆解，带你手写 LRU 算法",
+        "path": "第3章-数据结构系列/3.1-手把手教你写LRU缓存淘汰算法.md",
+        "html": "reader.html?path=第3章-数据结构系列/3.1-手把手教你写LRU缓存淘汰算法.md",
+        "url": "https://riddlego.github.io/interview-hub/leetcode/reader.html?path=第3章-数据结构系列/3.1-手把手教你写LRU缓存淘汰算法.md"
+      },
+      {
+        "title": "递归反转链表的一部分",
+        "path": "第3章-数据结构系列/3.10-秀操作之纯递归反转链表.md",
+        "html": "reader.html?path=第3章-数据结构系列/3.10-秀操作之纯递归反转链表.md",
+        "url": "https://riddlego.github.io/interview-hub/leetcode/reader.html?path=第3章-数据结构系列/3.10-秀操作之纯递归反转链表.md"
+      },
+      {
+        "title": "如何k个一组反转链表",
+        "path": "第3章-数据结构系列/3.11-秀操作之k个一组反转链表.md",
+        "html": "reader.html?path=第3章-数据结构系列/3.11-秀操作之k个一组反转链表.md",
+        "url": "https://riddlego.github.io/interview-hub/leetcode/reader.html?path=第3章-数据结构系列/3.11-秀操作之k个一组反转链表.md"
+      },
+      {
+        "title": "算法就像搭乐高：带你手撸 LFU 算法",
+        "path": "第3章-数据结构系列/3.2-层层拆解，带你手写LFU算法.md",
+        "html": "reader.html?path=第3章-数据结构系列/3.2-层层拆解，带你手写LFU算法.md",
+        "url": "https://riddlego.github.io/interview-hub/leetcode/reader.html?path=第3章-数据结构系列/3.2-层层拆解，带你手写LFU算法.md"
+      },
+      {
+        "title": "二叉搜索树操作集锦",
+        "path": "第3章-数据结构系列/3.3-二叉搜索树操作集锦.md",
+        "html": "reader.html?path=第3章-数据结构系列/3.3-二叉搜索树操作集锦.md",
+        "url": "https://riddlego.github.io/interview-hub/leetcode/reader.html?path=第3章-数据结构系列/3.3-二叉搜索树操作集锦.md"
+      },
+      {
+        "title": "如何计算完全二叉树的节点数",
+        "path": "第3章-数据结构系列/3.4-完全二叉树的节点数为什么那么难算.md",
+        "html": "reader.html?path=第3章-数据结构系列/3.4-完全二叉树的节点数为什么那么难算.md",
+        "url": "https://riddlego.github.io/interview-hub/leetcode/reader.html?path=第3章-数据结构系列/3.4-完全二叉树的节点数为什么那么难算.md"
+      },
+      {
+        "title": "二叉树的序列化，就那几个框架，枯燥至极",
+        "path": "第3章-数据结构系列/3.5-用各种遍历框架序列化和反序列化二叉.md",
+        "html": "reader.html?path=第3章-数据结构系列/3.5-用各种遍历框架序列化和反序列化二叉.md",
+        "url": "https://riddlego.github.io/interview-hub/leetcode/reader.html?path=第3章-数据结构系列/3.5-用各种遍历框架序列化和反序列化二叉.md"
+      },
+      {
+        "title": "Git原理之最近公共祖先",
+        "path": "第3章-数据结构系列/3.6-Git原理之二叉树最近公共祖先.md",
+        "html": "reader.html?path=第3章-数据结构系列/3.6-Git原理之二叉树最近公共祖先.md",
+        "url": "https://riddlego.github.io/interview-hub/leetcode/reader.html?path=第3章-数据结构系列/3.6-Git原理之二叉树最近公共祖先.md"
+      },
+      {
+        "title": "如何使用单调栈解题",
+        "path": "第3章-数据结构系列/3.7-特殊数据结构：单调栈.md",
+        "html": "reader.html?path=第3章-数据结构系列/3.7-特殊数据结构：单调栈.md",
+        "url": "https://riddlego.github.io/interview-hub/leetcode/reader.html?path=第3章-数据结构系列/3.7-特殊数据结构：单调栈.md"
+      },
+      {
+        "title": "特殊数据结构：单调队列",
+        "path": "第3章-数据结构系列/3.8-特殊数据结构：单调队列.md",
+        "html": "reader.html?path=第3章-数据结构系列/3.8-特殊数据结构：单调队列.md",
+        "url": "https://riddlego.github.io/interview-hub/leetcode/reader.html?path=第3章-数据结构系列/3.8-特殊数据结构：单调队列.md"
+      },
+      {
+        "title": "如何高效判断回文链表",
+        "path": "第3章-数据结构系列/3.9-如何判断回文链表.md",
+        "html": "reader.html?path=第3章-数据结构系列/3.9-如何判断回文链表.md",
+        "url": "https://riddlego.github.io/interview-hub/leetcode/reader.html?path=第3章-数据结构系列/3.9-如何判断回文链表.md"
+      }
+    ]
+  },
+  {
+    "id": "第4章-算法思维系列",
+    "label": "第4章 算法思维系列",
+    "articles": [
+      {
+        "title": "回溯算法团灭子集、排列、组合问题",
+        "path": "第4章-算法思维系列/4.1-回溯算法解决子集、组合、排列问题.md",
+        "html": "reader.html?path=第4章-算法思维系列/4.1-回溯算法解决子集、组合、排列问题.md",
+        "url": "https://riddlego.github.io/interview-hub/leetcode/reader.html?path=第4章-算法思维系列/4.1-回溯算法解决子集、组合、排列问题.md"
+      },
+      {
+        "title": "扁平化嵌套列表",
+        "path": "第4章-算法思维系列/4.10-扁平化嵌套列表.md",
+        "html": "reader.html?path=第4章-算法思维系列/4.10-扁平化嵌套列表.md",
+        "url": "https://riddlego.github.io/interview-hub/leetcode/reader.html?path=第4章-算法思维系列/4.10-扁平化嵌套列表.md"
+      },
+      {
+        "title": "回溯算法最佳实践：解数独",
+        "path": "第4章-算法思维系列/4.2-回溯算法最佳实践：解数独.md",
+        "html": "reader.html?path=第4章-算法思维系列/4.2-回溯算法最佳实践：解数独.md",
+        "url": "https://riddlego.github.io/interview-hub/leetcode/reader.html?path=第4章-算法思维系列/4.2-回溯算法最佳实践：解数独.md"
+      },
+      {
+        "title": "回溯算法最佳实践：括号生成",
+        "path": "第4章-算法思维系列/4.3-回溯算法最佳实践：括号生成.md",
+        "html": "reader.html?path=第4章-算法思维系列/4.3-回溯算法最佳实践：括号生成.md",
+        "url": "https://riddlego.github.io/interview-hub/leetcode/reader.html?path=第4章-算法思维系列/4.3-回溯算法最佳实践：括号生成.md"
+      },
+      {
+        "title": "如何用 BFS 算法秒杀各种智力题",
+        "path": "第4章-算法思维系列/4.4-BFS算法暴力破解各种智力题.md",
+        "html": "reader.html?path=第4章-算法思维系列/4.4-BFS算法暴力破解各种智力题.md",
+        "url": "https://riddlego.github.io/interview-hub/leetcode/reader.html?path=第4章-算法思维系列/4.4-BFS算法暴力破解各种智力题.md"
+      },
+      {
+        "title": "twoSum问题的核心思想",
+        "path": "第4章-算法思维系列/4.5-2Sum问题的核心思想.md",
+        "html": "reader.html?path=第4章-算法思维系列/4.5-2Sum问题的核心思想.md",
+        "url": "https://riddlego.github.io/interview-hub/leetcode/reader.html?path=第4章-算法思维系列/4.5-2Sum问题的核心思想.md"
+      },
+      {
+        "title": "一个函数秒杀 2Sum 3Sum 4Sum 问题",
+        "path": "第4章-算法思维系列/4.6-一个函数解决nSum问题.md",
+        "html": "reader.html?path=第4章-算法思维系列/4.6-一个函数解决nSum问题.md",
+        "url": "https://riddlego.github.io/interview-hub/leetcode/reader.html?path=第4章-算法思维系列/4.6-一个函数解决nSum问题.md"
+      },
+      {
+        "title": "拆解复杂问题：实现计算器",
+        "path": "第4章-算法思维系列/4.7-拆解复杂问题：实现计算器.md",
+        "html": "reader.html?path=第4章-算法思维系列/4.7-拆解复杂问题：实现计算器.md",
+        "url": "https://riddlego.github.io/interview-hub/leetcode/reader.html?path=第4章-算法思维系列/4.7-拆解复杂问题：实现计算器.md"
+      },
+      {
+        "title": "烧饼排序算法",
+        "path": "第4章-算法思维系列/4.8-摊烧饼也得有点递归思维.md",
+        "html": "reader.html?path=第4章-算法思维系列/4.8-摊烧饼也得有点递归思维.md",
+        "url": "https://riddlego.github.io/interview-hub/leetcode/reader.html?path=第4章-算法思维系列/4.8-摊烧饼也得有点递归思维.md"
+      },
+      {
+        "title": "前缀和技巧",
+        "path": "第4章-算法思维系列/4.9-前缀和技巧解决子数组问题.md",
+        "html": "reader.html?path=第4章-算法思维系列/4.9-前缀和技巧解决子数组问题.md",
+        "url": "https://riddlego.github.io/interview-hub/leetcode/reader.html?path=第4章-算法思维系列/4.9-前缀和技巧解决子数组问题.md"
+      }
+    ]
+  },
+  {
+    "id": "第5章-高频面试系列",
+    "label": "第5章 高频面试系列",
+    "articles": [
+      {
+        "title": "如何高效寻找素数",
+        "path": "第5章-高频面试系列/5.1-如何高效寻找素数.md",
+        "html": "reader.html?path=第5章-高频面试系列/5.1-如何高效寻找素数.md",
+        "url": "https://riddlego.github.io/interview-hub/leetcode/reader.html?path=第5章-高频面试系列/5.1-如何高效寻找素数.md"
+      },
+      {
+        "title": "如何调度考生的座位",
+        "path": "第5章-高频面试系列/5.10-如何调度考生的座位.md",
+        "html": "reader.html?path=第5章-高频面试系列/5.10-如何调度考生的座位.md",
+        "url": "https://riddlego.github.io/interview-hub/leetcode/reader.html?path=第5章-高频面试系列/5.10-如何调度考生的座位.md"
+      },
+      {
+        "title": "Union-Find算法详解",
+        "path": "第5章-高频面试系列/5.11-Union-Find算法详解.md",
+        "html": "reader.html?path=第5章-高频面试系列/5.11-Union-Find算法详解.md",
+        "url": "https://riddlego.github.io/interview-hub/leetcode/reader.html?path=第5章-高频面试系列/5.11-Union-Find算法详解.md"
+      },
+      {
+        "title": "如何高效进行模幂运算",
+        "path": "第5章-高频面试系列/5.2-如何高效进行模幂运算.md",
+        "html": "reader.html?path=第5章-高频面试系列/5.2-如何高效进行模幂运算.md",
+        "url": "https://riddlego.github.io/interview-hub/leetcode/reader.html?path=第5章-高频面试系列/5.2-如何高效进行模幂运算.md"
+      },
+      {
+        "title": "如何运用二分查找算法",
+        "path": "第5章-高频面试系列/5.3-如何运用二分查找算法.md",
+        "html": "reader.html?path=第5章-高频面试系列/5.3-如何运用二分查找算法.md",
+        "url": "https://riddlego.github.io/interview-hub/leetcode/reader.html?path=第5章-高频面试系列/5.3-如何运用二分查找算法.md"
+      },
+      {
+        "title": "接雨水问题详解",
+        "path": "第5章-高频面试系列/5.4-如何高效解决接雨水问题.md",
+        "html": "reader.html?path=第5章-高频面试系列/5.4-如何高效解决接雨水问题.md",
+        "url": "https://riddlego.github.io/interview-hub/leetcode/reader.html?path=第5章-高频面试系列/5.4-如何高效解决接雨水问题.md"
+      },
+      {
+        "title": "如何去除有序数组的重复元素",
+        "path": "第5章-高频面试系列/5.5-如何去除有序数组的重复元素.md",
+        "html": "reader.html?path=第5章-高频面试系列/5.5-如何去除有序数组的重复元素.md",
+        "url": "https://riddlego.github.io/interview-hub/leetcode/reader.html?path=第5章-高频面试系列/5.5-如何去除有序数组的重复元素.md"
+      },
+      {
+        "title": "如何寻找最长回文子串",
+        "path": "第5章-高频面试系列/5.6-如何寻找最长回文子串.md",
+        "html": "reader.html?path=第5章-高频面试系列/5.6-如何寻找最长回文子串.md",
+        "url": "https://riddlego.github.io/interview-hub/leetcode/reader.html?path=第5章-高频面试系列/5.6-如何寻找最长回文子串.md"
+      },
+      {
+        "title": "如何运用贪心思想玩跳跃游戏",
+        "path": "第5章-高频面试系列/5.7-如何运用贪心思想玩跳跃游戏.md",
+        "html": "reader.html?path=第5章-高频面试系列/5.7-如何运用贪心思想玩跳跃游戏.md",
+        "url": "https://riddlego.github.io/interview-hub/leetcode/reader.html?path=第5章-高频面试系列/5.7-如何运用贪心思想玩跳跃游戏.md"
+      },
+      {
+        "title": "运用贪心算法来做时间管理",
+        "path": "第5章-高频面试系列/5.8-如何运用贪心算法做时间管理.md",
+        "html": "reader.html?path=第5章-高频面试系列/5.8-如何运用贪心算法做时间管理.md",
+        "url": "https://riddlego.github.io/interview-hub/leetcode/reader.html?path=第5章-高频面试系列/5.8-如何运用贪心算法做时间管理.md"
+      },
+      {
+        "title": "如何判定括号合法性",
+        "path": "第5章-高频面试系列/5.9-如何判定括号合法性.md",
+        "html": "reader.html?path=第5章-高频面试系列/5.9-如何判定括号合法性.md",
+        "url": "https://riddlego.github.io/interview-hub/leetcode/reader.html?path=第5章-高频面试系列/5.9-如何判定括号合法性.md"
+      }
+    ]
+  }
+]

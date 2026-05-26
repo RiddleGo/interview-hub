@@ -1,6 +1,6 @@
 # interview-hub
 
-本站 **`index.html` 为学习总入口**：顶部可进入 **《人工智能系统》教材**（目录 `ai-system-textbook/`，微软 [AI-System/Textbook](https://github.com/microsoft/AI-System/tree/main/Textbook) 在线阅读），下方为面经题库导航。
+本站 **`index.html` 为学习总入口**：顶部可进入 **《人工智能系统》教材**（目录 `ai-system-textbook/`）、**labuladong 算法小抄 Python 版**（目录 `leetcode/`），下方为面经题库导航。
 
 面经合集 **导航站**：用浏览器访问下方 Pages 地址，可一键进入四个题库仓库与各自的单页 `study.html`。页面底部含 **微信公众号 · TrustZone** 配图（`images/gongzhonghao.webp` / `gongzhonghao-sm.png`，压缩后约数十 KB，加载更快）。
 
@@ -11,6 +11,8 @@
 启用 GitHub Pages（见下）后，站点一般为：
 
 **https://riddlego.github.io/interview-hub/index.html**（推荐；根路径 `/interview-hub/` 偶发 CDN 旧缓存）
+
+- 算法小抄（Python）：https://riddlego.github.io/interview-hub/leetcode/
 
 备用：`https://riddlego.github.io/interview-hub/?v=1`
 

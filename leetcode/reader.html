@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>加载中… · 算法小抄</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.5.1/github-markdown-dark.min.css" />
+  <style>
+    :root { --bg: #0c0e14; --text: #eef2f8; --muted: #8b95a8; --a: #3ee0c9; }
+    body { margin: 0; background: var(--bg); color: var(--text); font-family: "DM Sans", "PingFang SC", "Microsoft YaHei", sans-serif; }
+    .top { max-width: 920px; margin: 0 auto; padding: 1rem 1.25rem 0; }
+    .top a { color: var(--a); text-decoration: none; font-size: 0.85rem; }
+    .top a:hover { text-decoration: underline; }
+    .markdown-body { box-sizing: border-box; max-width: 920px; margin: 0 auto; padding: 1.5rem 1.25rem 4rem; background: transparent; }
+    .markdown-body img { max-width: 100%; }
+    .markdown-body pre { overflow-x: auto; }
+    .err { color: #f87171; padding: 2rem; text-align: center; }
+  </style>
+</head>
+<body>
+  <div class="top"><a href="index.html">← 返回章节目录</a></div>
+  <article id="content" class="markdown-body">加载中…</article>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    const params = new URLSearchParams(location.search);
+    const path = params.get("path");
+    const content = document.getElementById("content");
+    if (!path || path.includes("..")) {
+      content.innerHTML = '<p class="err">无效的文章路径</p>';
+    } else {
+      document.title = path.split("/").pop().replace(/\.md$/, "") + " · 算法小抄";
+      fetch(path)
+        .then(r => { if (!r.ok) throw new Error(r.status); return r.text(); })
+        .then(md => { content.innerHTML = marked.parse(md); })
+        .catch(() => { content.innerHTML = '<p class="err">无法加载文章：' + path + '</p>'; });
+    }
+  </script>
+</body>
+</html>
