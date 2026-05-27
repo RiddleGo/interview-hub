@@ -79,6 +79,13 @@
       max-width: 100%;
       border-radius: 10px;
       border: 1px solid var(--border);
+      display: block;
+      margin: 1rem auto;
+    }
+    .markdown-body img.img-error {
+      min-height: 80px;
+      background: var(--card);
+      border-style: dashed;
     }
     .markdown-body pre {
       overflow-x: auto;
@@ -404,6 +411,34 @@
       fixLiteralMarkdown(root);
     }
 
+    /** MD 里 ../pictures/ 相对章节文件；reader.html 在 leetcode/ 根，需重算路径 */
+    function resolveAssetPath(src, mdPath) {
+      const s = src.trim();
+      if (!s || /^(https?:|data:|\/\/)/i.test(s)) return s;
+      const dir = mdPath.includes("/") ? mdPath.replace(/[^/]+$/, "") : "";
+      const parts = (dir + s).split("/");
+      const stack = [];
+      for (const part of parts) {
+        if (!part || part === ".") continue;
+        if (part === "..") {
+          stack.pop();
+          continue;
+        }
+        stack.push(part);
+      }
+      return stack.join("/");
+    }
+
+    function fixImagePaths(root, mdPath) {
+      root.querySelectorAll("img[src]").forEach((img) => {
+        const fixed = resolveAssetPath(img.getAttribute("src"), mdPath);
+        img.setAttribute("src", fixed);
+        img.loading = "lazy";
+        img.decoding = "async";
+        img.addEventListener("error", () => img.classList.add("img-error"), { once: true });
+      });
+    }
+
     const params = new URLSearchParams(location.search);
     const path = params.get("path");
     const content = document.getElementById("content");
@@ -420,6 +455,7 @@
           content.innerHTML = marked.parse(preprocessMd(md));
           enhanceContent(content);
           fixLiteralMarkdown(content);
+          fixImagePaths(content, path);
         })
         .catch(() => {
           content.innerHTML = '<p class="err">无法加载文章：' + path + "</p>";
