@@ -16,6 +16,7 @@
       --muted: #8b95a8;
       --a: #3ee0c9;
       --accent: #a78bfa;
+      --leetcode: #ffa657;
       --radius: 14px;
     }
     body {
@@ -102,27 +103,29 @@
     .markdown-body table { display: block; overflow-x: auto; }
     .markdown-body table th,
     .markdown-body table td { border-color: var(--border) !important; }
+    .markdown-body p:empty { display: none; }
 
-    /* 隐藏原书 badge 行（GitHub/Zhihu 等 shields） */
-    .article-badges { display: none; }
-
-    /* 相关推荐卡片 */
-    .related-links {
+    .related-links,
+    .leetcode-links,
+    .notice-block {
       margin: 1rem 0 1.5rem;
       padding: 1rem 1.15rem;
       border-radius: var(--radius);
-      border: 1px solid rgba(62, 224, 201, 0.22);
-      background: linear-gradient(135deg, rgba(62, 224, 201, 0.07), rgba(167, 139, 250, 0.05));
     }
-    .related-links .related-label {
+    .card-label {
       font-size: 0.72rem;
       font-weight: 700;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: var(--a);
       margin-bottom: 0.65rem;
     }
-    .related-links ul {
+    .related-links {
+      border: 1px solid rgba(62, 224, 201, 0.22);
+      background: linear-gradient(135deg, rgba(62, 224, 201, 0.07), rgba(167, 139, 250, 0.05));
+    }
+    .related-links .card-label { color: var(--a); }
+    .related-links ul,
+    .leetcode-links ul {
       list-style: none;
       margin: 0;
       padding: 0;
@@ -130,8 +133,10 @@
       flex-direction: column;
       gap: 0.45rem;
     }
-    .related-links li { margin: 0; }
-    .related-links a {
+    .related-links li,
+    .leetcode-links li { margin: 0; }
+    .related-links a,
+    .leetcode-links a {
       display: flex;
       align-items: center;
       gap: 0.5rem;
@@ -155,19 +160,51 @@
       border-color: rgba(62, 224, 201, 0.35);
       background: rgba(62, 224, 201, 0.08);
     }
-
-    /* 通知提示 */
+    .leetcode-links {
+      border: 1px solid rgba(255, 166, 87, 0.25);
+      background: linear-gradient(135deg, rgba(255, 166, 87, 0.08), rgba(167, 139, 250, 0.04));
+    }
+    .leetcode-links .card-label { color: var(--leetcode); }
+    .leetcode-links .card-intro {
+      margin: 0 0 0.75rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+    .leetcode-links a::before {
+      content: "LC";
+      font-size: 0.65rem;
+      font-weight: 800;
+      color: var(--leetcode);
+      background: rgba(255, 166, 87, 0.15);
+      padding: 0.15rem 0.35rem;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+    .leetcode-links a:hover {
+      border-color: rgba(255, 166, 87, 0.4);
+      background: rgba(255, 166, 87, 0.1);
+    }
     .notice-block {
-      margin: 0 0 1.5rem;
-      padding: 0.9rem 1rem;
-      border-radius: var(--radius);
       border: 1px solid rgba(167, 139, 250, 0.25);
       background: rgba(167, 139, 250, 0.07);
       font-size: 0.92rem;
       color: #c8d0e0;
       line-height: 1.65;
     }
+    .notice-block .card-label { color: var(--accent); }
+    .notice-block .notice-body { margin: 0; }
+    .notice-block .notice-body p { margin: 0; }
     .notice-block strong { color: var(--text); }
+
+    .markdown-body p.emphasis-lead {
+      margin-top: 1.25rem;
+      padding: 0.65rem 0.85rem;
+      border-left: 3px solid var(--accent);
+      background: rgba(255, 255, 255, 0.02);
+      border-radius: 0 8px 8px 0;
+    }
+    .markdown-body p.emphasis-lead strong { color: var(--text); }
 
     .err { color: #f87171; padding: 2rem; text-align: center; }
   </style>
@@ -179,73 +216,174 @@
   <script>
     marked.use({ gfm: true, breaks: false });
 
+    function renderMdFragment(text) {
+      let html = marked.parse(String(text).trim());
+      html = html.replace(/^<p>([\s\S]*)<\/p>\s*$/i, "$1");
+      return html;
+    }
+
+    function extractMdLinks(block) {
+      return [...block.matchAll(/\[([^\]]+)\]\(([^)]+)\)/g)].map((m) => ({
+        title: m[1],
+        href: m[2],
+      }));
+    }
+
+    function buildLinkList(links, className) {
+      if (!links.length) return "";
+      const items = links
+        .map(
+          (l) =>
+            '  <li><a href="' +
+            l.href +
+            '" target="_blank" rel="noopener noreferrer">' +
+            l.title +
+            "</a></li>"
+        )
+        .join("\n");
+      return (
+        '<aside class="' +
+        className +
+        '">\n<div class="card-label">' +
+        (className === "leetcode-links" ? "LeetCode 题目" : "相关推荐") +
+        '</div>\n<ul>\n' +
+        items +
+        "\n</ul>\n</aside>\n\n"
+      );
+    }
+
+    function buildRelatedLinks(block) {
+      const links = extractMdLinks(block);
+      return buildLinkList(links, "related-links");
+    }
+
+    function buildLeetcodeBlock(block) {
+      const lines = block.trim().split("\n");
+      const intro = lines[0] || "";
+      const links = extractMdLinks(block);
+      if (!links.length) return block;
+      const items = links
+        .map(
+          (l) =>
+            '  <li><a href="' +
+            l.href +
+            '" target="_blank" rel="noopener noreferrer">' +
+            l.title +
+            "</a></li>"
+        )
+        .join("\n");
+      return (
+        '<aside class="leetcode-links">\n' +
+        '<div class="card-label">LeetCode 题目</div>\n' +
+        '<p class="card-intro">' +
+        renderMdFragment(intro) +
+        "</p>\n<ul>\n" +
+        items +
+        "\n</ul>\n</aside>\n\n"
+      );
+    }
+
+    function buildNoticeBlock(block) {
+      const body = renderMdFragment(block.trim());
+      return (
+        '<aside class="notice-block">\n' +
+        '<div class="card-label">通知</div>\n' +
+        '<div class="notice-body">' +
+        body +
+        "</div>\n</aside>\n\n"
+      );
+    }
+
     function preprocessMd(md) {
       md = md.replace(/<p align=['']center['']>[\s\S]*?<\/p>\s*/gi, "");
 
-      md = md.replace(
-        /相关推荐：\s*\n((?:[ \t]*\*[^\n]+\n?)+)/g,
-        (_, list) => {
-          const items = [...list.matchAll(/\*\s*\[([^\]]+)\]\(([^)]+)\)/g)]
-            .map(
-              (m) =>
-                '  <li><a href="' +
-                m[2] +
-                '" target="_blank" rel="noopener noreferrer">' +
-                m[1] +
-                "</a></li>"
-            )
-            .join("\n");
-          return (
-            '<aside class="related-links">\n<div class="related-label">相关推荐</div>\n<ul>\n' +
-            items +
-            "\n</ul>\n</aside>\n\n"
-          );
-        }
+      md = md.replace(/^#{1,6}\s+\*\*(.+?)\*\*\s*$/gm, (m, t) =>
+        m.replace("**" + t + "**", t)
       );
 
       md = md.replace(
-        /^---\s*\n+\s*(通知：[\s\S]*?)(?=\n## |\n# |\n[^#\s]|$)/m,
-        (_, body) => '<aside class="notice-block">\n' + body.trim() + "\n</aside>\n\n"
+        /相关推荐：\s*\n+((?:[ \t]*[-*][^\n]+\n*)+)/g,
+        (_, list) => buildRelatedLinks(list)
+      );
+
+      md = md.replace(
+        /^(读完本文[\s\S]*?\n\n(?:\[[\d]+[^\]]*\]\([^)]+\)\s*\n*)+)/m,
+        (_, block) => buildLeetcodeBlock(block)
+      );
+
+      md = md.replace(
+        /^---\s*\n+\s*(通知：[^\n]+(?:\n(?![\n#])[^\n]+)*)/m,
+        (_, notice) => buildNoticeBlock(notice)
       );
 
       return md;
     }
 
+    function hasRawMarkdown(el) {
+      const html = el.innerHTML;
+      return (
+        (/\*\*[^*]+\*\*/.test(html) || /(?:^|>)\*[^*\n]+\*(?:<|$)/.test(html)) &&
+        !el.querySelector("strong, em, code, a")
+      );
+    }
+
+    function fixRawMarkdownNodes(root) {
+      root.querySelectorAll("p, li, td, blockquote").forEach((el) => {
+        if (hasRawMarkdown(el)) {
+          el.innerHTML = renderMdFragment(el.textContent);
+        }
+      });
+    }
+
     function enhanceContent(root) {
       root.querySelectorAll("p").forEach((p) => {
+        if (p.closest(".related-links, .leetcode-links, .notice-block")) return;
+
         const text = p.textContent.trim();
+
         if (/^相关推荐：/.test(text) && !p.closest(".related-links")) {
-          const aside = document.createElement("aside");
-          aside.className = "related-links";
-          const label = document.createElement("div");
-          label.className = "related-label";
-          label.textContent = "相关推荐";
-          const ul = document.createElement("ul");
-          const linkRe = /\[([^\]]+)\]\(([^)]+)\)/g;
-          let m;
-          while ((m = linkRe.exec(text))) {
-            const li = document.createElement("li");
-            const a = document.createElement("a");
-            a.href = m[2];
-            a.target = "_blank";
-            a.rel = "noopener noreferrer";
-            a.textContent = m[1];
-            li.appendChild(a);
-            ul.appendChild(li);
+          const html = buildRelatedLinks(text);
+          if (html) {
+            const wrap = document.createElement("div");
+            wrap.innerHTML = html;
+            p.replaceWith(wrap.firstElementChild);
           }
-          if (ul.children.length) {
-            aside.appendChild(label);
-            aside.appendChild(ul);
-            p.replaceWith(aside);
-          }
+          return;
         }
+
         if (/^通知：/.test(text) && !p.closest(".notice-block")) {
           const aside = document.createElement("aside");
           aside.className = "notice-block";
-          aside.innerHTML = p.innerHTML;
+          aside.innerHTML =
+            '<div class="card-label">通知</div><div class="notice-body">' +
+            renderMdFragment(text) +
+            "</div>";
           p.replaceWith(aside);
+          return;
+        }
+
+        if (/^读完本文/.test(text)) {
+          const lines = [text];
+          let sib = p.nextElementSibling;
+          const toRemove = [];
+          while (sib && sib.tagName === "P" && /^\[\d+\./.test(sib.textContent.trim())) {
+            lines.push(sib.textContent.trim());
+            toRemove.push(sib);
+            sib = sib.nextElementSibling;
+          }
+          const wrap = document.createElement("div");
+          wrap.innerHTML = buildLeetcodeBlock(lines.join("\n\n"));
+          p.replaceWith(wrap.firstElementChild);
+          toRemove.forEach((el) => el.remove());
+          return;
+        }
+
+        if (/^\*\*\d+、/.test(text) && text.includes("**")) {
+          p.classList.add("emphasis-lead");
         }
       });
+
+      fixRawMarkdownNodes(root);
     }
 
     const params = new URLSearchParams(location.search);
