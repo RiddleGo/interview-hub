@@ -5,17 +5,170 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>加载中… · 算法小抄</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.5.1/github-markdown-dark.min.css" />
   <style>
-    :root { --bg: #0c0e14; --text: #eef2f8; --muted: #8b95a8; --a: #3ee0c9; }
-    body { margin: 0; background: var(--bg); color: var(--text); font-family: "DM Sans", "PingFang SC", "Microsoft YaHei", sans-serif; }
-    .top { max-width: 920px; margin: 0 auto; padding: 1rem 1.25rem 0; }
-    .top a { color: var(--a); text-decoration: none; font-size: 0.85rem; }
+    :root {
+      --bg: #0c0e14;
+      --card: #151922;
+      --border: rgba(255, 255, 255, 0.08);
+      --text: #eef2f8;
+      --muted: #8b95a8;
+      --a: #3ee0c9;
+      --accent: #a78bfa;
+      --radius: 14px;
+    }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "DM Sans", "PingFang SC", "Microsoft YaHei", sans-serif;
+      background-image:
+        radial-gradient(ellipse 80% 50% at 100% 0%, rgba(62, 224, 201, 0.06), transparent 50%),
+        radial-gradient(ellipse 60% 40% at 0% 100%, rgba(167, 139, 250, 0.06), transparent 45%);
+    }
+    .top {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 1rem 1.25rem 0;
+    }
+    .top a {
+      color: var(--a);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
     .top a:hover { text-decoration: underline; }
-    .markdown-body { box-sizing: border-box; max-width: 920px; margin: 0 auto; padding: 1.5rem 1.25rem 4rem; background: transparent; }
-    .markdown-body img { max-width: 100%; }
-    .markdown-body pre { overflow-x: auto; }
+    .markdown-body {
+      box-sizing: border-box;
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 1.25rem 1.25rem 4rem;
+      background: transparent !important;
+      font-size: 1rem;
+      line-height: 1.75;
+    }
+    .markdown-body > :first-child { margin-top: 0 !important; }
+    .markdown-body h1 {
+      font-size: clamp(1.5rem, 4vw, 1.85rem);
+      letter-spacing: -0.02em;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 1.25rem !important;
+    }
+    .markdown-body h2 {
+      margin-top: 2rem !important;
+      font-size: 1.25rem;
+      color: var(--text);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.35rem;
+    }
+    .markdown-body h3 { margin-top: 1.5rem !important; font-size: 1.05rem; }
+    .markdown-body a { color: var(--a); }
+    .markdown-body a:hover { color: #6ee8d8; }
+    .markdown-body hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 1.75rem 0;
+    }
+    .markdown-body img {
+      max-width: 100%;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+    }
+    .markdown-body pre {
+      overflow-x: auto;
+      border-radius: 12px;
+      border: 1px solid var(--border) !important;
+      background: #0a0d12 !important;
+    }
+    .markdown-body pre code {
+      font-family: "JetBrains Mono", "Consolas", monospace;
+      font-size: 0.88rem;
+    }
+    .markdown-body code:not(pre code) {
+      background: rgba(167, 139, 250, 0.12);
+      color: #d4c4ff;
+      padding: 0.15em 0.4em;
+      border-radius: 6px;
+      font-size: 0.9em;
+    }
+    .markdown-body blockquote {
+      border-left: 3px solid var(--accent);
+      background: rgba(167, 139, 250, 0.06);
+      border-radius: 0 10px 10px 0;
+      color: var(--muted);
+    }
+    .markdown-body table { display: block; overflow-x: auto; }
+    .markdown-body table th,
+    .markdown-body table td { border-color: var(--border) !important; }
+
+    /* 隐藏原书 badge 行（GitHub/Zhihu 等 shields） */
+    .article-badges { display: none; }
+
+    /* 相关推荐卡片 */
+    .related-links {
+      margin: 1rem 0 1.5rem;
+      padding: 1rem 1.15rem;
+      border-radius: var(--radius);
+      border: 1px solid rgba(62, 224, 201, 0.22);
+      background: linear-gradient(135deg, rgba(62, 224, 201, 0.07), rgba(167, 139, 250, 0.05));
+    }
+    .related-links .related-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--a);
+      margin-bottom: 0.65rem;
+    }
+    .related-links ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+    }
+    .related-links li { margin: 0; }
+    .related-links a {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.55rem 0.75rem;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border);
+      color: var(--text) !important;
+      text-decoration: none !important;
+      font-size: 0.92rem;
+      font-weight: 600;
+      transition: border-color 0.15s, background 0.15s;
+    }
+    .related-links a::before {
+      content: "→";
+      color: var(--a);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .related-links a:hover {
+      border-color: rgba(62, 224, 201, 0.35);
+      background: rgba(62, 224, 201, 0.08);
+    }
+
+    /* 通知提示 */
+    .notice-block {
+      margin: 0 0 1.5rem;
+      padding: 0.9rem 1rem;
+      border-radius: var(--radius);
+      border: 1px solid rgba(167, 139, 250, 0.25);
+      background: rgba(167, 139, 250, 0.07);
+      font-size: 0.92rem;
+      color: #c8d0e0;
+      line-height: 1.65;
+    }
+    .notice-block strong { color: var(--text); }
+
     .err { color: #f87171; padding: 2rem; text-align: center; }
   </style>
 </head>
@@ -24,6 +177,77 @@
   <article id="content" class="markdown-body">加载中…</article>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script>
+    marked.use({ gfm: true, breaks: false });
+
+    function preprocessMd(md) {
+      md = md.replace(/<p align=['']center['']>[\s\S]*?<\/p>\s*/gi, "");
+
+      md = md.replace(
+        /相关推荐：\s*\n((?:[ \t]*\*[^\n]+\n?)+)/g,
+        (_, list) => {
+          const items = [...list.matchAll(/\*\s*\[([^\]]+)\]\(([^)]+)\)/g)]
+            .map(
+              (m) =>
+                '  <li><a href="' +
+                m[2] +
+                '" target="_blank" rel="noopener noreferrer">' +
+                m[1] +
+                "</a></li>"
+            )
+            .join("\n");
+          return (
+            '<aside class="related-links">\n<div class="related-label">相关推荐</div>\n<ul>\n' +
+            items +
+            "\n</ul>\n</aside>\n\n"
+          );
+        }
+      );
+
+      md = md.replace(
+        /^---\s*\n+\s*(通知：[\s\S]*?)(?=\n## |\n# |\n[^#\s]|$)/m,
+        (_, body) => '<aside class="notice-block">\n' + body.trim() + "\n</aside>\n\n"
+      );
+
+      return md;
+    }
+
+    function enhanceContent(root) {
+      root.querySelectorAll("p").forEach((p) => {
+        const text = p.textContent.trim();
+        if (/^相关推荐：/.test(text) && !p.closest(".related-links")) {
+          const aside = document.createElement("aside");
+          aside.className = "related-links";
+          const label = document.createElement("div");
+          label.className = "related-label";
+          label.textContent = "相关推荐";
+          const ul = document.createElement("ul");
+          const linkRe = /\[([^\]]+)\]\(([^)]+)\)/g;
+          let m;
+          while ((m = linkRe.exec(text))) {
+            const li = document.createElement("li");
+            const a = document.createElement("a");
+            a.href = m[2];
+            a.target = "_blank";
+            a.rel = "noopener noreferrer";
+            a.textContent = m[1];
+            li.appendChild(a);
+            ul.appendChild(li);
+          }
+          if (ul.children.length) {
+            aside.appendChild(label);
+            aside.appendChild(ul);
+            p.replaceWith(aside);
+          }
+        }
+        if (/^通知：/.test(text) && !p.closest(".notice-block")) {
+          const aside = document.createElement("aside");
+          aside.className = "notice-block";
+          aside.innerHTML = p.innerHTML;
+          p.replaceWith(aside);
+        }
+      });
+    }
+
     const params = new URLSearchParams(location.search);
     const path = params.get("path");
     const content = document.getElementById("content");
@@ -32,9 +256,17 @@
     } else {
       document.title = path.split("/").pop().replace(/\.md$/, "") + " · 算法小抄";
       fetch(path)
-        .then(r => { if (!r.ok) throw new Error(r.status); return r.text(); })
-        .then(md => { content.innerHTML = marked.parse(md); })
-        .catch(() => { content.innerHTML = '<p class="err">无法加载文章：' + path + '</p>'; });
+        .then((r) => {
+          if (!r.ok) throw new Error(r.status);
+          return r.text();
+        })
+        .then((md) => {
+          content.innerHTML = marked.parse(preprocessMd(md));
+          enhanceContent(content);
+        })
+        .catch(() => {
+          content.innerHTML = '<p class="err">无法加载文章：' + path + "</p>";
+        });
     }
   </script>
 </body>
