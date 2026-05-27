@@ -326,6 +326,10 @@
       );
       md = md.replace(/\*\*\s*(`[^`\n]+`)\s*\*\*/g, "$1");
       md = md.replace(/\*\*\s*\*\*/g, "");
+      md = md.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, (full, alt, url) => {
+        if (/^(https?:|data:)/i.test(url.trim())) return full;
+        return "![" + alt + "](" + url.replace(/\\/g, "/") + ")";
+      });
       return md;
     }
 
@@ -412,10 +416,14 @@
     }
 
     /** MD 里 ../pictures/ 相对章节文件；reader.html 在 leetcode/ 根，需重算路径 */
+    function normalizeSlashes(p) {
+      return String(p).replace(/\\/g, "/");
+    }
+
     function resolveAssetPath(src, mdPath) {
-      const s = src.trim();
+      const s = normalizeSlashes(src.trim());
       if (!s || /^(https?:|data:|\/\/)/i.test(s)) return s;
-      const dir = mdPath.includes("/") ? mdPath.replace(/[^/]+$/, "") : "";
+      const dir = mdPath.includes("/") ? normalizeSlashes(mdPath.replace(/[^/]+$/, "")) : "";
       const parts = (dir + s).split("/");
       const stack = [];
       for (const part of parts) {
@@ -426,7 +434,12 @@
         }
         stack.push(part);
       }
-      return stack.join("/");
+      return stack.map((seg) => {
+        try {
+          if (/%[0-9A-Fa-f]{2}/.test(seg)) seg = decodeURIComponent(seg);
+        } catch (_) {}
+        return encodeURIComponent(seg);
+      }).join("/");
     }
 
     function fixImagePaths(root, mdPath) {
