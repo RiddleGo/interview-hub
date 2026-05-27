@@ -60,7 +60,6 @@
     .markdown-body h2 {
       margin-top: 2rem !important;
       font-size: 1.25rem;
-      color: var(--text);
       border-bottom: 1px solid var(--border);
       padding-bottom: 0.35rem;
     }
@@ -104,6 +103,7 @@
     .markdown-body table th,
     .markdown-body table td { border-color: var(--border) !important; }
     .markdown-body p:empty { display: none; }
+    .markdown-body strong { color: #fff; font-weight: 700; }
 
     .related-links,
     .leetcode-links,
@@ -148,13 +148,11 @@
       text-decoration: none !important;
       font-size: 0.92rem;
       font-weight: 600;
-      transition: border-color 0.15s, background 0.15s;
     }
     .related-links a::before {
       content: "→";
       color: var(--a);
       font-weight: 700;
-      flex-shrink: 0;
     }
     .related-links a:hover {
       border-color: rgba(62, 224, 201, 0.35);
@@ -179,33 +177,29 @@
       background: rgba(255, 166, 87, 0.15);
       padding: 0.15rem 0.35rem;
       border-radius: 4px;
-      flex-shrink: 0;
     }
     .leetcode-links a:hover {
       border-color: rgba(255, 166, 87, 0.4);
       background: rgba(255, 166, 87, 0.1);
     }
     .notice-block {
-      border: 1px solid rgba(167, 139, 250, 0.25);
-      background: rgba(167, 139, 250, 0.07);
-      font-size: 0.92rem;
-      color: #c8d0e0;
-      line-height: 1.65;
+      border: 1px solid rgba(167, 139, 250, 0.3);
+      background: rgba(167, 139, 250, 0.08);
+      font-size: 0.95rem;
+      color: #d0d8e8;
+      line-height: 1.7;
     }
     .notice-block .card-label { color: var(--accent); }
-    .notice-block .notice-body { margin: 0; }
     .notice-block .notice-body p { margin: 0; }
-    .notice-block strong { color: var(--text); }
+    .notice-block .notice-body strong { color: #fff; }
 
     .markdown-body p.emphasis-lead {
-      margin-top: 1.25rem;
+      margin-top: 1rem;
       padding: 0.65rem 0.85rem;
       border-left: 3px solid var(--accent);
       background: rgba(255, 255, 255, 0.02);
       border-radius: 0 8px 8px 0;
     }
-    .markdown-body p.emphasis-lead strong { color: var(--text); }
-
     .err { color: #f87171; padding: 2rem; text-align: center; }
   </style>
 </head>
@@ -216,8 +210,13 @@
   <script>
     marked.use({ gfm: true, breaks: false });
 
-    function renderMdFragment(text) {
-      let html = marked.parse(String(text).trim());
+    function renderMd(text) {
+      const s = String(text).trim();
+      if (!s) return "";
+      if (typeof marked.parseInline === "function") {
+        return marked.parseInline(s);
+      }
+      let html = marked.parse(s);
       html = html.replace(/^<p>([\s\S]*)<\/p>\s*$/i, "$1");
       return html;
     }
@@ -229,7 +228,7 @@
       }));
     }
 
-    function buildLinkList(links, className) {
+    function buildLinkList(links, className, label) {
       if (!links.length) return "";
       const items = links
         .map(
@@ -245,7 +244,7 @@
         '<aside class="' +
         className +
         '">\n<div class="card-label">' +
-        (className === "leetcode-links" ? "LeetCode 题目" : "相关推荐") +
+        label +
         '</div>\n<ul>\n' +
         items +
         "\n</ul>\n</aside>\n\n"
@@ -253,8 +252,7 @@
     }
 
     function buildRelatedLinks(block) {
-      const links = extractMdLinks(block);
-      return buildLinkList(links, "related-links");
+      return buildLinkList(extractMdLinks(block), "related-links", "相关推荐");
     }
 
     function buildLeetcodeBlock(block) {
@@ -276,7 +274,7 @@
         '<aside class="leetcode-links">\n' +
         '<div class="card-label">LeetCode 题目</div>\n' +
         '<p class="card-intro">' +
-        renderMdFragment(intro) +
+        renderMd(intro) +
         "</p>\n<ul>\n" +
         items +
         "\n</ul>\n</aside>\n\n"
@@ -284,25 +282,31 @@
     }
 
     function buildNoticeBlock(block) {
-      const body = renderMdFragment(block.trim());
+      const bodyText = block.trim().replace(/^通知[：:]\s*/, "");
       return (
         '<aside class="notice-block">\n' +
         '<div class="card-label">通知</div>\n' +
         '<div class="notice-body">' +
-        body +
+        renderMd(bodyText) +
         "</div>\n</aside>\n\n"
       );
     }
 
-    function preprocessMd(md) {
+    function normalizeSource(md) {
       md = md.replace(/<p align=['']center['']>[\s\S]*?<\/p>\s*/gi, "");
-
-      md = md.replace(/^#{1,6}\s+\*\*(.+?)\*\*\s*$/gm, (m, t) =>
-        m.replace("**" + t + "**", t)
+      md = md.replace(/^#{1,6}\s+\*\*(.+?)\*\*\s*$/gm, (line, title) =>
+        line.replace("**" + title + "**", title)
       );
+      md = md.replace(/\*\*\s*(`[^`\n]+`)\s*\*\*/g, "$1");
+      md = md.replace(/\*\*\s*\*\*/g, "");
+      return md;
+    }
+
+    function preprocessMd(md) {
+      md = normalizeSource(md);
 
       md = md.replace(
-        /相关推荐：\s*\n+((?:[ \t]*[-*][^\n]+\n*)+)/g,
+        /相关推荐[：:]\s*\n+((?:[ \t]*[-*][^\n]+\n*)+)/g,
         (_, list) => buildRelatedLinks(list)
       );
 
@@ -311,79 +315,73 @@
         (_, block) => buildLeetcodeBlock(block)
       );
 
-      md = md.replace(
-        /^---\s*\n+\s*(通知：[^\n]+(?:\n(?![\n#])[^\n]+)*)/m,
-        (_, notice) => buildNoticeBlock(notice)
+      md = md.replace(/\n---\s*\n+\s*(通知[：:][^\n]+)/g, (_, notice) =>
+        buildNoticeBlock(notice)
       );
 
       return md;
     }
 
-    function hasRawMarkdown(el) {
-      const html = el.innerHTML;
-      return (
-        (/\*\*[^*]+\*\*/.test(html) || /(?:^|>)\*[^*\n]+\*(?:<|$)/.test(html)) &&
-        !el.querySelector("strong, em, code, a")
-      );
+    function hasLiteralMd(el) {
+      if (el.closest("pre, code")) return false;
+      return /\*\*[^*]+?\*\*/.test(el.innerHTML);
     }
 
-    function fixRawMarkdownNodes(root) {
-      root.querySelectorAll("p, li, td, blockquote").forEach((el) => {
-        if (hasRawMarkdown(el)) {
-          el.innerHTML = renderMdFragment(el.textContent);
-        }
+    function fixLiteralMarkdown(root) {
+      const selectors =
+        "p, li, blockquote, td, th, h1, h2, h3, h4, h5, h6, .notice-body";
+      root.querySelectorAll(selectors).forEach((el) => {
+        if (el.closest("aside.related-links, aside.leetcode-links")) return;
+        if (!hasLiteralMd(el)) return;
+        const text = el.textContent.trim();
+        if (!text) return;
+        el.innerHTML = renderMd(text);
       });
     }
 
     function enhanceContent(root) {
       root.querySelectorAll("p").forEach((p) => {
-        if (p.closest(".related-links, .leetcode-links, .notice-block")) return;
-
+        if (p.closest("aside")) return;
         const text = p.textContent.trim();
 
-        if (/^相关推荐：/.test(text) && !p.closest(".related-links")) {
-          const html = buildRelatedLinks(text);
-          if (html) {
-            const wrap = document.createElement("div");
-            wrap.innerHTML = html;
-            p.replaceWith(wrap.firstElementChild);
-          }
+        if (/^相关推荐[：:]/.test(text)) {
+          const wrap = document.createElement("div");
+          wrap.innerHTML = buildRelatedLinks(text);
+          if (wrap.firstElementChild) p.replaceWith(wrap.firstElementChild);
           return;
         }
 
-        if (/^通知：/.test(text) && !p.closest(".notice-block")) {
-          const aside = document.createElement("aside");
-          aside.className = "notice-block";
-          aside.innerHTML =
-            '<div class="card-label">通知</div><div class="notice-body">' +
-            renderMdFragment(text) +
-            "</div>";
-          p.replaceWith(aside);
+        if (/^通知[：:]/.test(text)) {
+          const wrap = document.createElement("div");
+          wrap.innerHTML = buildNoticeBlock(text);
+          if (wrap.firstElementChild) p.replaceWith(wrap.firstElementChild);
           return;
         }
 
         if (/^读完本文/.test(text)) {
           const lines = [text];
+          const remove = [];
           let sib = p.nextElementSibling;
-          const toRemove = [];
           while (sib && sib.tagName === "P" && /^\[\d+\./.test(sib.textContent.trim())) {
             lines.push(sib.textContent.trim());
-            toRemove.push(sib);
+            remove.push(sib);
             sib = sib.nextElementSibling;
           }
           const wrap = document.createElement("div");
           wrap.innerHTML = buildLeetcodeBlock(lines.join("\n\n"));
-          p.replaceWith(wrap.firstElementChild);
-          toRemove.forEach((el) => el.remove());
+          if (wrap.firstElementChild) {
+            p.replaceWith(wrap.firstElementChild);
+            remove.forEach((el) => el.remove());
+          }
           return;
         }
 
-        if (/^\*\*\d+、/.test(text) && text.includes("**")) {
+        if (/^\*\*\d+、/.test(text)) {
           p.classList.add("emphasis-lead");
         }
       });
 
-      fixRawMarkdownNodes(root);
+      fixLiteralMarkdown(root);
     }
 
     const params = new URLSearchParams(location.search);
@@ -401,6 +399,7 @@
         .then((md) => {
           content.innerHTML = marked.parse(preprocessMd(md));
           enhanceContent(content);
+          fixLiteralMarkdown(content);
         })
         .catch(() => {
           content.innerHTML = '<p class="err">无法加载文章：' + path + "</p>";
