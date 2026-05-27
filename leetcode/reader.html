@@ -18,6 +18,10 @@
       --accent: #a78bfa;
       --leetcode: #ffa657;
       --radius: 14px;
+      --code-bg: #1a2234;
+      --code-bg-inline: rgba(30, 42, 64, 0.95);
+      --code-border: rgba(62, 224, 201, 0.22);
+      --code-text: #e8f0ff;
     }
     body {
       margin: 0;
@@ -78,20 +82,36 @@
     }
     .markdown-body pre {
       overflow-x: auto;
+      margin: 1.1rem 0 1.35rem;
+      padding: 1rem 1.15rem !important;
       border-radius: 12px;
-      border: 1px solid var(--border) !important;
-      background: #0a0d12 !important;
+      border: 1px solid var(--code-border) !important;
+      border-left: 3px solid var(--a) !important;
+      background: var(--code-bg) !important;
+      box-shadow:
+        0 0 0 1px rgba(0, 0, 0, 0.35) inset,
+        0 8px 24px rgba(0, 0, 0, 0.25);
     }
     .markdown-body pre code {
-      font-family: "JetBrains Mono", "Consolas", monospace;
-      font-size: 0.88rem;
+      display: block;
+      font-family: "JetBrains Mono", "Consolas", "Microsoft YaHei UI", monospace;
+      font-size: 0.86rem;
+      line-height: 1.55;
+      color: var(--code-text) !important;
+      background: transparent !important;
+      padding: 0 !important;
+      border: none !important;
     }
-    .markdown-body code:not(pre code) {
-      background: rgba(167, 139, 250, 0.12);
-      color: #d4c4ff;
-      padding: 0.15em 0.4em;
+    .markdown-body :not(pre) > code {
+      font-family: "JetBrains Mono", "Consolas", monospace;
+      background: var(--code-bg-inline) !important;
+      color: #b8e8ff !important;
+      padding: 0.2em 0.45em;
       border-radius: 6px;
-      font-size: 0.9em;
+      border: 1px solid rgba(62, 224, 201, 0.15);
+      font-size: 0.88em;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
     }
     .markdown-body blockquote {
       border-left: 3px solid var(--accent);
