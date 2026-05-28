@@ -5,17 +5,228 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>加载中… · 算法小抄</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.5.1/github-markdown-dark.min.css" />
   <style>
-    :root { --bg: #0c0e14; --text: #eef2f8; --muted: #8b95a8; --a: #3ee0c9; }
-    body { margin: 0; background: var(--bg); color: var(--text); font-family: "DM Sans", "PingFang SC", "Microsoft YaHei", sans-serif; }
-    .top { max-width: 920px; margin: 0 auto; padding: 1rem 1.25rem 0; }
-    .top a { color: var(--a); text-decoration: none; font-size: 0.85rem; }
+    :root {
+      --bg: #0c0e14;
+      --card: #151922;
+      --border: rgba(255, 255, 255, 0.08);
+      --text: #eef2f8;
+      --muted: #8b95a8;
+      --a: #3ee0c9;
+      --accent: #a78bfa;
+      --leetcode: #ffa657;
+      --radius: 14px;
+      --code-bg: #1a2234;
+      --code-bg-inline: rgba(30, 42, 64, 0.95);
+      --code-border: rgba(62, 224, 201, 0.22);
+      --code-text: #e8f0ff;
+    }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "DM Sans", "PingFang SC", "Microsoft YaHei", sans-serif;
+      background-image:
+        radial-gradient(ellipse 80% 50% at 100% 0%, rgba(62, 224, 201, 0.06), transparent 50%),
+        radial-gradient(ellipse 60% 40% at 0% 100%, rgba(167, 139, 250, 0.06), transparent 45%);
+    }
+    .top {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 1rem 1.25rem 0;
+    }
+    .top a {
+      color: var(--a);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
     .top a:hover { text-decoration: underline; }
-    .markdown-body { box-sizing: border-box; max-width: 920px; margin: 0 auto; padding: 1.5rem 1.25rem 4rem; background: transparent; }
-    .markdown-body img { max-width: 100%; }
-    .markdown-body pre { overflow-x: auto; }
+    .markdown-body {
+      box-sizing: border-box;
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 1.25rem 1.25rem 4rem;
+      background: transparent !important;
+      font-size: 1rem;
+      line-height: 1.75;
+    }
+    .markdown-body > :first-child { margin-top: 0 !important; }
+    .markdown-body h1 {
+      font-size: clamp(1.5rem, 4vw, 1.85rem);
+      letter-spacing: -0.02em;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 1.25rem !important;
+    }
+    .markdown-body h2 {
+      margin-top: 2rem !important;
+      font-size: 1.25rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.35rem;
+    }
+    .markdown-body h3 { margin-top: 1.5rem !important; font-size: 1.05rem; }
+    .markdown-body a { color: var(--a); }
+    .markdown-body a:hover { color: #6ee8d8; }
+    .markdown-body hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 1.75rem 0;
+    }
+    .markdown-body img {
+      max-width: 100%;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      display: block;
+      margin: 1rem auto;
+    }
+    .markdown-body img.img-error {
+      min-height: 80px;
+      background: var(--card);
+      border-style: dashed;
+    }
+    .markdown-body pre {
+      overflow-x: auto;
+      margin: 1.1rem 0 1.35rem;
+      padding: 1rem 1.15rem !important;
+      border-radius: 12px;
+      border: 1px solid var(--code-border) !important;
+      border-left: 3px solid var(--a) !important;
+      background: var(--code-bg) !important;
+      box-shadow:
+        0 0 0 1px rgba(0, 0, 0, 0.35) inset,
+        0 8px 24px rgba(0, 0, 0, 0.25);
+    }
+    .markdown-body pre code {
+      display: block;
+      font-family: "JetBrains Mono", "Consolas", "Microsoft YaHei UI", monospace;
+      font-size: 0.86rem;
+      line-height: 1.55;
+      color: var(--code-text) !important;
+      background: transparent !important;
+      padding: 0 !important;
+      border: none !important;
+    }
+    .markdown-body :not(pre) > code {
+      font-family: "JetBrains Mono", "Consolas", monospace;
+      background: var(--code-bg-inline) !important;
+      color: #b8e8ff !important;
+      padding: 0.2em 0.45em;
+      border-radius: 6px;
+      border: 1px solid rgba(62, 224, 201, 0.15);
+      font-size: 0.88em;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+    }
+    .markdown-body blockquote {
+      border-left: 3px solid var(--accent);
+      background: rgba(167, 139, 250, 0.06);
+      border-radius: 0 10px 10px 0;
+      color: var(--muted);
+    }
+    .markdown-body table { display: block; overflow-x: auto; }
+    .markdown-body table th,
+    .markdown-body table td { border-color: var(--border) !important; }
+    .markdown-body p:empty { display: none; }
+    .markdown-body strong { color: #fff; font-weight: 700; }
+
+    .related-links,
+    .leetcode-links,
+    .notice-block {
+      margin: 1rem 0 1.5rem;
+      padding: 1rem 1.15rem;
+      border-radius: var(--radius);
+    }
+    .card-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.65rem;
+    }
+    .related-links {
+      border: 1px solid rgba(62, 224, 201, 0.22);
+      background: linear-gradient(135deg, rgba(62, 224, 201, 0.07), rgba(167, 139, 250, 0.05));
+    }
+    .related-links .card-label { color: var(--a); }
+    .related-links ul,
+    .leetcode-links ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+    }
+    .related-links li,
+    .leetcode-links li { margin: 0; }
+    .related-links a,
+    .leetcode-links a {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.55rem 0.75rem;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border);
+      color: var(--text) !important;
+      text-decoration: none !important;
+      font-size: 0.92rem;
+      font-weight: 600;
+    }
+    .related-links a::before {
+      content: "→";
+      color: var(--a);
+      font-weight: 700;
+    }
+    .related-links a:hover {
+      border-color: rgba(62, 224, 201, 0.35);
+      background: rgba(62, 224, 201, 0.08);
+    }
+    .leetcode-links {
+      border: 1px solid rgba(255, 166, 87, 0.25);
+      background: linear-gradient(135deg, rgba(255, 166, 87, 0.08), rgba(167, 139, 250, 0.04));
+    }
+    .leetcode-links .card-label { color: var(--leetcode); }
+    .leetcode-links .card-intro {
+      margin: 0 0 0.75rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+    .leetcode-links a::before {
+      content: "LC";
+      font-size: 0.65rem;
+      font-weight: 800;
+      color: var(--leetcode);
+      background: rgba(255, 166, 87, 0.15);
+      padding: 0.15rem 0.35rem;
+      border-radius: 4px;
+    }
+    .leetcode-links a:hover {
+      border-color: rgba(255, 166, 87, 0.4);
+      background: rgba(255, 166, 87, 0.1);
+    }
+    .notice-block {
+      border: 1px solid rgba(167, 139, 250, 0.3);
+      background: rgba(167, 139, 250, 0.08);
+      font-size: 0.95rem;
+      color: #d0d8e8;
+      line-height: 1.7;
+    }
+    .notice-block .card-label { color: var(--accent); }
+    .notice-block .notice-body p { margin: 0; }
+    .notice-block .notice-body strong { color: #fff; }
+
+    .markdown-body p.emphasis-lead {
+      margin-top: 1rem;
+      padding: 0.65rem 0.85rem;
+      border-left: 3px solid var(--accent);
+      background: rgba(255, 255, 255, 0.02);
+      border-radius: 0 8px 8px 0;
+    }
     .err { color: #f87171; padding: 2rem; text-align: center; }
   </style>
 </head>
@@ -24,6 +235,223 @@
   <article id="content" class="markdown-body">加载中…</article>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script>
+    marked.use({ gfm: true, breaks: false });
+
+    function renderMd(text) {
+      const s = String(text).trim();
+      if (!s) return "";
+      if (typeof marked.parseInline === "function") {
+        return marked.parseInline(s);
+      }
+      let html = marked.parse(s);
+      html = html.replace(/^<p>([\s\S]*)<\/p>\s*$/i, "$1");
+      return html;
+    }
+
+    function extractMdLinks(block) {
+      return [...block.matchAll(/\[([^\]]+)\]\(([^)]+)\)/g)].map((m) => ({
+        title: m[1],
+        href: m[2],
+      }));
+    }
+
+    function buildLinkList(links, className, label) {
+      if (!links.length) return "";
+      const items = links
+        .map(
+          (l) =>
+            '  <li><a href="' +
+            l.href +
+            '" target="_blank" rel="noopener noreferrer">' +
+            l.title +
+            "</a></li>"
+        )
+        .join("\n");
+      return (
+        '<aside class="' +
+        className +
+        '">\n<div class="card-label">' +
+        label +
+        '</div>\n<ul>\n' +
+        items +
+        "\n</ul>\n</aside>\n\n"
+      );
+    }
+
+    function buildRelatedLinks(block) {
+      return buildLinkList(extractMdLinks(block), "related-links", "相关推荐");
+    }
+
+    function buildLeetcodeBlock(block) {
+      const lines = block.trim().split("\n");
+      const intro = lines[0] || "";
+      const links = extractMdLinks(block);
+      if (!links.length) return block;
+      const items = links
+        .map(
+          (l) =>
+            '  <li><a href="' +
+            l.href +
+            '" target="_blank" rel="noopener noreferrer">' +
+            l.title +
+            "</a></li>"
+        )
+        .join("\n");
+      return (
+        '<aside class="leetcode-links">\n' +
+        '<div class="card-label">LeetCode 题目</div>\n' +
+        '<p class="card-intro">' +
+        renderMd(intro) +
+        "</p>\n<ul>\n" +
+        items +
+        "\n</ul>\n</aside>\n\n"
+      );
+    }
+
+    function buildNoticeBlock(block) {
+      const bodyText = block.trim().replace(/^通知[：:]\s*/, "");
+      return (
+        '<aside class="notice-block">\n' +
+        '<div class="card-label">通知</div>\n' +
+        '<div class="notice-body">' +
+        renderMd(bodyText) +
+        "</div>\n</aside>\n\n"
+      );
+    }
+
+    function normalizeSource(md) {
+      md = md.replace(/<p align=['']center['']>[\s\S]*?<\/p>\s*/gi, "");
+      md = md.replace(/^#{1,6}\s+\*\*(.+?)\*\*\s*$/gm, (line, title) =>
+        line.replace("**" + title + "**", title)
+      );
+      md = md.replace(/\*\*\s*(`[^`\n]+`)\s*\*\*/g, "$1");
+      md = md.replace(/\*\*\s*\*\*/g, "");
+      md = md.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, (full, alt, url) => {
+        if (/^(https?:|data:)/i.test(url.trim())) return full;
+        return "![" + alt + "](" + url.replace(/\\/g, "/") + ")";
+      });
+      return md;
+    }
+
+    function preprocessMd(md) {
+      md = normalizeSource(md);
+
+      md = md.replace(
+        /相关推荐[：:]\s*\n+((?:[ \t]*[-*][^\n]+\n*)+)/g,
+        (_, list) => buildRelatedLinks(list)
+      );
+
+      md = md.replace(
+        /^(读完本文[\s\S]*?\n\n(?:\[[\d]+[^\]]*\]\([^)]+\)\s*\n*)+)/m,
+        (_, block) => buildLeetcodeBlock(block)
+      );
+
+      md = md.replace(/\n---\s*\n+\s*(通知[：:][^\n]+)/g, (_, notice) =>
+        buildNoticeBlock(notice)
+      );
+
+      return md;
+    }
+
+    function hasLiteralMd(el) {
+      if (el.closest("pre, code")) return false;
+      return /\*\*[^*]+?\*\*/.test(el.innerHTML);
+    }
+
+    function fixLiteralMarkdown(root) {
+      const selectors =
+        "p, li, blockquote, td, th, h1, h2, h3, h4, h5, h6, .notice-body";
+      root.querySelectorAll(selectors).forEach((el) => {
+        if (el.closest("aside.related-links, aside.leetcode-links")) return;
+        if (!hasLiteralMd(el)) return;
+        const text = el.textContent.trim();
+        if (!text) return;
+        el.innerHTML = renderMd(text);
+      });
+    }
+
+    function enhanceContent(root) {
+      root.querySelectorAll("p").forEach((p) => {
+        if (p.closest("aside")) return;
+        const text = p.textContent.trim();
+
+        if (/^相关推荐[：:]/.test(text)) {
+          const wrap = document.createElement("div");
+          wrap.innerHTML = buildRelatedLinks(text);
+          if (wrap.firstElementChild) p.replaceWith(wrap.firstElementChild);
+          return;
+        }
+
+        if (/^通知[：:]/.test(text)) {
+          const wrap = document.createElement("div");
+          wrap.innerHTML = buildNoticeBlock(text);
+          if (wrap.firstElementChild) p.replaceWith(wrap.firstElementChild);
+          return;
+        }
+
+        if (/^读完本文/.test(text)) {
+          const lines = [text];
+          const remove = [];
+          let sib = p.nextElementSibling;
+          while (sib && sib.tagName === "P" && /^\[\d+\./.test(sib.textContent.trim())) {
+            lines.push(sib.textContent.trim());
+            remove.push(sib);
+            sib = sib.nextElementSibling;
+          }
+          const wrap = document.createElement("div");
+          wrap.innerHTML = buildLeetcodeBlock(lines.join("\n\n"));
+          if (wrap.firstElementChild) {
+            p.replaceWith(wrap.firstElementChild);
+            remove.forEach((el) => el.remove());
+          }
+          return;
+        }
+
+        if (/^\*\*\d+、/.test(text)) {
+          p.classList.add("emphasis-lead");
+        }
+      });
+
+      fixLiteralMarkdown(root);
+    }
+
+    /** MD 里 ../pictures/ 相对章节文件；reader.html 在 leetcode/ 根，需重算路径 */
+    function normalizeSlashes(p) {
+      return String(p).replace(/\\/g, "/");
+    }
+
+    function resolveAssetPath(src, mdPath) {
+      const s = normalizeSlashes(src.trim());
+      if (!s || /^(https?:|data:|\/\/)/i.test(s)) return s;
+      const dir = mdPath.includes("/") ? normalizeSlashes(mdPath.replace(/[^/]+$/, "")) : "";
+      const parts = (dir + s).split("/");
+      const stack = [];
+      for (const part of parts) {
+        if (!part || part === ".") continue;
+        if (part === "..") {
+          stack.pop();
+          continue;
+        }
+        stack.push(part);
+      }
+      return stack.map((seg) => {
+        try {
+          if (/%[0-9A-Fa-f]{2}/.test(seg)) seg = decodeURIComponent(seg);
+        } catch (_) {}
+        return encodeURIComponent(seg);
+      }).join("/");
+    }
+
+    function fixImagePaths(root, mdPath) {
+      root.querySelectorAll("img[src]").forEach((img) => {
+        const fixed = resolveAssetPath(img.getAttribute("src"), mdPath);
+        img.setAttribute("src", fixed);
+        img.loading = "lazy";
+        img.decoding = "async";
+        img.addEventListener("error", () => img.classList.add("img-error"), { once: true });
+      });
+    }
+
     const params = new URLSearchParams(location.search);
     const path = params.get("path");
     const content = document.getElementById("content");
@@ -32,9 +460,19 @@
     } else {
       document.title = path.split("/").pop().replace(/\.md$/, "") + " · 算法小抄";
       fetch(path)
-        .then(r => { if (!r.ok) throw new Error(r.status); return r.text(); })
-        .then(md => { content.innerHTML = marked.parse(md); })
-        .catch(() => { content.innerHTML = '<p class="err">无法加载文章：' + path + '</p>'; });
+        .then((r) => {
+          if (!r.ok) throw new Error(r.status);
+          return r.text();
+        })
+        .then((md) => {
+          content.innerHTML = marked.parse(preprocessMd(md));
+          enhanceContent(content);
+          fixLiteralMarkdown(content);
+          fixImagePaths(content, path);
+        })
+        .catch(() => {
+          content.innerHTML = '<p class="err">无法加载文章：' + path + "</p>";
+        });
     }
   </script>
 </body>
