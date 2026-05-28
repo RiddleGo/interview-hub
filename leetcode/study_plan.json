@@ -1,944 +1,673 @@
 [
   {
-    "phase": "阶段 1",
-    "title": "入门 · 复杂度与基础",
-    "tags": [
-      "入门",
-      "数组",
-      "链表"
-    ],
-    "reads": [
-      {
-        "path": "第1章-核心套路篇/1.1-学习算法和刷题的框架思维.md",
-        "title": "学习算法和刷题的思路指南"
-      }
-    ],
+    "title": "哈希表",
+    "subtitle": "热题100 · 哈希",
     "problems": [
       {
-        "id": 53,
-        "title": "最大子数组和",
-        "slug": "maximum-subarray",
-        "src": [
-          "剑指42",
-          "热题"
-        ]
-      },
-      {
-        "jz": 3,
-        "title": "数组中重复的数字",
-        "slug": "shu-zu-zhong-zhong-fu-de-shu-zi-lcof",
-        "src": [
-          "剑指"
-        ]
-      },
-      {
-        "jz": 66,
-        "title": "构建乘积数组",
-        "slug": "gou-jian-cheng-ji-shu-zu-lcof",
-        "src": [
-          "剑指"
-        ]
-      },
-      {
-        "id": 206,
-        "title": "反转链表",
-        "slug": "reverse-linked-list",
-        "src": [
-          "热题",
-          "剑指24"
-        ]
-      },
-      {
-        "jz": 52,
-        "title": "两链表的第一个公共节点",
-        "slug": "liang-ge-lian-biao-de-di-yi-ge-gong-gong-jie-dian-lcof",
-        "src": [
-          "剑指"
-        ]
-      }
-    ]
-  },
-  {
-    "phase": "阶段 2",
-    "title": "双指针 · 二分查找",
-    "tags": [
-      "双指针",
-      "二分",
-      "排序"
-    ],
-    "reads": [
-      {
-        "path": "第1章-核心套路篇/1.5-双指针技巧套路框架.md",
-        "title": "双指针技巧总结"
-      },
-      {
-        "path": "第1章-核心套路篇/1.6-我写了首诗，保你闭着眼睛都能写出二分搜索算法.md",
-        "title": "二分查找详解"
-      },
-      {
-        "path": "第5章-高频面试系列/5.3-如何运用二分查找算法.md",
-        "title": "如何运用二分查找算法"
-      }
-    ],
-    "problems": [
-      {
-        "jz": 57,
-        "title": "和为 s 的两个数字",
-        "slug": "he-wei-sde-liang-ge-shu-zi-lcof",
-        "src": [
-          "剑指"
-        ]
-      },
-      {
-        "jz": 58,
-        "title": "左旋转字符串",
-        "slug": "zuo-xuan-zhuan-zi-fu-chuan-lcof",
-        "src": [
-          "剑指"
-        ]
-      },
-      {
-        "id": 15,
-        "title": "三数之和",
-        "slug": "3sum",
-        "src": [
-          "热题",
-          "高频"
-        ]
-      },
-      {
-        "id": 26,
-        "title": "删除有序数组重复项",
-        "slug": "remove-duplicates-from-sorted-array",
-        "src": [
-          "热题"
-        ]
-      },
-      {
-        "id": 33,
-        "title": "搜索旋转排序数组",
-        "slug": "search-in-rotated-sorted-array",
-        "src": [
-          "热题",
-          "高频"
-        ]
-      },
-      {
-        "jz": 53,
-        "title": "排序数组中查找数字",
-        "slug": "zai-pai-xu-shu-zu-zhong-cha-zhao-shu-zi-lcof",
-        "src": [
-          "剑指"
-        ]
-      },
-      {
-        "id": 34,
-        "title": "查找元素首末位置",
-        "slug": "find-first-and-last-position-of-element-in-sorted-array",
-        "src": [
-          "高频"
-        ]
-      },
-      {
-        "id": 875,
-        "title": "爱吃香蕉的珂珂",
-        "slug": "koko-eating-bananas",
-        "src": [
-          "高频"
-        ]
-      }
-    ]
-  },
-  {
-    "phase": "阶段 3",
-    "title": "滑动窗口 · 前缀和 · 哈希",
-    "tags": [
-      "滑动窗口",
-      "前缀和",
-      "哈希"
-    ],
-    "reads": [
-      {
-        "path": "第1章-核心套路篇/1.7-我写了一个模板，把滑动窗口算法变成了默写题.md",
-        "title": "滑动窗口算法框架"
-      },
-      {
-        "path": "第4章-算法思维系列/4.5-2Sum问题的核心思想.md",
-        "title": "twoSum问题的核心思想"
-      },
-      {
-        "path": "第4章-算法思维系列/4.9-前缀和技巧解决子数组问题.md",
-        "title": "前缀和技巧"
-      }
-    ],
-    "problems": [
-      {
-        "jz": 48,
-        "title": "最长不含重复字符的子串",
-        "slug": "zui-chang-bu-han-zhong-fu-zi-fu-de-zi-zi-fu-chuan-lcof",
-        "src": [
-          "剑指"
-        ]
-      },
-      {
-        "id": 3,
-        "title": "无重复字符最长子串",
-        "slug": "longest-substring-without-repeating-characters",
-        "src": [
-          "热题"
-        ]
-      },
-      {
-        "id": 76,
-        "title": "最小覆盖子串",
-        "slug": "minimum-window-substring",
-        "src": [
-          "热题",
-          "高频"
-        ]
-      },
-      {
-        "id": 438,
-        "title": "找到字母异位词",
-        "slug": "find-all-anagrams-in-a-string",
-        "src": [
-          "高频"
-        ]
-      },
-      {
-        "id": 560,
-        "title": "和为 K 的子数组",
-        "slug": "subarray-sum-equals-k",
-        "src": [
-          "热题",
-          "高频"
-        ]
+        "id": 1,
+        "title": "两数之和",
+        "slug": "two-sum",
+        "diff": "简",
+        "list": "热题"
       },
       {
         "id": 49,
         "title": "字母异位词分组",
         "slug": "group-anagrams",
-        "src": [
-          "热题"
-        ]
-      },
-      {
-        "jz": 50,
-        "title": "第一个只出现一次的字符",
-        "slug": "di-yi-ge-zhi-chu-xian-yi-ci-de-zi-fu-lcof",
-        "src": [
-          "剑指"
-        ]
-      }
-    ]
-  },
-  {
-    "phase": "阶段 4",
-    "title": "链表",
-    "tags": [
-      "链表",
-      "双指针",
-      "快慢指针"
-    ],
-    "reads": [
-      {
-        "path": "第3章-数据结构系列/3.9-如何判断回文链表.md",
-        "title": "如何高效判断回文链表"
-      },
-      {
-        "path": "第3章-数据结构系列/3.10-秀操作之纯递归反转链表.md",
-        "title": "递归反转链表的一部分"
-      },
-      {
-        "path": "第3章-数据结构系列/3.11-秀操作之k个一组反转链表.md",
-        "title": "如何k个一组反转链表"
-      }
-    ],
-    "problems": [
-      {
-        "jz": 22,
-        "title": "链表中倒数第 k 个节点",
-        "slug": "lian-biao-zhong-dao-shu-di-kge-jie-dian-lcof",
-        "src": [
-          "剑指"
-        ]
-      },
-      {
-        "jz": 23,
-        "title": "链表中环的入口节点",
-        "slug": "lian-biao-zhong-huan-de-ru-kou-jie-dian-lcof",
-        "src": [
-          "剑指"
-        ]
-      },
-      {
-        "jz": 35,
-        "title": "复杂链表的复制",
-        "slug": "fu-za-lian-biao-de-fu-zhi-lcof",
-        "src": [
-          "剑指"
-        ]
-      },
-      {
-        "id": 141,
-        "title": "环形链表",
-        "slug": "linked-list-cycle",
-        "src": [
-          "热题"
-        ]
-      },
-      {
-        "id": 142,
-        "title": "环形链表 II",
-        "slug": "linked-list-cycle-ii",
-        "src": [
-          "热题"
-        ]
-      },
-      {
-        "id": 160,
-        "title": "相交链表",
-        "slug": "intersection-of-two-linked-lists",
-        "src": [
-          "热题"
-        ]
-      },
-      {
-        "id": 25,
-        "title": "K 个一组翻转链表",
-        "slug": "reverse-nodes-in-k-group",
-        "src": [
-          "热题",
-          "高频"
-        ]
-      },
-      {
-        "id": 234,
-        "title": "回文链表",
-        "slug": "palindrome-linked-list",
-        "src": [
-          "高频"
-        ]
-      }
-    ]
-  },
-  {
-    "phase": "阶段 5",
-    "title": "二叉树 · BFS/DFS",
-    "tags": [
-      "二叉树",
-      "BFS",
-      "DFS"
-    ],
-    "reads": [
-      {
-        "path": "第1章-核心套路篇/1.4-BFS 算法套路框架.md",
-        "title": "BFS 算法解题套路框架"
-      },
-      {
-        "path": "第3章-数据结构系列/3.3-二叉搜索树操作集锦.md",
-        "title": "二叉搜索树操作集锦"
-      },
-      {
-        "path": "第3章-数据结构系列/3.5-用各种遍历框架序列化和反序列化二叉.md",
-        "title": "二叉树的序列化，就那几个框架，枯燥至极"
-      },
-      {
-        "path": "第3章-数据结构系列/3.6-Git原理之二叉树最近公共祖先.md",
-        "title": "Git原理之最近公共祖先"
-      }
-    ],
-    "problems": [
-      {
-        "jz": 7,
-        "title": "重建二叉树",
-        "slug": "chong-jian-er-cha-shu-lcof",
-        "src": [
-          "剑指"
-        ]
-      },
-      {
-        "jz": 28,
-        "title": "对称的二叉树",
-        "slug": "dui-cheng-de-er-cha-shu-lcof",
-        "src": [
-          "剑指"
-        ]
-      },
-      {
-        "jz": 32,
-        "title": "从上到下打印二叉树",
-        "slug": "cong-shang-dao-xia-da-yin-er-cha-shu-lcof",
-        "src": [
-          "剑指"
-        ]
-      },
-      {
-        "jz": 68,
-        "title": "二叉搜索树的最近公共祖先",
-        "slug": "er-cha-sou-suo-shu-de-zui-jin-gong-gong-zu-xian-lcof",
-        "src": [
-          "剑指"
-        ]
-      },
-      {
-        "id": 102,
-        "title": "二叉树层序遍历",
-        "slug": "binary-tree-level-order-traversal",
-        "src": [
-          "热题"
-        ]
-      },
-      {
-        "id": 104,
-        "title": "二叉树最大深度",
-        "slug": "maximum-depth-of-binary-tree",
-        "src": [
-          "热题"
-        ]
-      },
-      {
-        "id": 236,
-        "title": "二叉树最近公共祖先",
-        "slug": "lowest-common-ancestor-of-a-binary-tree",
-        "src": [
-          "热题",
-          "高频"
-        ]
-      },
-      {
-        "id": 98,
-        "title": "验证二叉搜索树",
-        "slug": "validate-binary-search-tree",
-        "src": [
-          "热题",
-          "高频"
-        ]
-      },
-      {
-        "id": 297,
-        "title": "序列化与反序列化",
-        "slug": "serialize-and-deserialize-binary-tree",
-        "src": [
-          "高频",
-          "小抄"
-        ]
-      }
-    ]
-  },
-  {
-    "phase": "阶段 6",
-    "title": "回溯 · 搜索",
-    "tags": [
-      "回溯",
-      "DFS",
-      "剪枝"
-    ],
-    "reads": [
-      {
-        "path": "第1章-核心套路篇/1.3-回溯算法解题套路框架.md",
-        "title": "回溯算法详解"
-      },
-      {
-        "path": "第4章-算法思维系列/4.1-回溯算法解决子集、组合、排列问题.md",
-        "title": "回溯算法团灭子集、排列、组合问题"
-      },
-      {
-        "path": "第4章-算法思维系列/4.2-回溯算法最佳实践：解数独.md",
-        "title": "回溯算法最佳实践：解数独"
-      },
-      {
-        "path": "第4章-算法思维系列/4.3-回溯算法最佳实践：括号生成.md",
-        "title": "回溯算法最佳实践：括号生成"
-      }
-    ],
-    "problems": [
-      {
-        "jz": 38,
-        "title": "字符串的排列",
-        "slug": "zi-fu-chuan-de-pai-lie-lcof",
-        "src": [
-          "剑指"
-        ]
-      },
-      {
-        "id": 46,
-        "title": "全排列",
-        "slug": "permutations",
-        "src": [
-          "热题",
-          "高频"
-        ]
-      },
-      {
-        "id": 78,
-        "title": "子集",
-        "slug": "subsets",
-        "src": [
-          "热题"
-        ]
-      },
-      {
-        "id": 39,
-        "title": "组合总和",
-        "slug": "combination-sum",
-        "src": [
-          "热题"
-        ]
-      },
-      {
-        "id": 22,
-        "title": "括号生成",
-        "slug": "generate-parentheses",
-        "src": [
-          "热题",
-          "高频"
-        ]
-      },
-      {
-        "id": 79,
-        "title": "单词搜索",
-        "slug": "word-search",
-        "src": [
-          "热题"
-        ]
-      },
-      {
-        "jz": 12,
-        "title": "矩阵中的路径",
-        "slug": "ju-zhen-zhong-de-lu-jing-lcof",
-        "src": [
-          "剑指"
-        ]
-      },
-      {
-        "id": 51,
-        "title": "N 皇后",
-        "slug": "n-queens",
-        "src": [
-          "高频"
-        ]
-      }
-    ]
-  },
-  {
-    "phase": "阶段 7",
-    "title": "动态规划",
-    "tags": [
-      "DP",
-      "背包",
-      "子序列"
-    ],
-    "reads": [
-      {
-        "path": "第1章-核心套路篇/1.2-动态规划解题套路框架.md",
-        "title": "动态规划详解"
-      },
-      {
-        "path": "第2章-动态规划系列/2.1-动态规划设计：最长递增子序列.md",
-        "title": "动态规划设计：最长递增子序列"
-      },
-      {
-        "path": "第2章-动态规划系列/2.3-最大子数组问题.md",
-        "title": "动态规划设计：最大子数组"
-      },
-      {
-        "path": "第2章-动态规划系列/2.5-经典动态规划：最长公共子序列.md",
-        "title": "最长公共子序列"
-      },
-      {
-        "path": "第2章-动态规划系列/2.6-经典动态规划：编辑距离.md",
-        "title": "编辑距离"
-      },
-      {
-        "path": "第2章-动态规划系列/2.15-经典动态规划：0-1背包问题.md",
-        "title": "经典动态规划：0-1 背包问题"
-      }
-    ],
-    "problems": [
-      {
-        "jz": 10,
-        "title": "青蛙跳台阶",
-        "slug": "qing-wa-tiao-tai-jie-zi-lcof",
-        "src": [
-          "剑指"
-        ]
-      },
-      {
-        "jz": 14,
-        "title": "剪绳子",
-        "slug": "jian-sheng-zi-lcof",
-        "src": [
-          "剑指"
-        ]
-      },
-      {
-        "jz": 47,
-        "title": "礼物的最大价值",
-        "slug": "li-wu-de-zui-da-jia-zhi-lcof",
-        "src": [
-          "剑指"
-        ]
-      },
-      {
-        "jz": 63,
-        "title": "股票的最大利润",
-        "slug": "gu-piao-de-zui-da-li-run-lcof",
-        "src": [
-          "剑指"
-        ]
-      },
-      {
-        "id": 70,
-        "title": "爬楼梯",
-        "slug": "climbing-stairs",
-        "src": [
-          "热题"
-        ]
-      },
-      {
-        "id": 322,
-        "title": "零钱兑换",
-        "slug": "coin-change",
-        "src": [
-          "热题",
-          "高频"
-        ]
-      },
-      {
-        "id": 300,
-        "title": "最长递增子序列",
-        "slug": "longest-increasing-subsequence",
-        "src": [
-          "热题",
-          "高频"
-        ]
-      },
-      {
-        "id": 1143,
-        "title": "最长公共子序列",
-        "slug": "longest-common-subsequence",
-        "src": [
-          "热题",
-          "高频"
-        ]
-      },
-      {
-        "id": 72,
-        "title": "编辑距离",
-        "slug": "edit-distance",
-        "src": [
-          "热题",
-          "高频"
-        ]
-      },
-      {
-        "id": 416,
-        "title": "分割等和子集",
-        "slug": "partition-equal-subset-sum",
-        "src": [
-          "高频"
-        ]
-      },
-      {
-        "id": 139,
-        "title": "单词拆分",
-        "slug": "word-break",
-        "src": [
-          "热题"
-        ]
-      }
-    ]
-  },
-  {
-    "phase": "阶段 8",
-    "title": "栈 · 队列 · 单调结构",
-    "tags": [
-      "单调栈",
-      "单调队列",
-      "栈"
-    ],
-    "reads": [
-      {
-        "path": "第3章-数据结构系列/3.7-特殊数据结构：单调栈.md",
-        "title": "如何使用单调栈解题"
-      },
-      {
-        "path": "第3章-数据结构系列/3.8-特殊数据结构：单调队列.md",
-        "title": "特殊数据结构：单调队列"
-      },
-      {
-        "path": "第5章-高频面试系列/5.4-如何高效解决接雨水问题.md",
-        "title": "接雨水问题详解"
-      },
-      {
-        "path": "第5章-高频面试系列/5.9-如何判定括号合法性.md",
-        "title": "如何判定括号合法性"
-      }
-    ],
-    "problems": [
-      {
-        "jz": 30,
-        "title": "包含 min 函数的栈",
-        "slug": "bao-han-minhan-shu-de-zhan-lcof",
-        "src": [
-          "剑指"
-        ]
-      },
-      {
-        "jz": 31,
-        "title": "栈的压入弹出序列",
-        "slug": "zhan-de-ya-ru-dan-chu-xu-lie-lcof",
-        "src": [
-          "剑指"
-        ]
-      },
-      {
-        "jz": 59,
-        "title": "滑动窗口最大值",
-        "slug": "hua-dong-chuang-kou-de-zui-da-zhi-lcof",
-        "src": [
-          "剑指"
-        ]
-      },
-      {
-        "id": 20,
-        "title": "有效的括号",
-        "slug": "valid-parentheses",
-        "src": [
-          "热题"
-        ]
-      },
-      {
-        "id": 84,
-        "title": "柱状图最大矩形",
-        "slug": "largest-rectangle-in-histogram",
-        "src": [
-          "热题",
-          "高频"
-        ]
-      },
-      {
-        "id": 42,
-        "title": "接雨水",
-        "slug": "trapping-rain-water",
-        "src": [
-          "热题",
-          "高频"
-        ]
-      },
-      {
-        "id": 739,
-        "title": "每日温度",
-        "slug": "daily-temperatures",
-        "src": [
-          "热题"
-        ]
-      },
-      {
-        "id": 239,
-        "title": "滑动窗口最大值",
-        "slug": "sliding-window-maximum",
-        "src": [
-          "热题",
-          "高频"
-        ]
-      }
-    ]
-  },
-  {
-    "phase": "阶段 9",
-    "title": "贪心 · 图 · 并查集",
-    "tags": [
-      "贪心",
-      "BFS",
-      "并查集",
-      "拓扑"
-    ],
-    "reads": [
-      {
-        "path": "第5章-高频面试系列/5.7-如何运用贪心思想玩跳跃游戏.md",
-        "title": "如何运用贪心思想玩跳跃游戏"
-      },
-      {
-        "path": "第5章-高频面试系列/5.8-如何运用贪心算法做时间管理.md",
-        "title": "运用贪心算法来做时间管理"
-      },
-      {
-        "path": "第5章-高频面试系列/5.11-Union-Find算法详解.md",
-        "title": "Union-Find算法详解"
-      },
-      {
-        "path": "第1章-核心套路篇/1.4-BFS 算法套路框架.md",
-        "title": "BFS 算法解题套路框架"
-      }
-    ],
-    "problems": [
-      {
-        "jz": 13,
-        "title": "机器人的运动范围",
-        "slug": "ji-qi-ren-de-yun-dong-fan-wei-lcof",
-        "src": [
-          "剑指"
-        ]
-      },
-      {
-        "id": 55,
-        "title": "跳跃游戏",
-        "slug": "jump-game",
-        "src": [
-          "热题",
-          "高频"
-        ]
-      },
-      {
-        "id": 45,
-        "title": "跳跃游戏 II",
-        "slug": "jump-game-ii",
-        "src": [
-          "高频"
-        ]
-      },
-      {
-        "id": 200,
-        "title": "岛屿数量",
-        "slug": "number-of-islands",
-        "src": [
-          "热题",
-          "高频"
-        ]
-      },
-      {
-        "id": 207,
-        "title": "课程表",
-        "slug": "course-schedule",
-        "src": [
-          "热题",
-          "高频"
-        ]
-      },
-      {
-        "id": 994,
-        "title": "腐烂的橘子",
-        "slug": "rotting-oranges",
-        "src": [
-          "热题"
-        ]
-      },
-      {
-        "jz": 40,
-        "title": "最小的 k 个数",
-        "slug": "zui-xiao-de-kge-shu-lcof",
-        "src": [
-          "剑指"
-        ]
-      },
-      {
-        "id": 215,
-        "title": "数组第 K 个最大元素",
-        "slug": "kth-largest-element-in-an-array",
-        "src": [
-          "热题"
-        ]
-      }
-    ]
-  },
-  {
-    "phase": "阶段 10",
-    "title": "设计题 · 综合高频",
-    "tags": [
-      "设计",
-      "堆",
-      "综合"
-    ],
-    "reads": [
-      {
-        "path": "第3章-数据结构系列/3.1-手把手教你写LRU缓存淘汰算法.md",
-        "title": "层层拆解，带你手写 LRU 算法"
-      },
-      {
-        "path": "第3章-数据结构系列/3.2-层层拆解，带你手写LFU算法.md",
-        "title": "算法就像搭乐高：带你手撸 LFU 算法"
-      },
-      {
-        "path": "第4章-算法思维系列/4.7-拆解复杂问题：实现计算器.md",
-        "title": "拆解复杂问题：实现计算器"
-      },
-      {
-        "path": "第5章-高频面试系列/5.6-如何寻找最长回文子串.md",
-        "title": "如何寻找最长回文子串"
-      }
-    ],
-    "problems": [
-      {
-        "jz": 9,
-        "title": "用两个栈实现队列",
-        "slug": "yong-liang-ge-zhan-shi-xian-dui-lie-lcof",
-        "src": [
-          "剑指"
-        ]
-      },
-      {
-        "jz": 41,
-        "title": "数据流中的中位数",
-        "slug": "shu-ju-liu-zhong-de-zhong-wei-shu-lcof",
-        "src": [
-          "剑指"
-        ]
-      },
-      {
-        "id": 146,
-        "title": "LRU 缓存",
-        "slug": "lru-cache",
-        "src": [
-          "热题",
-          "高频",
-          "小抄"
-        ]
-      },
-      {
-        "id": 460,
-        "title": "LFU 缓存",
-        "slug": "lfu-cache",
-        "src": [
-          "高频",
-          "小抄"
-        ]
-      },
-      {
-        "id": 5,
-        "title": "最长回文子串",
-        "slug": "longest-palindromic-substring",
-        "src": [
-          "热题",
-          "高频"
-        ]
-      },
-      {
-        "id": 224,
-        "title": "基本计算器",
-        "slug": "basic-calculator",
-        "src": [
-          "高频",
-          "小抄"
-        ]
-      },
-      {
-        "id": 295,
-        "title": "数据流的中位数",
-        "slug": "find-median-from-data-stream",
-        "src": [
-          "热题"
-        ]
+        "diff": "中",
+        "list": "热题"
+      },
+      {
+        "id": 128,
+        "title": "最长连续序列",
+        "slug": "longest-consecutive-sequence",
+        "diff": "中",
+        "list": "热题"
       },
       {
         "id": 347,
         "title": "前 K 个高频元素",
         "slug": "top-k-frequent-elements",
-        "src": [
-          "热题",
-          "高频"
-        ]
+        "diff": "中",
+        "list": "热题"
+      },
+      {
+        "jz": 3,
+        "title": "数组中重复的数字",
+        "slug": "shu-zu-zhong-zhong-fu-de-shu-zi-lcof",
+        "diff": "简",
+        "list": "剑指"
+      }
+    ]
+  },
+  {
+    "title": "双指针",
+    "subtitle": "热题100 · 双指针",
+    "problems": [
+      {
+        "id": 283,
+        "title": "移动零",
+        "slug": "move-zeroes",
+        "diff": "简",
+        "list": "热题"
+      },
+      {
+        "id": 11,
+        "title": "盛最多水的容器",
+        "slug": "container-with-most-water",
+        "diff": "中",
+        "list": "热题"
+      },
+      {
+        "id": 15,
+        "title": "三数之和",
+        "slug": "3sum",
+        "diff": "中",
+        "list": "热题"
+      },
+      {
+        "id": 42,
+        "title": "接雨水",
+        "slug": "trapping-rain-water",
+        "diff": "难",
+        "list": "热题"
+      },
+      {
+        "id": 167,
+        "title": "两数之和 II",
+        "slug": "two-sum-ii-input-array-is-sorted",
+        "diff": "中",
+        "list": "热题"
+      },
+      {
+        "jz": 57,
+        "title": "和为 s 的两个数字",
+        "slug": "he-wei-sde-liang-ge-shu-zi-lcof",
+        "diff": "简",
+        "list": "剑指"
+      }
+    ]
+  },
+  {
+    "title": "滑动窗口",
+    "subtitle": "热题100 · 滑动窗口",
+    "problems": [
+      {
+        "id": 3,
+        "title": "无重复字符的最长子串",
+        "slug": "longest-substring-without-repeating-characters",
+        "diff": "中",
+        "list": "热题"
+      },
+      {
+        "id": 438,
+        "title": "找到字符串中所有字母异位词",
+        "slug": "find-all-anagrams-in-a-string",
+        "diff": "中",
+        "list": "热题"
+      },
+      {
+        "id": 567,
+        "title": "字符串的排列",
+        "slug": "permutation-in-string",
+        "diff": "中",
+        "list": "热题"
+      },
+      {
+        "id": 76,
+        "title": "最小覆盖子串",
+        "slug": "minimum-window-substring",
+        "diff": "难",
+        "list": "热题"
+      },
+      {
+        "id": 239,
+        "title": "滑动窗口最大值",
+        "slug": "sliding-window-maximum",
+        "diff": "难",
+        "list": "热题"
+      },
+      {
+        "jz": 59,
+        "title": "滑动窗口最大值",
+        "slug": "hua-dong-chuang-kou-de-zui-da-zhi-lcof",
+        "diff": "难",
+        "list": "剑指"
+      }
+    ]
+  },
+  {
+    "title": "数组 · 前缀和",
+    "subtitle": "热题100 · 子数组 / 数组",
+    "problems": [
+      {
+        "id": 560,
+        "title": "和为 K 的子数组",
+        "slug": "subarray-sum-equals-k",
+        "diff": "中",
+        "list": "热题"
+      },
+      {
+        "id": 53,
+        "title": "最大子数组和",
+        "slug": "maximum-subarray",
+        "diff": "中",
+        "list": "热题"
+      },
+      {
+        "id": 56,
+        "title": "合并区间",
+        "slug": "merge-intervals",
+        "diff": "中",
+        "list": "热题"
+      },
+      {
+        "id": 238,
+        "title": "除自身以外数组的乘积",
+        "slug": "product-of-array-except-self",
+        "diff": "中",
+        "list": "热题"
+      },
+      {
+        "id": 41,
+        "title": "缺失的第一个正数",
+        "slug": "first-missing-positive",
+        "diff": "难",
+        "list": "热题"
+      },
+      {
+        "jz": 42,
+        "title": "连续子数组的最大和",
+        "slug": "lian-xu-zi-shu-zu-de-zui-da-he-lcof",
+        "diff": "简",
+        "list": "剑指"
+      }
+    ]
+  },
+  {
+    "title": "矩阵",
+    "subtitle": "热题100 · 矩阵",
+    "problems": [
+      {
+        "id": 48,
+        "title": "旋转图像",
+        "slug": "rotate-image",
+        "diff": "中",
+        "list": "热题"
+      },
+      {
+        "id": 54,
+        "title": "螺旋矩阵",
+        "slug": "spiral-matrix",
+        "diff": "中",
+        "list": "热题"
+      },
+      {
+        "id": 73,
+        "title": "矩阵置零",
+        "slug": "set-matrix-zeroes",
+        "diff": "中",
+        "list": "热题"
+      },
+      {
+        "id": 240,
+        "title": "搜索二维矩阵 II",
+        "slug": "search-a-2d-matrix-ii",
+        "diff": "中",
+        "list": "热题"
+      },
+      {
+        "jz": 4,
+        "title": "二维数组中的查找",
+        "slug": "er-wei-shu-zu-zhong-de-cha-zhao-lcof",
+        "diff": "中",
+        "list": "剑指"
+      }
+    ]
+  },
+  {
+    "title": "链表",
+    "subtitle": "热题100 · 链表",
+    "problems": [
+      {
+        "id": 160,
+        "title": "相交链表",
+        "slug": "intersection-of-two-linked-lists",
+        "diff": "简",
+        "list": "热题"
+      },
+      {
+        "id": 206,
+        "title": "反转链表",
+        "slug": "reverse-linked-list",
+        "diff": "简",
+        "list": "热题"
+      },
+      {
+        "id": 234,
+        "title": "回文链表",
+        "slug": "palindrome-linked-list",
+        "diff": "简",
+        "list": "热题"
+      },
+      {
+        "id": 141,
+        "title": "环形链表",
+        "slug": "linked-list-cycle",
+        "diff": "简",
+        "list": "热题"
+      },
+      {
+        "id": 142,
+        "title": "环形链表 II",
+        "slug": "linked-list-cycle-ii",
+        "diff": "中",
+        "list": "热题"
+      },
+      {
+        "id": 19,
+        "title": "删除链表的倒数第 N 个结点",
+        "slug": "remove-nth-node-from-end-of-list",
+        "diff": "中",
+        "list": "热题"
+      },
+      {
+        "id": 25,
+        "title": "K 个一组翻转链表",
+        "slug": "reverse-nodes-in-k-group",
+        "diff": "难",
+        "list": "热题"
+      },
+      {
+        "jz": 22,
+        "title": "链表中倒数第 k 个节点",
+        "slug": "lian-biao-zhong-dao-shu-di-kge-jie-dian-lcof",
+        "diff": "简",
+        "list": "剑指"
+      },
+      {
+        "jz": 35,
+        "title": "复杂链表的复制",
+        "slug": "fu-za-lian-biao-de-fu-zhi-lcof",
+        "diff": "中",
+        "list": "剑指"
+      }
+    ]
+  },
+  {
+    "title": "二叉树",
+    "subtitle": "热题100 · 二叉树",
+    "problems": [
+      {
+        "id": 94,
+        "title": "二叉树的中序遍历",
+        "slug": "binary-tree-inorder-traversal",
+        "diff": "简",
+        "list": "热题"
+      },
+      {
+        "id": 104,
+        "title": "二叉树的最大深度",
+        "slug": "maximum-depth-of-binary-tree",
+        "diff": "简",
+        "list": "热题"
+      },
+      {
+        "id": 101,
+        "title": "对称二叉树",
+        "slug": "symmetric-tree",
+        "diff": "简",
+        "list": "热题"
+      },
+      {
+        "id": 102,
+        "title": "二叉树的层序遍历",
+        "slug": "binary-tree-level-order-traversal",
+        "diff": "中",
+        "list": "热题"
+      },
+      {
+        "id": 98,
+        "title": "验证二叉搜索树",
+        "slug": "validate-binary-search-tree",
+        "diff": "中",
+        "list": "热题"
+      },
+      {
+        "id": 236,
+        "title": "二叉树的最近公共祖先",
+        "slug": "lowest-common-ancestor-of-a-binary-tree",
+        "diff": "中",
+        "list": "热题"
+      },
+      {
+        "id": 124,
+        "title": "二叉树中的最大路径和",
+        "slug": "binary-tree-maximum-path-sum",
+        "diff": "难",
+        "list": "热题"
+      },
+      {
+        "jz": 7,
+        "title": "重建二叉树",
+        "slug": "chong-jian-er-cha-shu-lcof",
+        "diff": "中",
+        "list": "剑指"
+      },
+      {
+        "jz": 32,
+        "title": "从上到下打印二叉树",
+        "slug": "cong-shang-dao-xia-da-yin-er-cha-shu-lcof",
+        "diff": "中",
+        "list": "剑指"
+      }
+    ]
+  },
+  {
+    "title": "图 · BFS / DFS",
+    "subtitle": "热题100 · 搜索",
+    "problems": [
+      {
+        "id": 200,
+        "title": "岛屿数量",
+        "slug": "number-of-islands",
+        "diff": "中",
+        "list": "热题"
+      },
+      {
+        "id": 994,
+        "title": "腐烂的橘子",
+        "slug": "rotting-oranges",
+        "diff": "中",
+        "list": "热题"
+      },
+      {
+        "id": 207,
+        "title": "课程表",
+        "slug": "course-schedule",
+        "diff": "中",
+        "list": "热题"
+      },
+      {
+        "id": 79,
+        "title": "单词搜索",
+        "slug": "word-search",
+        "diff": "中",
+        "list": "热题"
+      },
+      {
+        "jz": 12,
+        "title": "矩阵中的路径",
+        "slug": "ju-zhen-zhong-de-lu-jing-lcof",
+        "diff": "中",
+        "list": "剑指"
+      },
+      {
+        "jz": 13,
+        "title": "机器人的运动范围",
+        "slug": "ji-qi-ren-de-yun-dong-fan-wei-lcof",
+        "diff": "中",
+        "list": "剑指"
+      }
+    ]
+  },
+  {
+    "title": "回溯",
+    "subtitle": "热题100 · 回溯",
+    "problems": [
+      {
+        "id": 46,
+        "title": "全排列",
+        "slug": "permutations",
+        "diff": "中",
+        "list": "热题"
+      },
+      {
+        "id": 78,
+        "title": "子集",
+        "slug": "subsets",
+        "diff": "中",
+        "list": "热题"
+      },
+      {
+        "id": 39,
+        "title": "组合总和",
+        "slug": "combination-sum",
+        "diff": "中",
+        "list": "热题"
+      },
+      {
+        "id": 22,
+        "title": "括号生成",
+        "slug": "generate-parentheses",
+        "diff": "中",
+        "list": "热题"
+      },
+      {
+        "jz": 38,
+        "title": "字符串的排列",
+        "slug": "zi-fu-chuan-de-pai-lie-lcof",
+        "diff": "中",
+        "list": "剑指"
+      }
+    ]
+  },
+  {
+    "title": "二分查找",
+    "subtitle": "热题100 · 二分",
+    "problems": [
+      {
+        "id": 35,
+        "title": "搜索插入位置",
+        "slug": "search-insert-position",
+        "diff": "简",
+        "list": "热题"
+      },
+      {
+        "id": 74,
+        "title": "搜索二维矩阵",
+        "slug": "search-a-2d-matrix",
+        "diff": "中",
+        "list": "热题"
+      },
+      {
+        "id": 33,
+        "title": "搜索旋转排序数组",
+        "slug": "search-in-rotated-sorted-array",
+        "diff": "中",
+        "list": "热题"
+      },
+      {
+        "id": 34,
+        "title": "在排序数组中查找元素的第一个和最后一个位置",
+        "slug": "find-first-and-last-position-of-element-in-sorted-array",
+        "diff": "中",
+        "list": "热题"
+      },
+      {
+        "jz": 11,
+        "title": "旋转数组的最小数字",
+        "slug": "xuan-zhuan-shu-zu-de-zui-xiao-shu-zi-lcof",
+        "diff": "中",
+        "list": "剑指"
+      }
+    ]
+  },
+  {
+    "title": "栈 · 单调栈",
+    "subtitle": "热题100 · 栈",
+    "problems": [
+      {
+        "id": 20,
+        "title": "有效的括号",
+        "slug": "valid-parentheses",
+        "diff": "简",
+        "list": "热题"
+      },
+      {
+        "id": 84,
+        "title": "柱状图中最大的矩形",
+        "slug": "largest-rectangle-in-histogram",
+        "diff": "难",
+        "list": "热题"
+      },
+      {
+        "id": 739,
+        "title": "每日温度",
+        "slug": "daily-temperatures",
+        "diff": "中",
+        "list": "热题"
+      },
+      {
+        "jz": 31,
+        "title": "栈的压入、弹出序列",
+        "slug": "zhan-de-ya-ru-dan-chu-xu-lie-lcof",
+        "diff": "中",
+        "list": "剑指"
+      }
+    ]
+  },
+  {
+    "title": "堆 · 设计",
+    "subtitle": "热题100 · 堆 / 设计",
+    "problems": [
+      {
+        "id": 215,
+        "title": "数组中的第 K 个最大元素",
+        "slug": "kth-largest-element-in-an-array",
+        "diff": "中",
+        "list": "热题"
+      },
+      {
+        "id": 295,
+        "title": "数据流的中位数",
+        "slug": "find-median-from-data-stream",
+        "diff": "难",
+        "list": "热题"
+      },
+      {
+        "id": 146,
+        "title": "LRU 缓存",
+        "slug": "lru-cache",
+        "diff": "中",
+        "list": "热题"
+      },
+      {
+        "jz": 41,
+        "title": "数据流中的中位数",
+        "slug": "shu-ju-liu-zhong-de-zhong-wei-shu-lcof",
+        "diff": "难",
+        "list": "剑指"
+      },
+      {
+        "jz": 9,
+        "title": "用两个栈实现队列",
+        "slug": "yong-liang-ge-zhan-shi-xian-dui-lie-lcof",
+        "diff": "简",
+        "list": "剑指"
+      }
+    ]
+  },
+  {
+    "title": "贪心",
+    "subtitle": "热题100 · 贪心",
+    "problems": [
+      {
+        "id": 55,
+        "title": "跳跃游戏",
+        "slug": "jump-game",
+        "diff": "中",
+        "list": "热题"
+      },
+      {
+        "id": 45,
+        "title": "跳跃游戏 II",
+        "slug": "jump-game-ii",
+        "diff": "中",
+        "list": "热题"
+      },
+      {
+        "id": 121,
+        "title": "买卖股票的最佳时机",
+        "slug": "best-time-to-buy-and-sell-stock",
+        "diff": "简",
+        "list": "热题"
+      },
+      {
+        "jz": 63,
+        "title": "股票的最大利润",
+        "slug": "gu-piao-de-zui-da-li-run-lcof",
+        "diff": "简",
+        "list": "剑指"
+      }
+    ]
+  },
+  {
+    "title": "动态规划",
+    "subtitle": "热题100 · 动态规划",
+    "problems": [
+      {
+        "id": 70,
+        "title": "爬楼梯",
+        "slug": "climbing-stairs",
+        "diff": "简",
+        "list": "热题"
+      },
+      {
+        "id": 322,
+        "title": "零钱兑换",
+        "slug": "coin-change",
+        "diff": "中",
+        "list": "热题"
+      },
+      {
+        "id": 300,
+        "title": "最长递增子序列",
+        "slug": "longest-increasing-subsequence",
+        "diff": "中",
+        "list": "热题"
+      },
+      {
+        "id": 1143,
+        "title": "最长公共子序列",
+        "slug": "longest-common-subsequence",
+        "diff": "中",
+        "list": "热题"
+      },
+      {
+        "id": 72,
+        "title": "编辑距离",
+        "slug": "edit-distance",
+        "diff": "难",
+        "list": "热题"
+      },
+      {
+        "id": 139,
+        "title": "单词拆分",
+        "slug": "word-break",
+        "diff": "中",
+        "list": "热题"
+      },
+      {
+        "id": 5,
+        "title": "最长回文子串",
+        "slug": "longest-palindromic-substring",
+        "diff": "中",
+        "list": "热题"
+      },
+      {
+        "jz": 10,
+        "title": "青蛙跳台阶",
+        "slug": "qing-wa-tiao-tai-jie-zi-lcof",
+        "diff": "简",
+        "list": "剑指"
+      },
+      {
+        "jz": 47,
+        "title": "礼物的最大价值",
+        "slug": "li-wu-de-zui-da-jia-zhi-lcof",
+        "diff": "中",
+        "list": "剑指"
       }
     ]
   }
