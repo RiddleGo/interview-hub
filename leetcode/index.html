@@ -30,7 +30,7 @@
         radial-gradient(ellipse 100% 80% at 100% 0%, rgba(62,224,201,.12), transparent 50%),
         radial-gradient(ellipse 70% 50% at 0% 100%, rgba(167,139,250,.1), transparent 45%);
     }
-    .wrap { max-width: 960px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
+    .wrap { max-width: 1180px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
     header { text-align: center; margin-bottom: 2.75rem; }
     header h1 {
       font-size: clamp(1.6rem, 4vw, 2.1rem);
@@ -117,7 +117,7 @@
 
     /* 力扣官网题单风格：浅色面板 + 绿/橙/红难度，无蓝色链接 */
     .plan-section {
-      margin: 2.5rem 0 2rem;
+      margin: 0;
       padding: 1.35rem 1.15rem 1.5rem;
       border-radius: 13px;
       background: #ffffff;
@@ -300,20 +300,90 @@
     .plan-footnote a:hover {
       text-decoration: underline;
     }
-    .chapters-label {
-      text-align: center;
-      font-size: 0.82rem;
-      color: var(--muted);
-      margin: 2rem 0 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.06em;
-    }
     @media (max-width: 480px) {
       .plan-section {
         padding: 1rem .85rem 1.15rem;
       }
       .lc-problem-item {
         padding: .65rem .75rem;
+      }
+    }
+
+    .content-split {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+      gap: 1.25rem;
+      align-items: start;
+      margin-top: 1.5rem;
+    }
+    .split-col-plan {
+      min-width: 0;
+    }
+    .split-col-chapters {
+      min-width: 0;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem 0.9rem 1.1rem;
+      position: sticky;
+      top: 1rem;
+      max-height: calc(100vh - 2rem);
+      display: flex;
+      flex-direction: column;
+    }
+    .chapters-heading {
+      margin: 0 0 0.35rem;
+      padding: 0 0.65rem;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.35;
+      word-break: break-word;
+    }
+    .chapters-meta {
+      margin: 0 0 0.75rem;
+      padding: 0 0.65rem;
+      font-size: 0.78rem;
+      color: var(--muted);
+      line-height: 1.45;
+    }
+    .chapters-scroll {
+      flex: 1;
+      min-height: 0;
+      overflow-y: auto;
+      padding: 0 0.35rem 0.25rem;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(255,255,255,.2) transparent;
+    }
+    .chapters-scroll .chapter-block {
+      margin: 0 0 1rem;
+    }
+    .chapters-scroll .chapter-block h3 {
+      margin: 0 0 0.45rem;
+      padding: 0 0.35rem;
+      font-size: 0.88rem;
+      color: var(--b);
+    }
+    .chapters-scroll .article-list {
+      grid-template-columns: 1fr;
+      gap: 0.35rem;
+    }
+    .chapters-scroll .article-list a {
+      font-size: 0.8rem;
+      padding: 0.45rem 0.6rem;
+      line-height: 1.4;
+      word-break: break-word;
+    }
+    @media (max-width: 960px) {
+      .content-split {
+        grid-template-columns: 1fr;
+      }
+      .split-col-chapters {
+        position: static;
+        max-height: none;
+      }
+      .chapters-scroll {
+        max-height: 28rem;
       }
     }
 
@@ -339,16 +409,25 @@
       <p class="section-label">导读</p>
     </div>
 
-    <section class="plan-section" aria-labelledby="plan-heading">
-      <h2 class="plan-heading" id="plan-heading">刷题分类计划</h2>
-      <p class="plan-intro">题单根据网上公开资料整理：<strong>力扣热题 HOT 100</strong>（按题型归类）、<strong>剑指 Offer</strong> 经典题补充。与下方「算法小抄」文章独立；建议先按本表刷题，需要模板时再查小抄章节。</p>
-      <div class="plan-sources" id="plan-sources"></div>
-      <div id="study-plan" class="plan-board"></div>
-      <p class="plan-footnote">题号与分类参考 <a href="https://leetcode.cn/problem-list/2cktkvj/" target="_blank" rel="noopener">力扣 HOT 100 官方题单</a>、<a href="https://leetcode.cn/problemset/lcof/" target="_blank" rel="noopener">剑指 Offer 题集</a> 及社区题型汇总；力扣题目以官网为准。</p>
-    </section>
-    <p class="chapters-label">算法小抄章节目录 · 全部 57 篇</p>
+    <div class="content-split">
+      <div class="split-col split-col-plan">
 
-    <div id="chapters"></div>
+      <section class="plan-section" aria-labelledby="plan-heading">
+        <h2 class="plan-heading" id="plan-heading">刷题分类计划</h2>
+        <p class="plan-intro">题单根据网上公开资料整理：<strong>力扣热题 HOT 100</strong>（按题型归类）、<strong>剑指 Offer</strong> 经典题补充。与右侧章节目录独立；先刷题，需要模板时再点右侧文章。</p>
+        <div class="plan-sources" id="plan-sources"></div>
+        <div id="study-plan" class="plan-board"></div>
+        <p class="plan-footnote">题号与分类参考 <a href="https://leetcode.cn/problem-list/2cktkvj/" target="_blank" rel="noopener">力扣 HOT 100 官方题单</a>、<a href="https://leetcode.cn/problemset/lcof/" target="_blank" rel="noopener">剑指 Offer 题集</a> 及社区题型汇总；力扣题目以官网为准。</p>
+      </section>
+
+      </div>
+      <aside class="split-col split-col-chapters" aria-labelledby="chapters-heading">
+        <h2 class="chapters-heading" id="chapters-heading">算法小抄章节目录</h2>
+        <p class="chapters-meta">全部 57 篇 · Python 框架</p>
+        <div id="chapters" class="chapters-scroll"></div>
+      </aside>
+    </div>
+
     <footer>
       <a href="https://github.com/RiddleGo/interview-hub">@RiddleGo/interview-hub</a>
       · 示例代码已全部转换为 Python
