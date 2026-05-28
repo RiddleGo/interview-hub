@@ -128,13 +128,38 @@
     }}
     .plan-intro {{
       text-align: center;
-      color: var(--muted);
+      color: #b8c4d8;
       font-size: .84rem;
-      margin: 0 0 1.15rem;
-      max-width: 36rem;
+      margin: 0 0 .65rem;
+      max-width: 40rem;
       margin-left: auto;
       margin-right: auto;
+      line-height: 1.55;
     }}
+    .plan-legend {{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: .45rem .65rem;
+      margin: 0 0 1.1rem;
+      font-size: .72rem;
+    }}
+    .plan-legend span {{
+      display: inline-flex;
+      align-items: center;
+      gap: .3rem;
+      color: #c5d0e4;
+    }}
+    .plan-legend .dot {{
+      width: .55rem;
+      height: .55rem;
+      border-radius: 2px;
+      flex-shrink: 0;
+    }}
+    .dot-jz {{ background: #f0a020; }}
+    .dot-hot {{ background: #f07178; }}
+    .dot-high {{ background: #7eb6ff; }}
+    .dot-doc {{ background: #a78bfa; }}
     .plan-board {{
       display: grid;
       gap: .9rem;
@@ -164,6 +189,7 @@
       font-size: .95rem;
       font-weight: 700;
       flex: 1 1 12rem;
+      color: var(--text);
     }}
     .plan-tags {{
       display: flex;
@@ -175,42 +201,96 @@
       font-size: .66rem;
       padding: .12rem .42rem;
       border-radius: 6px;
-      background: rgba(167,139,250,.14);
-      color: var(--b);
+      background: rgba(167,139,250,.18);
+      color: #d4c4ff;
       font-weight: 600;
     }}
-    .plan-row {{ margin-top: .5rem; }}
+    .plan-row {{ margin-top: .55rem; }}
     .plan-row-label {{
-      font-size: .7rem;
-      color: var(--muted);
-      margin-bottom: .3rem;
-      font-weight: 600;
+      font-size: .72rem;
+      color: #9aa8be;
+      margin-bottom: .4rem;
+      font-weight: 700;
+      letter-spacing: .02em;
     }}
-    .plan-reads, .plan-problems {{
+    .plan-reads {{
       display: flex;
       flex-wrap: wrap;
-      gap: .35rem;
+      gap: .4rem;
     }}
     .plan-reads a {{
-      font-size: .76rem;
-      padding: .28rem .5rem;
+      font-size: .78rem;
+      padding: .35rem .6rem;
       border-radius: 8px;
-      border: 1px solid var(--border);
-      color: var(--text);
+      border: 1px solid rgba(255,255,255,.14);
+      color: #eef2f8;
       text-decoration: none;
-      background: rgba(255,255,255,.03);
+      background: rgba(255,255,255,.06);
+      line-height: 1.35;
     }}
-    .plan-reads a:hover {{ border-color: var(--b); color: var(--b); }}
+    .plan-reads a:hover {{
+      border-color: #a78bfa;
+      color: #fff;
+      background: rgba(167,139,250,.15);
+    }}
+    .plan-problems {{
+      display: flex;
+      flex-wrap: wrap;
+      gap: .45rem;
+    }}
     .plan-problems a {{
-      font-size: .76rem;
-      padding: .28rem .5rem;
-      border-radius: 8px;
-      border: 1px solid rgba(62,224,201,.22);
-      color: var(--a);
+      display: inline-flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: .35rem .4rem;
+      font-size: .78rem;
+      padding: .4rem .65rem;
+      border-radius: 9px;
+      border: 1px solid rgba(255,255,255,.16);
+      color: #f4f7fc;
       text-decoration: none;
-      background: rgba(62,224,201,.07);
+      background: #1c2433;
+      line-height: 1.35;
+      box-shadow: 0 1px 0 rgba(0,0,0,.25);
+      max-width: 100%;
     }}
-    .plan-problems a:hover {{ background: rgba(62,224,201,.14); }}
+    .plan-problems a:hover {{
+      border-color: #5a6d88;
+      background: #263044;
+      color: #fff;
+    }}
+    .plan-prob-title {{
+      font-weight: 600;
+      color: #f8fafc;
+    }}
+    .plan-src {{
+      font-size: .62rem;
+      font-weight: 700;
+      padding: .1rem .35rem;
+      border-radius: 4px;
+      line-height: 1.2;
+      white-space: nowrap;
+    }}
+    .plan-src-jz {{
+      background: #3d2e12;
+      color: #ffc96a;
+      border: 1px solid #a67c18;
+    }}
+    .plan-src-hot {{
+      background: #3a1a1c;
+      color: #ffb4b8;
+      border: 1px solid #9e3d45;
+    }}
+    .plan-src-high {{
+      background: #152a45;
+      color: #9ed0ff;
+      border: 1px solid #3d6ea8;
+    }}
+    .plan-src-doc {{
+      background: #2a2240;
+      color: #d4c4ff;
+      border: 1px solid #6b52a8;
+    }}
     .chapters-label {{
       text-align: center;
       font-size: 0.82rem;
@@ -244,7 +324,13 @@
 
     <section class="plan-section" aria-labelledby="plan-heading">
       <h2 class="plan-heading" id="plan-heading">刷题分类计划</h2>
-      <p class="plan-intro">8 个阶段对照本站的 Python 框架文章与力扣经典题。每阶段建议：先读「对应文章」掌握模板，再刷「推荐题目」。</p>
+      <p class="plan-intro">10 个阶段：先读本站 Python 框架文章，再按<strong>剑指 Offer</strong>、<strong>热题 100</strong>、<strong>面试高频</strong>刷力扣（与小抄章节交叉标注）。题单参考《剑指 Offer》《程序员代码面试指南》及 LeetCode 官方热题榜，不仅限于小抄目录。</p>
+      <div class="plan-legend" aria-hidden="true">
+        <span><i class="dot dot-jz"></i>剑指 Offer</span>
+        <span><i class="dot dot-hot"></i>热题 100</span>
+        <span><i class="dot dot-high"></i>面试高频</span>
+        <span><i class="dot dot-doc"></i>小抄对应</span>
+      </div>
       <div id="study-plan" class="plan-board"></div>
     </section>
     <p class="chapters-label">章节目录 · 全部 57 篇</p>
@@ -634,9 +720,11 @@
     const STUDY_PLAN = [
   {
     "phase": "阶段 1",
-    "title": "框架与方法论",
+    "title": "入门 · 复杂度与基础",
     "tags": [
-      "入门"
+      "入门",
+      "数组",
+      "链表"
     ],
     "reads": [
       {
@@ -646,14 +734,46 @@
     ],
     "problems": [
       {
-        "id": 1,
-        "title": "两数之和",
-        "slug": "two-sum"
+        "id": 53,
+        "title": "最大子数组和",
+        "slug": "maximum-subarray",
+        "src": [
+          "剑指42",
+          "热题"
+        ]
+      },
+      {
+        "jz": 3,
+        "title": "数组中重复的数字",
+        "slug": "shu-zu-zhong-zhong-fu-de-shu-zi-lcof",
+        "src": [
+          "剑指"
+        ]
+      },
+      {
+        "jz": 66,
+        "title": "构建乘积数组",
+        "slug": "gou-jian-cheng-ji-shu-zu-lcof",
+        "src": [
+          "剑指"
+        ]
       },
       {
         "id": 206,
         "title": "反转链表",
-        "slug": "reverse-linked-list"
+        "slug": "reverse-linked-list",
+        "src": [
+          "热题",
+          "剑指24"
+        ]
+      },
+      {
+        "jz": 52,
+        "title": "两链表的第一个公共节点",
+        "slug": "liang-ge-lian-biao-de-di-yi-ge-gong-gong-jie-dian-lcof",
+        "src": [
+          "剑指"
+        ]
       }
     ]
   },
@@ -662,7 +782,8 @@
     "title": "双指针 · 二分查找",
     "tags": [
       "双指针",
-      "二分"
+      "二分",
+      "排序"
     ],
     "reads": [
       {
@@ -680,40 +801,76 @@
     ],
     "problems": [
       {
-        "id": 167,
-        "title": "两数之和 II",
-        "slug": "two-sum-ii-input-array-is-sorted"
+        "jz": 57,
+        "title": "和为 s 的两个数字",
+        "slug": "he-wei-sde-liang-ge-shu-zi-lcof",
+        "src": [
+          "剑指"
+        ]
+      },
+      {
+        "jz": 58,
+        "title": "左旋转字符串",
+        "slug": "zuo-xuan-zhuan-zi-fu-chuan-lcof",
+        "src": [
+          "剑指"
+        ]
       },
       {
         "id": 15,
         "title": "三数之和",
-        "slug": "3sum"
+        "slug": "3sum",
+        "src": [
+          "热题",
+          "高频"
+        ]
       },
       {
         "id": 26,
         "title": "删除有序数组重复项",
-        "slug": "remove-duplicates-from-sorted-array"
+        "slug": "remove-duplicates-from-sorted-array",
+        "src": [
+          "热题"
+        ]
       },
       {
-        "id": 704,
-        "title": "二分查找",
-        "slug": "binary-search"
+        "id": 33,
+        "title": "搜索旋转排序数组",
+        "slug": "search-in-rotated-sorted-array",
+        "src": [
+          "热题",
+          "高频"
+        ]
+      },
+      {
+        "jz": 53,
+        "title": "排序数组中查找数字",
+        "slug": "zai-pai-xu-shu-zu-zhong-cha-zhao-shu-zi-lcof",
+        "src": [
+          "剑指"
+        ]
       },
       {
         "id": 34,
         "title": "查找元素首末位置",
-        "slug": "find-first-and-last-position-of-element-in-sorted-array"
+        "slug": "find-first-and-last-position-of-element-in-sorted-array",
+        "src": [
+          "高频"
+        ]
       },
       {
         "id": 875,
         "title": "爱吃香蕉的珂珂",
-        "slug": "koko-eating-bananas"
+        "slug": "koko-eating-bananas",
+        "src": [
+          "高频"
+        ]
       }
     ]
   },
   {
     "phase": "阶段 3",
-    "title": "滑动窗口 · 前缀和",
+    "title": "滑动窗口 · 前缀和 · 哈希",
     "tags": [
       "滑动窗口",
       "前缀和",
@@ -735,29 +892,62 @@
     ],
     "problems": [
       {
+        "jz": 48,
+        "title": "最长不含重复字符的子串",
+        "slug": "zui-chang-bu-han-zhong-fu-zi-fu-de-zi-zi-fu-chuan-lcof",
+        "src": [
+          "剑指"
+        ]
+      },
+      {
         "id": 3,
         "title": "无重复字符最长子串",
-        "slug": "longest-substring-without-repeating-characters"
+        "slug": "longest-substring-without-repeating-characters",
+        "src": [
+          "热题"
+        ]
       },
       {
         "id": 76,
         "title": "最小覆盖子串",
-        "slug": "minimum-window-substring"
+        "slug": "minimum-window-substring",
+        "src": [
+          "热题",
+          "高频"
+        ]
       },
       {
         "id": 438,
         "title": "找到字母异位词",
-        "slug": "find-all-anagrams-in-a-string"
+        "slug": "find-all-anagrams-in-a-string",
+        "src": [
+          "高频"
+        ]
       },
       {
         "id": 560,
         "title": "和为 K 的子数组",
-        "slug": "subarray-sum-equals-k"
+        "slug": "subarray-sum-equals-k",
+        "src": [
+          "热题",
+          "高频"
+        ]
       },
       {
         "id": 49,
         "title": "字母异位词分组",
-        "slug": "group-anagrams"
+        "slug": "group-anagrams",
+        "src": [
+          "热题"
+        ]
+      },
+      {
+        "jz": 50,
+        "title": "第一个只出现一次的字符",
+        "slug": "di-yi-ge-zhi-chu-xian-yi-ci-de-zi-fu-lcof",
+        "src": [
+          "剑指"
+        ]
       }
     ]
   },
@@ -766,7 +956,8 @@
     "title": "链表",
     "tags": [
       "链表",
-      "双指针"
+      "双指针",
+      "快慢指针"
     ],
     "reads": [
       {
@@ -784,35 +975,75 @@
     ],
     "problems": [
       {
+        "jz": 22,
+        "title": "链表中倒数第 k 个节点",
+        "slug": "lian-biao-zhong-dao-shu-di-kge-jie-dian-lcof",
+        "src": [
+          "剑指"
+        ]
+      },
+      {
+        "jz": 23,
+        "title": "链表中环的入口节点",
+        "slug": "lian-biao-zhong-huan-de-ru-kou-jie-dian-lcof",
+        "src": [
+          "剑指"
+        ]
+      },
+      {
+        "jz": 35,
+        "title": "复杂链表的复制",
+        "slug": "fu-za-lian-biao-de-fu-zhi-lcof",
+        "src": [
+          "剑指"
+        ]
+      },
+      {
         "id": 141,
         "title": "环形链表",
-        "slug": "linked-list-cycle"
+        "slug": "linked-list-cycle",
+        "src": [
+          "热题"
+        ]
       },
       {
         "id": 142,
         "title": "环形链表 II",
-        "slug": "linked-list-cycle-ii"
+        "slug": "linked-list-cycle-ii",
+        "src": [
+          "热题"
+        ]
       },
       {
-        "id": 92,
-        "title": "反转链表 II",
-        "slug": "reverse-linked-list-ii"
+        "id": 160,
+        "title": "相交链表",
+        "slug": "intersection-of-two-linked-lists",
+        "src": [
+          "热题"
+        ]
       },
       {
         "id": 25,
         "title": "K 个一组翻转链表",
-        "slug": "reverse-nodes-in-k-group"
+        "slug": "reverse-nodes-in-k-group",
+        "src": [
+          "热题",
+          "高频"
+        ]
       },
       {
         "id": 234,
         "title": "回文链表",
-        "slug": "palindrome-linked-list"
+        "slug": "palindrome-linked-list",
+        "src": [
+          "高频"
+        ]
       }
     ]
   },
   {
     "phase": "阶段 5",
-    "title": "二叉树 · BFS",
+    "title": "二叉树 · BFS/DFS",
     "tags": [
       "二叉树",
       "BFS",
@@ -838,38 +1069,89 @@
     ],
     "problems": [
       {
-        "id": 104,
-        "title": "二叉树最大深度",
-        "slug": "maximum-depth-of-binary-tree"
+        "jz": 7,
+        "title": "重建二叉树",
+        "slug": "chong-jian-er-cha-shu-lcof",
+        "src": [
+          "剑指"
+        ]
       },
       {
-        "id": 111,
-        "title": "二叉树最小深度",
-        "slug": "minimum-depth-of-binary-tree"
+        "jz": 28,
+        "title": "对称的二叉树",
+        "slug": "dui-cheng-de-er-cha-shu-lcof",
+        "src": [
+          "剑指"
+        ]
+      },
+      {
+        "jz": 32,
+        "title": "从上到下打印二叉树",
+        "slug": "cong-shang-dao-xia-da-yin-er-cha-shu-lcof",
+        "src": [
+          "剑指"
+        ]
+      },
+      {
+        "jz": 68,
+        "title": "二叉搜索树的最近公共祖先",
+        "slug": "er-cha-sou-suo-shu-de-zui-jin-gong-gong-zu-xian-lcof",
+        "src": [
+          "剑指"
+        ]
       },
       {
         "id": 102,
-        "title": "层序遍历",
-        "slug": "binary-tree-level-order-traversal"
+        "title": "二叉树层序遍历",
+        "slug": "binary-tree-level-order-traversal",
+        "src": [
+          "热题"
+        ]
+      },
+      {
+        "id": 104,
+        "title": "二叉树最大深度",
+        "slug": "maximum-depth-of-binary-tree",
+        "src": [
+          "热题"
+        ]
       },
       {
         "id": 236,
-        "title": "最近公共祖先",
-        "slug": "lowest-common-ancestor-of-a-binary-tree"
+        "title": "二叉树最近公共祖先",
+        "slug": "lowest-common-ancestor-of-a-binary-tree",
+        "src": [
+          "热题",
+          "高频"
+        ]
+      },
+      {
+        "id": 98,
+        "title": "验证二叉搜索树",
+        "slug": "validate-binary-search-tree",
+        "src": [
+          "热题",
+          "高频"
+        ]
       },
       {
         "id": 297,
         "title": "序列化与反序列化",
-        "slug": "serialize-and-deserialize-binary-tree"
+        "slug": "serialize-and-deserialize-binary-tree",
+        "src": [
+          "高频",
+          "小抄"
+        ]
       }
     ]
   },
   {
     "phase": "阶段 6",
-    "title": "回溯",
+    "title": "回溯 · 搜索",
     "tags": [
       "回溯",
-      "DFS"
+      "DFS",
+      "剪枝"
     ],
     "reads": [
       {
@@ -891,29 +1173,70 @@
     ],
     "problems": [
       {
+        "jz": 38,
+        "title": "字符串的排列",
+        "slug": "zi-fu-chuan-de-pai-lie-lcof",
+        "src": [
+          "剑指"
+        ]
+      },
+      {
         "id": 46,
         "title": "全排列",
-        "slug": "permutations"
+        "slug": "permutations",
+        "src": [
+          "热题",
+          "高频"
+        ]
       },
       {
         "id": 78,
         "title": "子集",
-        "slug": "subsets"
+        "slug": "subsets",
+        "src": [
+          "热题"
+        ]
       },
       {
         "id": 39,
         "title": "组合总和",
-        "slug": "combination-sum"
+        "slug": "combination-sum",
+        "src": [
+          "热题"
+        ]
       },
       {
         "id": 22,
         "title": "括号生成",
-        "slug": "generate-parentheses"
+        "slug": "generate-parentheses",
+        "src": [
+          "热题",
+          "高频"
+        ]
+      },
+      {
+        "id": 79,
+        "title": "单词搜索",
+        "slug": "word-search",
+        "src": [
+          "热题"
+        ]
+      },
+      {
+        "jz": 12,
+        "title": "矩阵中的路径",
+        "slug": "ju-zhen-zhong-de-lu-jing-lcof",
+        "src": [
+          "剑指"
+        ]
       },
       {
         "id": 51,
         "title": "N 皇后",
-        "slug": "n-queens"
+        "slug": "n-queens",
+        "src": [
+          "高频"
+        ]
       }
     ]
   },
@@ -953,50 +1276,106 @@
     ],
     "problems": [
       {
-        "id": 509,
-        "title": "斐波那契数",
-        "slug": "fibonacci-number"
+        "jz": 10,
+        "title": "青蛙跳台阶",
+        "slug": "qing-wa-tiao-tai-jie-zi-lcof",
+        "src": [
+          "剑指"
+        ]
+      },
+      {
+        "jz": 14,
+        "title": "剪绳子",
+        "slug": "jian-sheng-zi-lcof",
+        "src": [
+          "剑指"
+        ]
+      },
+      {
+        "jz": 47,
+        "title": "礼物的最大价值",
+        "slug": "li-wu-de-zui-da-jia-zhi-lcof",
+        "src": [
+          "剑指"
+        ]
+      },
+      {
+        "jz": 63,
+        "title": "股票的最大利润",
+        "slug": "gu-piao-de-zui-da-li-run-lcof",
+        "src": [
+          "剑指"
+        ]
+      },
+      {
+        "id": 70,
+        "title": "爬楼梯",
+        "slug": "climbing-stairs",
+        "src": [
+          "热题"
+        ]
       },
       {
         "id": 322,
         "title": "零钱兑换",
-        "slug": "coin-change"
-      },
-      {
-        "id": 53,
-        "title": "最大子数组和",
-        "slug": "maximum-subarray"
+        "slug": "coin-change",
+        "src": [
+          "热题",
+          "高频"
+        ]
       },
       {
         "id": 300,
         "title": "最长递增子序列",
-        "slug": "longest-increasing-subsequence"
+        "slug": "longest-increasing-subsequence",
+        "src": [
+          "热题",
+          "高频"
+        ]
       },
       {
         "id": 1143,
         "title": "最长公共子序列",
-        "slug": "longest-common-subsequence"
+        "slug": "longest-common-subsequence",
+        "src": [
+          "热题",
+          "高频"
+        ]
       },
       {
         "id": 72,
         "title": "编辑距离",
-        "slug": "edit-distance"
+        "slug": "edit-distance",
+        "src": [
+          "热题",
+          "高频"
+        ]
       },
       {
         "id": 416,
         "title": "分割等和子集",
-        "slug": "partition-equal-subset-sum"
+        "slug": "partition-equal-subset-sum",
+        "src": [
+          "高频"
+        ]
+      },
+      {
+        "id": 139,
+        "title": "单词拆分",
+        "slug": "word-break",
+        "src": [
+          "热题"
+        ]
       }
     ]
   },
   {
     "phase": "阶段 8",
-    "title": "栈 · 贪心 · 设计 · 并查集",
+    "title": "栈 · 队列 · 单调结构",
     "tags": [
       "单调栈",
-      "贪心",
-      "LRU",
-      "并查集"
+      "单调队列",
+      "栈"
     ],
     "reads": [
       {
@@ -1008,61 +1387,304 @@
         "title": "特殊数据结构：单调队列"
       },
       {
-        "path": "第3章-数据结构系列/3.1-手把手教你写LRU缓存淘汰算法.md",
-        "title": "层层拆解，带你手写 LRU 算法"
-      },
-      {
         "path": "第5章-高频面试系列/5.4-如何高效解决接雨水问题.md",
         "title": "接雨水问题详解"
       },
+      {
+        "path": "第5章-高频面试系列/5.9-如何判定括号合法性.md",
+        "title": "如何判定括号合法性"
+      }
+    ],
+    "problems": [
+      {
+        "jz": 30,
+        "title": "包含 min 函数的栈",
+        "slug": "bao-han-minhan-shu-de-zhan-lcof",
+        "src": [
+          "剑指"
+        ]
+      },
+      {
+        "jz": 31,
+        "title": "栈的压入弹出序列",
+        "slug": "zhan-de-ya-ru-dan-chu-xu-lie-lcof",
+        "src": [
+          "剑指"
+        ]
+      },
+      {
+        "jz": 59,
+        "title": "滑动窗口最大值",
+        "slug": "hua-dong-chuang-kou-de-zui-da-zhi-lcof",
+        "src": [
+          "剑指"
+        ]
+      },
+      {
+        "id": 20,
+        "title": "有效的括号",
+        "slug": "valid-parentheses",
+        "src": [
+          "热题"
+        ]
+      },
+      {
+        "id": 84,
+        "title": "柱状图最大矩形",
+        "slug": "largest-rectangle-in-histogram",
+        "src": [
+          "热题",
+          "高频"
+        ]
+      },
+      {
+        "id": 42,
+        "title": "接雨水",
+        "slug": "trapping-rain-water",
+        "src": [
+          "热题",
+          "高频"
+        ]
+      },
+      {
+        "id": 739,
+        "title": "每日温度",
+        "slug": "daily-temperatures",
+        "src": [
+          "热题"
+        ]
+      },
+      {
+        "id": 239,
+        "title": "滑动窗口最大值",
+        "slug": "sliding-window-maximum",
+        "src": [
+          "热题",
+          "高频"
+        ]
+      }
+    ]
+  },
+  {
+    "phase": "阶段 9",
+    "title": "贪心 · 图 · 并查集",
+    "tags": [
+      "贪心",
+      "BFS",
+      "并查集",
+      "拓扑"
+    ],
+    "reads": [
       {
         "path": "第5章-高频面试系列/5.7-如何运用贪心思想玩跳跃游戏.md",
         "title": "如何运用贪心思想玩跳跃游戏"
       },
       {
+        "path": "第5章-高频面试系列/5.8-如何运用贪心算法做时间管理.md",
+        "title": "运用贪心算法来做时间管理"
+      },
+      {
         "path": "第5章-高频面试系列/5.11-Union-Find算法详解.md",
         "title": "Union-Find算法详解"
+      },
+      {
+        "path": "第1章-核心套路篇/1.4-BFS 算法套路框架.md",
+        "title": "BFS 算法解题套路框架"
       }
     ],
     "problems": [
       {
-        "id": 20,
-        "title": "有效的括号",
-        "slug": "valid-parentheses"
-      },
-      {
-        "id": 42,
-        "title": "接雨水",
-        "slug": "trapping-rain-water"
-      },
-      {
-        "id": 739,
-        "title": "每日温度",
-        "slug": "daily-temperatures"
+        "jz": 13,
+        "title": "机器人的运动范围",
+        "slug": "ji-qi-ren-de-yun-dong-fan-wei-lcof",
+        "src": [
+          "剑指"
+        ]
       },
       {
         "id": 55,
         "title": "跳跃游戏",
-        "slug": "jump-game"
+        "slug": "jump-game",
+        "src": [
+          "热题",
+          "高频"
+        ]
       },
       {
-        "id": 146,
-        "title": "LRU 缓存",
-        "slug": "lru-cache"
+        "id": 45,
+        "title": "跳跃游戏 II",
+        "slug": "jump-game-ii",
+        "src": [
+          "高频"
+        ]
       },
       {
         "id": 200,
         "title": "岛屿数量",
-        "slug": "number-of-islands"
+        "slug": "number-of-islands",
+        "src": [
+          "热题",
+          "高频"
+        ]
+      },
+      {
+        "id": 207,
+        "title": "课程表",
+        "slug": "course-schedule",
+        "src": [
+          "热题",
+          "高频"
+        ]
+      },
+      {
+        "id": 994,
+        "title": "腐烂的橘子",
+        "slug": "rotting-oranges",
+        "src": [
+          "热题"
+        ]
+      },
+      {
+        "jz": 40,
+        "title": "最小的 k 个数",
+        "slug": "zui-xiao-de-kge-shu-lcof",
+        "src": [
+          "剑指"
+        ]
+      },
+      {
+        "id": 215,
+        "title": "数组第 K 个最大元素",
+        "slug": "kth-largest-element-in-an-array",
+        "src": [
+          "热题"
+        ]
+      }
+    ]
+  },
+  {
+    "phase": "阶段 10",
+    "title": "设计题 · 综合高频",
+    "tags": [
+      "设计",
+      "堆",
+      "综合"
+    ],
+    "reads": [
+      {
+        "path": "第3章-数据结构系列/3.1-手把手教你写LRU缓存淘汰算法.md",
+        "title": "层层拆解，带你手写 LRU 算法"
+      },
+      {
+        "path": "第3章-数据结构系列/3.2-层层拆解，带你手写LFU算法.md",
+        "title": "算法就像搭乐高：带你手撸 LFU 算法"
+      },
+      {
+        "path": "第4章-算法思维系列/4.7-拆解复杂问题：实现计算器.md",
+        "title": "拆解复杂问题：实现计算器"
+      },
+      {
+        "path": "第5章-高频面试系列/5.6-如何寻找最长回文子串.md",
+        "title": "如何寻找最长回文子串"
+      }
+    ],
+    "problems": [
+      {
+        "jz": 9,
+        "title": "用两个栈实现队列",
+        "slug": "yong-liang-ge-zhan-shi-xian-dui-lie-lcof",
+        "src": [
+          "剑指"
+        ]
+      },
+      {
+        "jz": 41,
+        "title": "数据流中的中位数",
+        "slug": "shu-ju-liu-zhong-de-zhong-wei-shu-lcof",
+        "src": [
+          "剑指"
+        ]
+      },
+      {
+        "id": 146,
+        "title": "LRU 缓存",
+        "slug": "lru-cache",
+        "src": [
+          "热题",
+          "高频",
+          "小抄"
+        ]
+      },
+      {
+        "id": 460,
+        "title": "LFU 缓存",
+        "slug": "lfu-cache",
+        "src": [
+          "高频",
+          "小抄"
+        ]
+      },
+      {
+        "id": 5,
+        "title": "最长回文子串",
+        "slug": "longest-palindromic-substring",
+        "src": [
+          "热题",
+          "高频"
+        ]
+      },
+      {
+        "id": 224,
+        "title": "基本计算器",
+        "slug": "basic-calculator",
+        "src": [
+          "高频",
+          "小抄"
+        ]
+      },
+      {
+        "id": 295,
+        "title": "数据流的中位数",
+        "slug": "find-median-from-data-stream",
+        "src": [
+          "热题"
+        ]
+      },
+      {
+        "id": 347,
+        "title": "前 K 个高频元素",
+        "slug": "top-k-frequent-elements",
+        "src": [
+          "热题",
+          "高频"
+        ]
       }
     ]
   }
 ];
+    const SRC_CLASS = {
+      "剑指": "plan-src-jz",
+      "热题": "plan-src-hot",
+      "高频": "plan-src-high",
+      "小抄": "plan-src-doc",
+    };
     function articleHref(path) {
       return "reader.html?path=" + encodeURIComponent(path);
     }
     function lcHref(slug) {
       return "https://leetcode.cn/problems/" + slug + "/";
+    }
+    function srcTags(srcList) {
+      return (srcList || []).map(s => {
+        const key = s.startsWith("剑指") ? "剑指" : s.replace(/\d+.*/, "");
+        const cls = SRC_CLASS[key] || "plan-src-high";
+        return `<span class="plan-src ${cls}">${s}</span>`;
+      }).join("");
+    }
+    function probLabel(p) {
+      if (p.jz) return `剑指${p.jz} · ${p.title}`;
+      if (p.id) return `${p.id}. ${p.title}`;
+      return p.title;
     }
     function renderStudyPlan() {
       const board = document.getElementById("study-plan");
@@ -1075,7 +1697,7 @@
           `<a href="${articleHref(r.path)}">${r.title}</a>`
         ).join("");
         const problems = (track.problems || []).map(p =>
-          `<a href="${lcHref(p.slug)}" target="_blank" rel="noopener">${p.id}. ${p.title}</a>`
+          `<a href="${lcHref(p.slug)}" target="_blank" rel="noopener">${srcTags(p.src)}<span class="plan-prob-title">${probLabel(p)}</span></a>`
         ).join("");
         card.innerHTML = `
           <div class="plan-card-head">
@@ -1084,11 +1706,11 @@
             <div class="plan-tags">${tags}</div>
           </div>
           <div class="plan-row">
-            <div class="plan-row-label">对应文章</div>
+            <div class="plan-row-label">框架文章（本站）</div>
             <div class="plan-reads">${reads}</div>
           </div>
           <div class="plan-row">
-            <div class="plan-row-label">推荐刷题（力扣）</div>
+            <div class="plan-row-label">刷题推荐（力扣）</div>
             <div class="plan-problems">${problems}</div>
           </div>`;
         board.appendChild(card);
