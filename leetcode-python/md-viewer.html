@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Markdown Viewer · leetcode-python</title>
+  <style>
+    body { margin: 0; background: #0b1220; color: #e5e7eb; font-family: Arial, "Microsoft YaHei", sans-serif; }
+    .wrap { max-width: 980px; margin: 0 auto; padding: 20px 16px 48px; }
+    .top { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin-bottom: 14px; }
+    a.btn { padding: 7px 11px; border: 1px solid #334155; border-radius: 8px; color: #e2e8f0; text-decoration: none; }
+    a.btn:hover { border-color: #22d3ee; color: #22d3ee; }
+    #path { color: #93c5fd; font-size: 14px; }
+    #status { color: #94a3b8; margin: 12px 0; }
+    article { background: #111827; border: 1px solid #334155; border-radius: 12px; padding: 18px; line-height: 1.7; }
+    article h1, article h2, article h3 { color: #f8fafc; }
+    article code { background: #1f2937; padding: 2px 6px; border-radius: 6px; }
+    article pre { overflow: auto; background: #030712; border: 1px solid #374151; border-radius: 10px; padding: 12px; }
+    article a { color: #22d3ee; }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <main class="wrap">
+    <div class="top">
+      <a class="btn" href="index.html">返回 leetcode-python 首页</a>
+      <a class="btn" href="problems/index.html">返回题解目录</a>
+      <span id="path"></span>
+    </div>
+    <div id="status">正在加载 Markdown...</div>
+    <article id="content"></article>
+  </main>
+
+  <script>
+    (async function () {
+      const status = document.getElementById("status");
+      const pathEl = document.getElementById("path");
+      const content = document.getElementById("content");
+      const url = new URL(window.location.href);
+      const file = url.searchParams.get("file");
+
+      if (!file) {
+        status.textContent = "缺少参数：?file=...";
+        return;
+      }
+
+      // Allow only project-local markdown paths.
+      if (file.includes("..") || !file.endsWith(".md")) {
+        status.textContent = "非法路径参数";
+        return;
+      }
+
+      pathEl.textContent = file;
+
+      try {
+        const resp = await fetch(file, { cache: "no-store" });
+        if (!resp.ok) throw new Error(String(resp.status));
+        const text = await resp.text();
+        const html = marked.parse(text, { mangle: false, headerIds: false });
+        content.innerHTML = html;
+        status.textContent = "";
+      } catch (err) {
+        status.textContent = "加载失败: " + String(err);
+      }
+    })();
+  </script>
+</body>
+</html>
