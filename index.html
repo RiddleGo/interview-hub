@@ -261,6 +261,18 @@
       "<a class=\"btn\" href=\"https://github.com/RiddleGo/interview-hub/tree/main/leetcode\" target=\"_blank\" rel=\"noopener\">GitHub 源码</a>" +
       "</div>";
     root.appendChild(algo);
+    var carl = document.createElement("article");
+    carl.className = "featured";
+    carl.innerHTML =
+      "<h2>代码随想录（全量 Python 化）</h2>" +
+      "<div class=\"meta\">leetcode-master 迁移版 · Python-first</div>" +
+      "<p class=\"desc\">基于 youngyangyang04/leetcode-master 生成：题解文档代码块统一为 Python，并生成可批量校验的 solutions 目录；无法可靠自动转换处保留占位实现与原文片段。</p>" +
+      "<div class=\"actions\">" +
+      "<a class=\"btn primary\" href=\"leetcode-python/index.html\">打开迁移项目</a>" +
+      "<a class=\"btn\" href=\"leetcode-python/migration-report.md\">迁移报告</a>" +
+      "<a class=\"btn\" href=\"https://github.com/RiddleGo/interview-hub/tree/main/leetcode-python\" target=\"_blank\" rel=\"noopener\">GitHub 子目录</a>" +
+      "</div>";
+    root.appendChild(carl);
     var lbl = document.createElement("p");
     lbl.className = "section-label";
     lbl.style.gridColumn = "1 / -1";

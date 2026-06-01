@@ -1,0 +1,1270 @@
+{
+  "source": "D:/coding/leetcode-master",
+  "output": "D:/coding/interview-hub/leetcode-python",
+  "stats": {
+    "md_files": 314,
+    "converted_blocks": 3140,
+    "kept_python_blocks": 511,
+    "copied_assets": 8,
+    "generated_solution_files": 315,
+    "placeholder_solutions": 96
+  },
+  "solutions": {
+    "README.md": {
+      "solution": "solutions/README.py",
+      "placeholder": true
+    },
+    "problems/0001.两数之和.md": {
+      "solution": "solutions/0001_两数之和.py",
+      "placeholder": false
+    },
+    "problems/0005.最长回文子串.md": {
+      "solution": "solutions/0005_最长回文子串.py",
+      "placeholder": false
+    },
+    "problems/0015.三数之和.md": {
+      "solution": "solutions/0015_三数之和.py",
+      "placeholder": false
+    },
+    "problems/0017.电话号码的字母组合.md": {
+      "solution": "solutions/0017_电话号码的字母组合.py",
+      "placeholder": false
+    },
+    "problems/0018.四数之和.md": {
+      "solution": "solutions/0018_四数之和.py",
+      "placeholder": false
+    },
+    "problems/0019.删除链表的倒数第N个节点.md": {
+      "solution": "solutions/0019_删除链表的倒数第N个节点.py",
+      "placeholder": false
+    },
+    "problems/0020.有效的括号.md": {
+      "solution": "solutions/0020_有效的括号.py",
+      "placeholder": false
+    },
+    "problems/0024.两两交换链表中的节点.md": {
+      "solution": "solutions/0024_两两交换链表中的节点.py",
+      "placeholder": false
+    },
+    "problems/0027.移除元素.md": {
+      "solution": "solutions/0027_移除元素.py",
+      "placeholder": false
+    },
+    "problems/0028.实现strStr.md": {
+      "solution": "solutions/0028_实现strStr.py",
+      "placeholder": false
+    },
+    "problems/0031.下一个排列.md": {
+      "solution": "solutions/0031_下一个排列.py",
+      "placeholder": false
+    },
+    "problems/0034.在排序数组中查找元素的第一个和最后一个位置.md": {
+      "solution": "solutions/0034_在排序数组中查找元素的第一个和最后一个位置.py",
+      "placeholder": false
+    },
+    "problems/0035.搜索插入位置.md": {
+      "solution": "solutions/0035_搜索插入位置.py",
+      "placeholder": false
+    },
+    "problems/0037.解数独.md": {
+      "solution": "solutions/0037_解数独.py",
+      "placeholder": false
+    },
+    "problems/0039.组合总和.md": {
+      "solution": "solutions/0039_组合总和.py",
+      "placeholder": false
+    },
+    "problems/0040.组合总和II.md": {
+      "solution": "solutions/0040_组合总和II.py",
+      "placeholder": false
+    },
+    "problems/0042.接雨水.md": {
+      "solution": "solutions/0042_接雨水.py",
+      "placeholder": false
+    },
+    "problems/0045.跳跃游戏II.md": {
+      "solution": "solutions/0045_跳跃游戏II.py",
+      "placeholder": false
+    },
+    "problems/0046.全排列.md": {
+      "solution": "solutions/0046_全排列.py",
+      "placeholder": false
+    },
+    "problems/0047.全排列II.md": {
+      "solution": "solutions/0047_全排列II.py",
+      "placeholder": false
+    },
+    "problems/0051.N皇后.md": {
+      "solution": "solutions/0051_N皇后.py",
+      "placeholder": false
+    },
+    "problems/0052.N皇后II.md": {
+      "solution": "solutions/0052_N皇后II.py",
+      "placeholder": true
+    },
+    "problems/0053.最大子序和.md": {
+      "solution": "solutions/0053_最大子序和.py",
+      "placeholder": false
+    },
+    "problems/0053.最大子序和（动态规划）.md": {
+      "solution": "solutions/0053_最大子序和_动态规划.py",
+      "placeholder": false
+    },
+    "problems/0054.螺旋矩阵.md": {
+      "solution": "solutions/0054_螺旋矩阵.py",
+      "placeholder": false
+    },
+    "problems/0055.跳跃游戏.md": {
+      "solution": "solutions/0055_跳跃游戏.py",
+      "placeholder": false
+    },
+    "problems/0056.合并区间.md": {
+      "solution": "solutions/0056_合并区间.py",
+      "placeholder": false
+    },
+    "problems/0059.螺旋矩阵II.md": {
+      "solution": "solutions/0059_螺旋矩阵II.py",
+      "placeholder": false
+    },
+    "problems/0062.不同路径.md": {
+      "solution": "solutions/0062_不同路径.py",
+      "placeholder": false
+    },
+    "problems/0063.不同路径II.md": {
+      "solution": "solutions/0063_不同路径II.py",
+      "placeholder": false
+    },
+    "problems/0070.爬楼梯.md": {
+      "solution": "solutions/0070_爬楼梯.py",
+      "placeholder": false
+    },
+    "problems/0070.爬楼梯完全背包版本.md": {
+      "solution": "solutions/0070_爬楼梯完全背包版本.py",
+      "placeholder": false
+    },
+    "problems/0072.编辑距离.md": {
+      "solution": "solutions/0072_编辑距离.py",
+      "placeholder": false
+    },
+    "problems/0077.组合.md": {
+      "solution": "solutions/0077_组合.py",
+      "placeholder": false
+    },
+    "problems/0077.组合优化.md": {
+      "solution": "solutions/0077_组合优化.py",
+      "placeholder": false
+    },
+    "problems/0078.子集.md": {
+      "solution": "solutions/0078_子集.py",
+      "placeholder": false
+    },
+    "problems/0084.柱状图中最大的矩形.md": {
+      "solution": "solutions/0084_柱状图中最大的矩形.py",
+      "placeholder": false
+    },
+    "problems/0090.子集II.md": {
+      "solution": "solutions/0090_子集II.py",
+      "placeholder": false
+    },
+    "problems/0093.复原IP地址.md": {
+      "solution": "solutions/0093_复原IP地址.py",
+      "placeholder": false
+    },
+    "problems/0096.不同的二叉搜索树.md": {
+      "solution": "solutions/0096_不同的二叉搜索树.py",
+      "placeholder": false
+    },
+    "problems/0098.验证二叉搜索树.md": {
+      "solution": "solutions/0098_验证二叉搜索树.py",
+      "placeholder": false
+    },
+    "problems/0100.相同的树.md": {
+      "solution": "solutions/0100_相同的树.py",
+      "placeholder": false
+    },
+    "problems/0101.对称二叉树.md": {
+      "solution": "solutions/0101_对称二叉树.py",
+      "placeholder": false
+    },
+    "problems/0102.二叉树的层序遍历.md": {
+      "solution": "solutions/0102_二叉树的层序遍历.py",
+      "placeholder": false
+    },
+    "problems/0104.二叉树的最大深度.md": {
+      "solution": "solutions/0104_二叉树的最大深度.py",
+      "placeholder": false
+    },
+    "problems/0106.从中序与后序遍历序列构造二叉树.md": {
+      "solution": "solutions/0106_从中序与后序遍历序列构造二叉树.py",
+      "placeholder": false
+    },
+    "problems/0108.将有序数组转换为二叉搜索树.md": {
+      "solution": "solutions/0108_将有序数组转换为二叉搜索树.py",
+      "placeholder": false
+    },
+    "problems/0110.平衡二叉树.md": {
+      "solution": "solutions/0110_平衡二叉树.py",
+      "placeholder": false
+    },
+    "problems/0111.二叉树的最小深度.md": {
+      "solution": "solutions/0111_二叉树的最小深度.py",
+      "placeholder": false
+    },
+    "problems/0112.路径总和.md": {
+      "solution": "solutions/0112_路径总和.py",
+      "placeholder": false
+    },
+    "problems/0115.不同的子序列.md": {
+      "solution": "solutions/0115_不同的子序列.py",
+      "placeholder": false
+    },
+    "problems/0116.填充每个节点的下一个右侧节点指针.md": {
+      "solution": "solutions/0116_填充每个节点的下一个右侧节点指针.py",
+      "placeholder": false
+    },
+    "problems/0121.买卖股票的最佳时机.md": {
+      "solution": "solutions/0121_买卖股票的最佳时机.py",
+      "placeholder": false
+    },
+    "problems/0122.买卖股票的最佳时机II.md": {
+      "solution": "solutions/0122_买卖股票的最佳时机II.py",
+      "placeholder": false
+    },
+    "problems/0122.买卖股票的最佳时机II（动态规划）.md": {
+      "solution": "solutions/0122_买卖股票的最佳时机II_动态规划.py",
+      "placeholder": false
+    },
+    "problems/0123.买卖股票的最佳时机III.md": {
+      "solution": "solutions/0123_买卖股票的最佳时机III.py",
+      "placeholder": false
+    },
+    "problems/0127.单词接龙.md": {
+      "solution": "solutions/0127_单词接龙.py",
+      "placeholder": false
+    },
+    "problems/0129.求根到叶子节点数字之和.md": {
+      "solution": "solutions/0129_求根到叶子节点数字之和.py",
+      "placeholder": false
+    },
+    "problems/0130.被围绕的区域.md": {
+      "solution": "solutions/0130_被围绕的区域.py",
+      "placeholder": false
+    },
+    "problems/0131.分割回文串.md": {
+      "solution": "solutions/0131_分割回文串.py",
+      "placeholder": true
+    },
+    "problems/0132.分割回文串II.md": {
+      "solution": "solutions/0132_分割回文串II.py",
+      "placeholder": false
+    },
+    "problems/0134.加油站.md": {
+      "solution": "solutions/0134_加油站.py",
+      "placeholder": false
+    },
+    "problems/0135.分发糖果.md": {
+      "solution": "solutions/0135_分发糖果.py",
+      "placeholder": false
+    },
+    "problems/0139.单词拆分.md": {
+      "solution": "solutions/0139_单词拆分.py",
+      "placeholder": false
+    },
+    "problems/0141.环形链表.md": {
+      "solution": "solutions/0141_环形链表.py",
+      "placeholder": false
+    },
+    "problems/0142.环形链表II.md": {
+      "solution": "solutions/0142_环形链表II.py",
+      "placeholder": false
+    },
+    "problems/0143.重排链表.md": {
+      "solution": "solutions/0143_重排链表.py",
+      "placeholder": false
+    },
+    "problems/0150.逆波兰表达式求值.md": {
+      "solution": "solutions/0150_逆波兰表达式求值.py",
+      "placeholder": true
+    },
+    "problems/0151.翻转字符串里的单词.md": {
+      "solution": "solutions/0151_翻转字符串里的单词.py",
+      "placeholder": false
+    },
+    "problems/0160.相交链表.md": {
+      "solution": "solutions/0160_相交链表.py",
+      "placeholder": true
+    },
+    "problems/0188.买卖股票的最佳时机IV.md": {
+      "solution": "solutions/0188_买卖股票的最佳时机IV.py",
+      "placeholder": false
+    },
+    "problems/0189.旋转数组.md": {
+      "solution": "solutions/0189_旋转数组.py",
+      "placeholder": false
+    },
+    "problems/0198.打家劫舍.md": {
+      "solution": "solutions/0198_打家劫舍.py",
+      "placeholder": false
+    },
+    "problems/0200.岛屿数量.广搜版.md": {
+      "solution": "solutions/0200_岛屿数量_广搜版.py",
+      "placeholder": false
+    },
+    "problems/0200.岛屿数量.深搜版.md": {
+      "solution": "solutions/0200_岛屿数量_深搜版.py",
+      "placeholder": false
+    },
+    "problems/0202.快乐数.md": {
+      "solution": "solutions/0202_快乐数.py",
+      "placeholder": false
+    },
+    "problems/0203.移除链表元素.md": {
+      "solution": "solutions/0203_移除链表元素.py",
+      "placeholder": false
+    },
+    "problems/0205.同构字符串.md": {
+      "solution": "solutions/0205_同构字符串.py",
+      "placeholder": false
+    },
+    "problems/0206.翻转链表.md": {
+      "solution": "solutions/0206_翻转链表.py",
+      "placeholder": false
+    },
+    "problems/0207.课程表.md": {
+      "solution": "solutions/0207_课程表.py",
+      "placeholder": true
+    },
+    "problems/0209.长度最小的子数组.md": {
+      "solution": "solutions/0209_长度最小的子数组.py",
+      "placeholder": false
+    },
+    "problems/0210.课程表II.md": {
+      "solution": "solutions/0210_课程表II.py",
+      "placeholder": true
+    },
+    "problems/0213.打家劫舍II.md": {
+      "solution": "solutions/0213_打家劫舍II.py",
+      "placeholder": false
+    },
+    "problems/0216.组合总和III.md": {
+      "solution": "solutions/0216_组合总和III.py",
+      "placeholder": false
+    },
+    "problems/0222.完全二叉树的节点个数.md": {
+      "solution": "solutions/0222_完全二叉树的节点个数.py",
+      "placeholder": false
+    },
+    "problems/0225.用队列实现栈.md": {
+      "solution": "solutions/0225_用队列实现栈.py",
+      "placeholder": false
+    },
+    "problems/0226.翻转二叉树.md": {
+      "solution": "solutions/0226_翻转二叉树.py",
+      "placeholder": false
+    },
+    "problems/0232.用栈实现队列.md": {
+      "solution": "solutions/0232_用栈实现队列.py",
+      "placeholder": false
+    },
+    "problems/0234.回文链表.md": {
+      "solution": "solutions/0234_回文链表.py",
+      "placeholder": false
+    },
+    "problems/0235.二叉搜索树的最近公共祖先.md": {
+      "solution": "solutions/0235_二叉搜索树的最近公共祖先.py",
+      "placeholder": false
+    },
+    "problems/0236.二叉树的最近公共祖先.md": {
+      "solution": "solutions/0236_二叉树的最近公共祖先.py",
+      "placeholder": false
+    },
+    "problems/0239.滑动窗口最大值.md": {
+      "solution": "solutions/0239_滑动窗口最大值.py",
+      "placeholder": false
+    },
+    "problems/0242.有效的字母异位词.md": {
+      "solution": "solutions/0242_有效的字母异位词.py",
+      "placeholder": false
+    },
+    "problems/0257.二叉树的所有路径.md": {
+      "solution": "solutions/0257_二叉树的所有路径.py",
+      "placeholder": false
+    },
+    "problems/0279.完全平方数.md": {
+      "solution": "solutions/0279_完全平方数.py",
+      "placeholder": false
+    },
+    "problems/0283.移动零.md": {
+      "solution": "solutions/0283_移动零.py",
+      "placeholder": false
+    },
+    "problems/0300.最长上升子序列.md": {
+      "solution": "solutions/0300_最长上升子序列.py",
+      "placeholder": false
+    },
+    "problems/0309.最佳买卖股票时机含冷冻期.md": {
+      "solution": "solutions/0309_最佳买卖股票时机含冷冻期.py",
+      "placeholder": false
+    },
+    "problems/0322.零钱兑换.md": {
+      "solution": "solutions/0322_零钱兑换.py",
+      "placeholder": false
+    },
+    "problems/0332.重新安排行程.md": {
+      "solution": "solutions/0332_重新安排行程.py",
+      "placeholder": false
+    },
+    "problems/0337.打家劫舍III.md": {
+      "solution": "solutions/0337_打家劫舍III.py",
+      "placeholder": false
+    },
+    "problems/0343.整数拆分.md": {
+      "solution": "solutions/0343_整数拆分.py",
+      "placeholder": false
+    },
+    "problems/0344.反转字符串.md": {
+      "solution": "solutions/0344_反转字符串.py",
+      "placeholder": false
+    },
+    "problems/0347.前K个高频元素.md": {
+      "solution": "solutions/0347_前K个高频元素.py",
+      "placeholder": false
+    },
+    "problems/0349.两个数组的交集.md": {
+      "solution": "solutions/0349_两个数组的交集.py",
+      "placeholder": false
+    },
+    "problems/0376.摆动序列.md": {
+      "solution": "solutions/0376_摆动序列.py",
+      "placeholder": false
+    },
+    "problems/0377.组合总和Ⅳ.md": {
+      "solution": "solutions/0377_组合总和Ⅳ.py",
+      "placeholder": false
+    },
+    "problems/0383.赎金信.md": {
+      "solution": "solutions/0383_赎金信.py",
+      "placeholder": false
+    },
+    "problems/0392.判断子序列.md": {
+      "solution": "solutions/0392_判断子序列.py",
+      "placeholder": false
+    },
+    "problems/0404.左叶子之和.md": {
+      "solution": "solutions/0404_左叶子之和.py",
+      "placeholder": false
+    },
+    "problems/0406.根据身高重建队列.md": {
+      "solution": "solutions/0406_根据身高重建队列.py",
+      "placeholder": false
+    },
+    "problems/0416.分割等和子集.md": {
+      "solution": "solutions/0416_分割等和子集.py",
+      "placeholder": false
+    },
+    "problems/0417.太平洋大西洋水流问题.md": {
+      "solution": "solutions/0417_太平洋大西洋水流问题.py",
+      "placeholder": false
+    },
+    "problems/0435.无重叠区间.md": {
+      "solution": "solutions/0435_无重叠区间.py",
+      "placeholder": false
+    },
+    "problems/0450.删除二叉搜索树中的节点.md": {
+      "solution": "solutions/0450_删除二叉搜索树中的节点.py",
+      "placeholder": false
+    },
+    "problems/0452.用最少数量的箭引爆气球.md": {
+      "solution": "solutions/0452_用最少数量的箭引爆气球.py",
+      "placeholder": false
+    },
+    "problems/0454.四数相加II.md": {
+      "solution": "solutions/0454_四数相加II.py",
+      "placeholder": false
+    },
+    "problems/0455.分发饼干.md": {
+      "solution": "solutions/0455_分发饼干.py",
+      "placeholder": false
+    },
+    "problems/0459.重复的子字符串.md": {
+      "solution": "solutions/0459_重复的子字符串.py",
+      "placeholder": false
+    },
+    "problems/0463.岛屿的周长.md": {
+      "solution": "solutions/0463_岛屿的周长.py",
+      "placeholder": false
+    },
+    "problems/0474.一和零.md": {
+      "solution": "solutions/0474_一和零.py",
+      "placeholder": false
+    },
+    "problems/0491.递增子序列.md": {
+      "solution": "solutions/0491_递增子序列.py",
+      "placeholder": false
+    },
+    "problems/0494.目标和.md": {
+      "solution": "solutions/0494_目标和.py",
+      "placeholder": false
+    },
+    "problems/0496.下一个更大元素I.md": {
+      "solution": "solutions/0496_下一个更大元素I.py",
+      "placeholder": false
+    },
+    "problems/0501.二叉搜索树中的众数.md": {
+      "solution": "solutions/0501_二叉搜索树中的众数.py",
+      "placeholder": false
+    },
+    "problems/0503.下一个更大元素II.md": {
+      "solution": "solutions/0503_下一个更大元素II.py",
+      "placeholder": false
+    },
+    "problems/0509.斐波那契数.md": {
+      "solution": "solutions/0509_斐波那契数.py",
+      "placeholder": false
+    },
+    "problems/0513.找树左下角的值.md": {
+      "solution": "solutions/0513_找树左下角的值.py",
+      "placeholder": false
+    },
+    "problems/0516.最长回文子序列.md": {
+      "solution": "solutions/0516_最长回文子序列.py",
+      "placeholder": false
+    },
+    "problems/0518.零钱兑换II.md": {
+      "solution": "solutions/0518_零钱兑换II.py",
+      "placeholder": false
+    },
+    "problems/0530.二叉搜索树的最小绝对差.md": {
+      "solution": "solutions/0530_二叉搜索树的最小绝对差.py",
+      "placeholder": false
+    },
+    "problems/0538.把二叉搜索树转换为累加树.md": {
+      "solution": "solutions/0538_把二叉搜索树转换为累加树.py",
+      "placeholder": false
+    },
+    "problems/0541.反转字符串II.md": {
+      "solution": "solutions/0541_反转字符串II.py",
+      "placeholder": false
+    },
+    "problems/0583.两个字符串的删除操作.md": {
+      "solution": "solutions/0583_两个字符串的删除操作.py",
+      "placeholder": false
+    },
+    "problems/0617.合并二叉树.md": {
+      "solution": "solutions/0617_合并二叉树.py",
+      "placeholder": false
+    },
+    "problems/0647.回文子串.md": {
+      "solution": "solutions/0647_回文子串.py",
+      "placeholder": false
+    },
+    "problems/0649.Dota2参议院.md": {
+      "solution": "solutions/0649_Dota2参议院.py",
+      "placeholder": false
+    },
+    "problems/0654.最大二叉树.md": {
+      "solution": "solutions/0654_最大二叉树.py",
+      "placeholder": false
+    },
+    "problems/0657.机器人能否返回原点.md": {
+      "solution": "solutions/0657_机器人能否返回原点.py",
+      "placeholder": false
+    },
+    "problems/0669.修剪二叉搜索树.md": {
+      "solution": "solutions/0669_修剪二叉搜索树.py",
+      "placeholder": false
+    },
+    "problems/0673.最长递增子序列的个数.md": {
+      "solution": "solutions/0673_最长递增子序列的个数.py",
+      "placeholder": false
+    },
+    "problems/0674.最长连续递增序列.md": {
+      "solution": "solutions/0674_最长连续递增序列.py",
+      "placeholder": false
+    },
+    "problems/0684.冗余连接.md": {
+      "solution": "solutions/0684_冗余连接.py",
+      "placeholder": false
+    },
+    "problems/0685.冗余连接II.md": {
+      "solution": "solutions/0685_冗余连接II.py",
+      "placeholder": false
+    },
+    "problems/0695.岛屿的最大面积.md": {
+      "solution": "solutions/0695_岛屿的最大面积.py",
+      "placeholder": false
+    },
+    "problems/0700.二叉搜索树中的搜索.md": {
+      "solution": "solutions/0700_二叉搜索树中的搜索.py",
+      "placeholder": false
+    },
+    "problems/0701.二叉搜索树中的插入操作.md": {
+      "solution": "solutions/0701_二叉搜索树中的插入操作.py",
+      "placeholder": false
+    },
+    "problems/0704.二分查找.md": {
+      "solution": "solutions/0704_二分查找.py",
+      "placeholder": false
+    },
+    "problems/0707.设计链表.md": {
+      "solution": "solutions/0707_设计链表.py",
+      "placeholder": false
+    },
+    "problems/0714.买卖股票的最佳时机含手续费.md": {
+      "solution": "solutions/0714_买卖股票的最佳时机含手续费.py",
+      "placeholder": false
+    },
+    "problems/0714.买卖股票的最佳时机含手续费（动态规划）.md": {
+      "solution": "solutions/0714_买卖股票的最佳时机含手续费_动态规划.py",
+      "placeholder": true
+    },
+    "problems/0718.最长重复子数组.md": {
+      "solution": "solutions/0718_最长重复子数组.py",
+      "placeholder": false
+    },
+    "problems/0724.寻找数组的中心索引.md": {
+      "solution": "solutions/0724_寻找数组的中心索引.py",
+      "placeholder": false
+    },
+    "problems/0738.单调递增的数字.md": {
+      "solution": "solutions/0738_单调递增的数字.py",
+      "placeholder": false
+    },
+    "problems/0739.每日温度.md": {
+      "solution": "solutions/0739_每日温度.py",
+      "placeholder": false
+    },
+    "problems/0743.网络延迟时间.md": {
+      "solution": "solutions/0743_网络延迟时间.py",
+      "placeholder": true
+    },
+    "problems/0746.使用最小花费爬楼梯.md": {
+      "solution": "solutions/0746_使用最小花费爬楼梯.py",
+      "placeholder": false
+    },
+    "problems/0763.划分字母区间.md": {
+      "solution": "solutions/0763_划分字母区间.py",
+      "placeholder": false
+    },
+    "problems/0787.K站中转内最便宜的航班.md": {
+      "solution": "solutions/0787_K站中转内最便宜的航班.py",
+      "placeholder": true
+    },
+    "problems/0797.所有可能的路径.md": {
+      "solution": "solutions/0797_所有可能的路径.py",
+      "placeholder": false
+    },
+    "problems/0827.最大人工岛.md": {
+      "solution": "solutions/0827_最大人工岛.py",
+      "placeholder": false
+    },
+    "problems/0841.钥匙和房间.md": {
+      "solution": "solutions/0841_钥匙和房间.py",
+      "placeholder": false
+    },
+    "problems/0844.比较含退格的字符串.md": {
+      "solution": "solutions/0844_比较含退格的字符串.py",
+      "placeholder": false
+    },
+    "problems/0860.柠檬水找零.md": {
+      "solution": "solutions/0860_柠檬水找零.py",
+      "placeholder": false
+    },
+    "problems/0922.按奇偶排序数组II.md": {
+      "solution": "solutions/0922_按奇偶排序数组II.py",
+      "placeholder": false
+    },
+    "problems/0925.长按键入.md": {
+      "solution": "solutions/0925_长按键入.py",
+      "placeholder": false
+    },
+    "problems/0941.有效的山脉数组.md": {
+      "solution": "solutions/0941_有效的山脉数组.py",
+      "placeholder": false
+    },
+    "problems/0968.监控二叉树.md": {
+      "solution": "solutions/0968_监控二叉树.py",
+      "placeholder": false
+    },
+    "problems/0977.有序数组的平方.md": {
+      "solution": "solutions/0977_有序数组的平方.py",
+      "placeholder": false
+    },
+    "problems/1002.查找常用字符.md": {
+      "solution": "solutions/1002_查找常用字符.py",
+      "placeholder": false
+    },
+    "problems/1005.K次取反后最大化的数组和.md": {
+      "solution": "solutions/1005_K次取反后最大化的数组和.py",
+      "placeholder": false
+    },
+    "problems/1020.飞地的数量.md": {
+      "solution": "solutions/1020_飞地的数量.py",
+      "placeholder": false
+    },
+    "problems/1035.不相交的线.md": {
+      "solution": "solutions/1035_不相交的线.py",
+      "placeholder": false
+    },
+    "problems/1047.删除字符串中的所有相邻重复项.md": {
+      "solution": "solutions/1047_删除字符串中的所有相邻重复项.py",
+      "placeholder": false
+    },
+    "problems/1049.最后一块石头的重量II.md": {
+      "solution": "solutions/1049_最后一块石头的重量II.py",
+      "placeholder": false
+    },
+    "problems/1143.最长公共子序列.md": {
+      "solution": "solutions/1143_最长公共子序列.py",
+      "placeholder": false
+    },
+    "problems/1207.独一无二的出现次数.md": {
+      "solution": "solutions/1207_独一无二的出现次数.py",
+      "placeholder": false
+    },
+    "problems/1221.分割平衡字符串.md": {
+      "solution": "solutions/1221_分割平衡字符串.py",
+      "placeholder": false
+    },
+    "problems/1254.统计封闭岛屿的数目.md": {
+      "solution": "solutions/1254_统计封闭岛屿的数目.py",
+      "placeholder": true
+    },
+    "problems/1334.阈值距离内邻居最少的城市.md": {
+      "solution": "solutions/1334_阈值距离内邻居最少的城市.py",
+      "placeholder": true
+    },
+    "problems/1356.根据数字二进制下1的数目排序.md": {
+      "solution": "solutions/1356_根据数字二进制下1的数目排序.py",
+      "placeholder": false
+    },
+    "problems/1365.有多少小于当前数字的数字.md": {
+      "solution": "solutions/1365_有多少小于当前数字的数字.py",
+      "placeholder": false
+    },
+    "problems/1382.将二叉搜索树变平衡.md": {
+      "solution": "solutions/1382_将二叉搜索树变平衡.py",
+      "placeholder": false
+    },
+    "problems/1791.找出星型图的中心节点.md": {
+      "solution": "solutions/1791_找出星型图的中心节点.py",
+      "placeholder": true
+    },
+    "problems/1971.寻找图中是否存在路径.md": {
+      "solution": "solutions/1971_寻找图中是否存在路径.py",
+      "placeholder": false
+    },
+    "problems/O(n)的算法居然超时了，此时的n究竟是多大？.md": {
+      "solution": "solutions/O_n_的算法居然超时了_此时的n究竟是多大.py",
+      "placeholder": true
+    },
+    "problems/为了绝杀编辑距离，卡尔做了三步铺垫.md": {
+      "solution": "solutions/为了绝杀编辑距离_卡尔做了三步铺垫.py",
+      "placeholder": true
+    },
+    "problems/二叉树中递归带着回溯.md": {
+      "solution": "solutions/二叉树中递归带着回溯.py",
+      "placeholder": true
+    },
+    "problems/二叉树总结篇.md": {
+      "solution": "solutions/二叉树总结篇.py",
+      "placeholder": true
+    },
+    "problems/二叉树理论基础.md": {
+      "solution": "solutions/二叉树理论基础.py",
+      "placeholder": false
+    },
+    "problems/二叉树的统一迭代法.md": {
+      "solution": "solutions/二叉树的统一迭代法.py",
+      "placeholder": false
+    },
+    "problems/二叉树的迭代遍历.md": {
+      "solution": "solutions/二叉树的迭代遍历.py",
+      "placeholder": false
+    },
+    "problems/二叉树的递归遍历.md": {
+      "solution": "solutions/二叉树的递归遍历.py",
+      "placeholder": false
+    },
+    "problems/剑指Offer05.替换空格.md": {
+      "solution": "solutions/剑指Offer05_替换空格.py",
+      "placeholder": true
+    },
+    "problems/剑指Offer58-II.左旋转字符串.md": {
+      "solution": "solutions/剑指Offer58-II_左旋转字符串.py",
+      "placeholder": true
+    },
+    "problems/动态规划-股票问题总结篇.md": {
+      "solution": "solutions/动态规划-股票问题总结篇.py",
+      "placeholder": true
+    },
+    "problems/动态规划总结篇.md": {
+      "solution": "solutions/动态规划总结篇.py",
+      "placeholder": true
+    },
+    "problems/动态规划理论基础.md": {
+      "solution": "solutions/动态规划理论基础.py",
+      "placeholder": true
+    },
+    "problems/双指针总结.md": {
+      "solution": "solutions/双指针总结.py",
+      "placeholder": true
+    },
+    "problems/哈希表总结.md": {
+      "solution": "solutions/哈希表总结.py",
+      "placeholder": true
+    },
+    "problems/哈希表理论基础.md": {
+      "solution": "solutions/哈希表理论基础.py",
+      "placeholder": true
+    },
+    "problems/回溯总结.md": {
+      "solution": "solutions/回溯总结.py",
+      "placeholder": true
+    },
+    "problems/回溯算法去重问题的另一种写法.md": {
+      "solution": "solutions/回溯算法去重问题的另一种写法.py",
+      "placeholder": false
+    },
+    "problems/回溯算法理论基础.md": {
+      "solution": "solutions/回溯算法理论基础.py",
+      "placeholder": true
+    },
+    "problems/字符串总结.md": {
+      "solution": "solutions/字符串总结.py",
+      "placeholder": true
+    },
+    "problems/数组总结篇.md": {
+      "solution": "solutions/数组总结篇.py",
+      "placeholder": true
+    },
+    "problems/数组理论基础.md": {
+      "solution": "solutions/数组理论基础.py",
+      "placeholder": true
+    },
+    "problems/栈与队列总结.md": {
+      "solution": "solutions/栈与队列总结.py",
+      "placeholder": true
+    },
+    "problems/栈与队列理论基础.md": {
+      "solution": "solutions/栈与队列理论基础.py",
+      "placeholder": true
+    },
+    "problems/根据身高重建队列（vector原理讲解）.md": {
+      "solution": "solutions/根据身高重建队列_vector原理讲解.py",
+      "placeholder": true
+    },
+    "problems/算法模板.md": {
+      "solution": "solutions/算法模板.py",
+      "placeholder": false
+    },
+    "problems/背包总结篇.md": {
+      "solution": "solutions/背包总结篇.py",
+      "placeholder": true
+    },
+    "problems/背包理论基础01背包-1.md": {
+      "solution": "solutions/背包理论基础01背包-1.py",
+      "placeholder": false
+    },
+    "problems/背包理论基础01背包-2.md": {
+      "solution": "solutions/背包理论基础01背包-2.py",
+      "placeholder": false
+    },
+    "problems/背包问题完全背包一维.md": {
+      "solution": "solutions/背包问题完全背包一维.py",
+      "placeholder": false
+    },
+    "problems/背包问题理论基础多重背包.md": {
+      "solution": "solutions/背包问题理论基础多重背包.py",
+      "placeholder": false
+    },
+    "problems/背包问题理论基础完全背包.md": {
+      "solution": "solutions/背包问题理论基础完全背包.py",
+      "placeholder": false
+    },
+    "problems/贪心算法总结篇.md": {
+      "solution": "solutions/贪心算法总结篇.py",
+      "placeholder": true
+    },
+    "problems/贪心算法理论基础.md": {
+      "solution": "solutions/贪心算法理论基础.py",
+      "placeholder": true
+    },
+    "problems/递归算法的时间与空间复杂度分析.md": {
+      "solution": "solutions/递归算法的时间与空间复杂度分析.py",
+      "placeholder": true
+    },
+    "problems/链表总结篇.md": {
+      "solution": "solutions/链表总结篇.py",
+      "placeholder": true
+    },
+    "problems/链表理论基础.md": {
+      "solution": "solutions/链表理论基础.py",
+      "placeholder": false
+    },
+    "problems/面试题02.07.链表相交.md": {
+      "solution": "solutions/面试题02_07_链表相交.py",
+      "placeholder": false
+    },
+    "problems/kamacoder/0044.开发商购买土地.md": {
+      "solution": "solutions/0044_开发商购买土地.py",
+      "placeholder": false
+    },
+    "problems/kamacoder/0047.参会dijkstra堆.md": {
+      "solution": "solutions/0047_参会dijkstra堆.py",
+      "placeholder": false
+    },
+    "problems/kamacoder/0047.参会dijkstra朴素.md": {
+      "solution": "solutions/0047_参会dijkstra朴素.py",
+      "placeholder": false
+    },
+    "problems/kamacoder/0053.寻宝-Kruskal.md": {
+      "solution": "solutions/0053_寻宝-Kruskal.py",
+      "placeholder": false
+    },
+    "problems/kamacoder/0053.寻宝-prim.md": {
+      "solution": "solutions/0053_寻宝-prim.py",
+      "placeholder": false
+    },
+    "problems/kamacoder/0054.替换数字.md": {
+      "solution": "solutions/0054_替换数字.py",
+      "placeholder": false
+    },
+    "problems/kamacoder/0055.右旋字符串.md": {
+      "solution": "solutions/0055_右旋字符串.py",
+      "placeholder": false
+    },
+    "problems/kamacoder/0058.区间和.md": {
+      "solution": "solutions/0058_区间和.py",
+      "placeholder": false
+    },
+    "problems/kamacoder/0094.城市间货物运输I-SPFA.md": {
+      "solution": "solutions/0094_城市间货物运输I-SPFA.py",
+      "placeholder": false
+    },
+    "problems/kamacoder/0094.城市间货物运输I.md": {
+      "solution": "solutions/0094_城市间货物运输I.py",
+      "placeholder": false
+    },
+    "problems/kamacoder/0095.城市间货物运输II.md": {
+      "solution": "solutions/0095_城市间货物运输II.py",
+      "placeholder": false
+    },
+    "problems/kamacoder/0096.城市间货物运输III.md": {
+      "solution": "solutions/0096_城市间货物运输III.py",
+      "placeholder": false
+    },
+    "problems/kamacoder/0097.小明逛公园.md": {
+      "solution": "solutions/0097_小明逛公园.py",
+      "placeholder": false
+    },
+    "problems/kamacoder/0098.所有可达路径.md": {
+      "solution": "solutions/0098_所有可达路径.py",
+      "placeholder": false
+    },
+    "problems/kamacoder/0099.岛屿的数量广搜.md": {
+      "solution": "solutions/0099_岛屿的数量广搜.py",
+      "placeholder": false
+    },
+    "problems/kamacoder/0099.岛屿的数量深搜.md": {
+      "solution": "solutions/0099_岛屿的数量深搜.py",
+      "placeholder": false
+    },
+    "problems/kamacoder/0100.岛屿的最大面积.md": {
+      "solution": "solutions/0100_岛屿的最大面积.py",
+      "placeholder": false
+    },
+    "problems/kamacoder/0101.孤岛的总面积.md": {
+      "solution": "solutions/0101_孤岛的总面积.py",
+      "placeholder": false
+    },
+    "problems/kamacoder/0102.沉没孤岛.md": {
+      "solution": "solutions/0102_沉没孤岛.py",
+      "placeholder": false
+    },
+    "problems/kamacoder/0103.水流问题.md": {
+      "solution": "solutions/0103_水流问题.py",
+      "placeholder": false
+    },
+    "problems/kamacoder/0104.建造最大岛屿.md": {
+      "solution": "solutions/0104_建造最大岛屿.py",
+      "placeholder": false
+    },
+    "problems/kamacoder/0105.有向图的完全可达性.md": {
+      "solution": "solutions/0105_有向图的完全可达性.py",
+      "placeholder": false
+    },
+    "problems/kamacoder/0106.岛屿的周长.md": {
+      "solution": "solutions/0106_岛屿的周长.py",
+      "placeholder": false
+    },
+    "problems/kamacoder/0107.寻找存在的路径.md": {
+      "solution": "solutions/0107_寻找存在的路径.py",
+      "placeholder": false
+    },
+    "problems/kamacoder/0108.冗余连接.md": {
+      "solution": "solutions/0108_冗余连接.py",
+      "placeholder": false
+    },
+    "problems/kamacoder/0109.冗余连接II.md": {
+      "solution": "solutions/0109_冗余连接II.py",
+      "placeholder": false
+    },
+    "problems/kamacoder/0110.字符串接龙.md": {
+      "solution": "solutions/0110_字符串接龙.py",
+      "placeholder": false
+    },
+    "problems/kamacoder/0117.软件构建.md": {
+      "solution": "solutions/0117_软件构建.py",
+      "placeholder": false
+    },
+    "problems/kamacoder/0126.骑士的攻击astar.md": {
+      "solution": "solutions/0126_骑士的攻击astar.py",
+      "placeholder": false
+    },
+    "problems/kamacoder/图论为什么用ACM模式.md": {
+      "solution": "solutions/图论为什么用ACM模式.py",
+      "placeholder": true
+    },
+    "problems/kamacoder/图论并查集理论基础.md": {
+      "solution": "solutions/图论并查集理论基础.py",
+      "placeholder": true
+    },
+    "problems/kamacoder/图论广搜理论基础.md": {
+      "solution": "solutions/图论广搜理论基础.py",
+      "placeholder": true
+    },
+    "problems/kamacoder/图论总结篇.md": {
+      "solution": "solutions/图论总结篇.py",
+      "placeholder": true
+    },
+    "problems/kamacoder/图论深搜理论基础.md": {
+      "solution": "solutions/图论深搜理论基础.py",
+      "placeholder": true
+    },
+    "problems/kamacoder/图论理论基础.md": {
+      "solution": "solutions/图论理论基础.py",
+      "placeholder": true
+    },
+    "problems/kamacoder/最短路问题总结篇.md": {
+      "solution": "solutions/最短路问题总结篇.py",
+      "placeholder": true
+    },
+    "problems/qita/acm.md": {
+      "solution": "solutions/acm.py",
+      "placeholder": true
+    },
+    "problems/qita/acm_backup.md": {
+      "solution": "solutions/acm_backup.py",
+      "placeholder": true
+    },
+    "problems/qita/algo_pdf.md": {
+      "solution": "solutions/algo_pdf.py",
+      "placeholder": true
+    },
+    "problems/qita/ewaishuoming.md": {
+      "solution": "solutions/ewaishuoming.py",
+      "placeholder": true
+    },
+    "problems/qita/gitserver.md": {
+      "solution": "solutions/gitserver.py",
+      "placeholder": false
+    },
+    "problems/qita/gongkaike.md": {
+      "solution": "solutions/gongkaike.py",
+      "placeholder": true
+    },
+    "problems/qita/join.md": {
+      "solution": "solutions/join.py",
+      "placeholder": true
+    },
+    "problems/qita/language.md": {
+      "solution": "solutions/language.py",
+      "placeholder": true
+    },
+    "problems/qita/publish.md": {
+      "solution": "solutions/publish.py",
+      "placeholder": true
+    },
+    "problems/qita/say_feel.md": {
+      "solution": "solutions/say_feel.py",
+      "placeholder": true
+    },
+    "problems/qita/server.md": {
+      "solution": "solutions/server.py",
+      "placeholder": true
+    },
+    "problems/qita/tulunfabu.md": {
+      "solution": "solutions/tulunfabu.py",
+      "placeholder": true
+    },
+    "problems/qita/tulunshuoming.md": {
+      "solution": "solutions/tulunshuoming.py",
+      "placeholder": true
+    },
+    "problems/qita/update.md": {
+      "solution": "solutions/update.py",
+      "placeholder": true
+    },
+    "problems/前序/ACM模式.md": {
+      "solution": "solutions/ACM模式.py",
+      "placeholder": true
+    },
+    "problems/前序/ACM模式如何构建二叉树.md": {
+      "solution": "solutions/ACM模式如何构建二叉树.py",
+      "placeholder": false
+    },
+    "problems/前序/BAT级别技术面试流程和注意事项都在这里了.md": {
+      "solution": "solutions/BAT级别技术面试流程和注意事项都在这里了.py",
+      "placeholder": true
+    },
+    "problems/前序/gitserver.md": {
+      "solution": "solutions/gitserver.py",
+      "placeholder": false
+    },
+    "problems/前序/Java处理输入输出.md": {
+      "solution": "solutions/Java处理输入输出.py",
+      "placeholder": true
+    },
+    "problems/前序/kvstore.md": {
+      "solution": "solutions/kvstore.py",
+      "placeholder": true
+    },
+    "problems/前序/server.md": {
+      "solution": "solutions/server.py",
+      "placeholder": true
+    },
+    "problems/前序/vim.md": {
+      "solution": "solutions/vim.py",
+      "placeholder": true
+    },
+    "problems/前序/代码风格.md": {
+      "solution": "solutions/代码风格.py",
+      "placeholder": true
+    },
+    "problems/前序/内存消耗.md": {
+      "solution": "solutions/内存消耗.py",
+      "placeholder": true
+    },
+    "problems/前序/刷力扣用不用库函数.md": {
+      "solution": "solutions/刷力扣用不用库函数.py",
+      "placeholder": true
+    },
+    "problems/前序/力扣上的代码在本地编译运行.md": {
+      "solution": "solutions/力扣上的代码在本地编译运行.py",
+      "placeholder": true
+    },
+    "problems/前序/时间复杂度.md": {
+      "solution": "solutions/时间复杂度.py",
+      "placeholder": true
+    },
+    "problems/前序/程序员写文档工具.md": {
+      "solution": "solutions/程序员写文档工具.py",
+      "placeholder": true
+    },
+    "problems/前序/程序员简历.md": {
+      "solution": "solutions/程序员简历.py",
+      "placeholder": true
+    },
+    "problems/前序/空间复杂度.md": {
+      "solution": "solutions/空间复杂度.py",
+      "placeholder": true
+    },
+    "problems/前序/算法超时.md": {
+      "solution": "solutions/算法超时.py",
+      "placeholder": true
+    },
+    "problems/前序/编程素养部分的吹毛求疵.md": {
+      "solution": "solutions/编程素养部分的吹毛求疵.py",
+      "placeholder": true
+    },
+    "problems/前序/递归算法的时间与空间复杂度分析.md": {
+      "solution": "solutions/递归算法的时间与空间复杂度分析.py",
+      "placeholder": true
+    },
+    "problems/前序/递归算法的时间复杂度.md": {
+      "solution": "solutions/递归算法的时间复杂度.py",
+      "placeholder": true
+    },
+    "problems/周总结/20200927二叉树周末总结.md": {
+      "solution": "solutions/2020_0927二叉树周末总结.py",
+      "placeholder": false
+    },
+    "problems/周总结/20201003二叉树周末总结.md": {
+      "solution": "solutions/2020_1003二叉树周末总结.py",
+      "placeholder": true
+    },
+    "problems/周总结/20201010二叉树周末总结.md": {
+      "solution": "solutions/2020_1010二叉树周末总结.py",
+      "placeholder": true
+    },
+    "problems/周总结/20201017二叉树周末总结.md": {
+      "solution": "solutions/2020_1017二叉树周末总结.py",
+      "placeholder": true
+    },
+    "problems/周总结/20201030回溯周末总结.md": {
+      "solution": "solutions/2020_1030回溯周末总结.py",
+      "placeholder": true
+    },
+    "problems/周总结/20201107回溯周末总结.md": {
+      "solution": "solutions/2020_1107回溯周末总结.py",
+      "placeholder": true
+    },
+    "problems/周总结/20201112回溯周末总结.md": {
+      "solution": "solutions/2020_1112回溯周末总结.py",
+      "placeholder": true
+    },
+    "problems/周总结/20201126贪心周末总结.md": {
+      "solution": "solutions/2020_1126贪心周末总结.py",
+      "placeholder": true
+    },
+    "problems/周总结/20201203贪心周末总结.md": {
+      "solution": "solutions/2020_1203贪心周末总结.py",
+      "placeholder": true
+    },
+    "problems/周总结/20201210复杂度分析周末总结.md": {
+      "solution": "solutions/2020_1210复杂度分析周末总结.py",
+      "placeholder": true
+    },
+    "problems/周总结/20201217贪心周末总结.md": {
+      "solution": "solutions/2020_1217贪心周末总结.py",
+      "placeholder": true
+    },
+    "problems/周总结/20201224贪心周末总结.md": {
+      "solution": "solutions/2020_1224贪心周末总结.py",
+      "placeholder": true
+    },
+    "problems/周总结/20210107动规周末总结.md": {
+      "solution": "solutions/2021_0107动规周末总结.py",
+      "placeholder": true
+    },
+    "problems/周总结/20210114动规周末总结.md": {
+      "solution": "solutions/2021_0114动规周末总结.py",
+      "placeholder": true
+    },
+    "problems/周总结/20210121动规周末总结.md": {
+      "solution": "solutions/2021_0121动规周末总结.py",
+      "placeholder": true
+    },
+    "problems/周总结/20210128动规周末总结.md": {
+      "solution": "solutions/2021_0128动规周末总结.py",
+      "placeholder": true
+    },
+    "problems/周总结/20210204动规周末总结.md": {
+      "solution": "solutions/2021_0204动规周末总结.py",
+      "placeholder": true
+    },
+    "problems/周总结/20210225动规周末总结.md": {
+      "solution": "solutions/2021_0225动规周末总结.py",
+      "placeholder": true
+    },
+    "problems/周总结/20210304动规周末总结.md": {
+      "solution": "solutions/2021_0304动规周末总结.py",
+      "placeholder": true
+    },
+    "problems/周总结/二叉树阶段总结系列一.md": {
+      "solution": "solutions/二叉树阶段总结系列一.py",
+      "placeholder": true
+    }
+  }
+}
