@@ -1,0 +1,57 @@
+"""Python solution extracted from problems/0210.课程表II.md."""
+from __future__ import annotations
+
+"""Auto-generated placeholder converted from `cpp`.
+Source: problems\0210.课程表II.md
+Manual rewrite may be required for algorithm equivalence.
+"""
+
+from typing import Any
+
+
+def solve(*args: Any, **kwargs: Any) -> Any:
+    """
+    TODO: Replace this placeholder with a real Python implementation.
+    Original source is preserved in ORIGINAL_SNIPPET.
+    """
+    raise NotImplementedError("Auto-generated placeholder; implement in Python")
+
+
+ORIGINAL_SNIPPET = """
+class Solution {
+public:
+    vector<int> findOrder(int numCourses, vector<vector<int>>& prerequisites) {
+        vector<int> inDegree(numCourses, 0);
+        vector<int> result;
+        unordered_map<int, vector<int>> umap;
+        for (int i = 0; i < prerequisites.size(); i++) {
+
+            // prerequisites[i][0] 是 课程入度，prerequisites[i][1] 是课程出度
+            // 即： 上课prerequisites[i][0] 之前，必须先上课prerequisites[i][1]
+            // prerequisites[i][1] -> prerequisites[i][0]
+            inDegree[prerequisites[i][0]]++;//当前课程入度值+1
+            umap[prerequisites[i][1]].push_back(prerequisites[i][0]); // 添加 prerequisites[i][1] 指向的课程
+        }
+        queue<int> que;
+        for (int i = 0; i < numCourses; i++) {
+            if (inDegree[i] == 0) que.push(i); // 所有入度为0，即为 开头课程 加入队列
+        }
+        int count = 0;
+        while (que.size()) {
+            int cur = que.front();  //当前选的课
+            que.pop();
+            count++; // 选课数+1 
+            result.push_back(cur);
+            vector<int> courses = umap[cur]; //获取这门课指向的课程，也就是这么课的后续课
+            if (courses.size()) { // 有后续课
+                for (int i = 0; i < courses.size(); i++) {
+                    inDegree[courses[i]]--; // 它的后续课的入度-1
+                    if (inDegree[courses[i]] == 0) que.push(courses[i]); // 如果入度为0，加入队列
+                }
+            }
+        }
+        if (count == numCourses) return result;
+        else return vector<int>();
+    }
+};
+"""

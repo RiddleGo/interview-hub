@@ -1,6 +1,6 @@
 # interview-hub
 
-本站 **`index.html` 为学习总入口**：顶部可进入 **《人工智能系统》教材**（目录 `ai-system-textbook/`）、**labuladong 算法小抄 Python 版**（目录 `leetcode/`），下方为面经题库导航。
+本站 **`index.html` 为学习总入口**：顶部可进入 **《人工智能系统》教材**（目录 `ai-system-textbook/`）、**labuladong 算法小抄 Python 版**（目录 `leetcode/`）、**代码随想录全量 Python 化项目**（目录 `leetcode-python/`），下方为面经题库导航。
 
 面经合集 **导航站**：用浏览器访问下方 Pages 地址，可一键进入四个题库仓库与各自的单页 `study.html`。页面底部含 **微信公众号 · TrustZone** 配图（`images/gongzhonghao.webp` / `gongzhonghao-sm.png`，压缩后约数十 KB，加载更快）。
 
@@ -13,6 +13,7 @@
 **https://riddlego.github.io/interview-hub/index.html**（推荐；根路径 `/interview-hub/` 偶发 CDN 旧缓存）
 
 - 算法小抄（Python）：https://riddlego.github.io/interview-hub/leetcode/
+- 代码随想录 Python 化：https://riddlego.github.io/interview-hub/leetcode-python/
 
 备用：`https://riddlego.github.io/interview-hub/?v=1`
 
@@ -26,3 +27,13 @@
 ## 本地预览
 
 直接用浏览器打开根目录的 `index.html` 即可（相对链接在本地同样可用）。教材页位于 `ai-system-textbook/index.html`；更新教材目录清单可在该目录执行：`python scripts/build_manifest.py`。
+
+## 新增子目录：leetcode-python
+
+- 路径：`leetcode-python/`
+- 说明：由 `youngyangyang04/leetcode-master` 迁移得到的 Python-first 版本
+- 核心文件：
+  - `leetcode-python/index.html`
+  - `leetcode-python/README.md`
+  - `leetcode-python/migration-report.md`
+  - `leetcode-python/manifest.json`
