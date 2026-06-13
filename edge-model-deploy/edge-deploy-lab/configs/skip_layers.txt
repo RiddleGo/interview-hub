@@ -1,0 +1,4 @@
+# One ONNX node name per line. Edit after layerwise dump (scripts/08_layerwise_dump.py).
+# Example YOLOv5 head layers (names vary by export — verify in Netron):
+# /model.24/m.0/Conv
+# /model.24/m.1/Conv

@@ -1,0 +1,37 @@
+# Model artifacts
+*.pt
+*.pth
+*.onnx
+*.om
+*.bin
+*.engine
+*.dlc
+
+# Deliverables (keep structure via .gitkeep)
+deliverables/**/*
+!deliverables/.gitkeep
+!deliverables/*/
+!deliverables/*/.gitkeep
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+
+# Logs and reports (local runs)
+*.log
+compare_report.json
+release/v*/
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# YOLOv5 clone (optional local)
+yolov5/

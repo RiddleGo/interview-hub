@@ -1,0 +1,46 @@
+# EdgeDeployLab unified configuration
+# Edit soc_version and paths for your board / CANN install.
+
+model_name: yolov5s
+input_name: images
+output_names:
+  - output0
+  - output1
+  - output2
+input_shape: [1, 3, 640, 640]
+opset: 13
+soc_version: Ascend310P3
+
+letterbox: true
+letterbox_color: [114, 114, 114]
+mean_std: yolov5  # yolov5: no mean/std, only /255
+
+# Board / adb settings (edit for your device)
+board:
+  remote_dir: /data/infer
+  infer_binary: infer
+  adb_device: ""
+
+paths:
+  pt: deliverables/01_export/yolov5s.pt
+  onnx_fp32: deliverables/01_export/model_fp32.onnx
+  onnx_fp32_dynamic: deliverables/01_export/model_fp32_dynamic.onnx
+  onnx_adapt: deliverables/02_adapt/model_adapt.onnx
+  onnx_int8: deliverables/03_quant/model_int8.onnx
+  om_fp16: deliverables/04_compile/model_fp16.om
+  om_int8: deliverables/04_compile/model_int8.om
+  input_bin: deliverables/05_verify/input.bin
+  output_ort: deliverables/05_verify/output_ort.bin
+  output_npu: deliverables/05_verify/output_npu.bin
+  compare_report: deliverables/05_verify/compare_report.json
+
+calib:
+  dir: calib/images
+  min_images: 100
+  recommended: 200
+
+thresholds:
+  cosine_backbone: 0.98
+  cosine_head: 0.99
+  cosine_global: 0.995
+  map_drop_max: 0.02

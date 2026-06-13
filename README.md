@@ -37,3 +37,9 @@
   - `leetcode-python/README.md`
   - `leetcode-python/migration-report.md`
   - `leetcode-python/manifest.json`
+
+## edge-model-deploy
+
+- Path: edge-model-deploy/
+- 30 Q&A + edge-deploy-lab Ascend hands-on project
+
